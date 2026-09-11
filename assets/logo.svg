@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 100" fill="none" width="100%" height="100%">
+  <defs>
+    <!-- Intense 3D Red Gradient -->
+    <linearGradient id="tfg-red-3d" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff3b3b"/>
+      <stop offset="40%" stop-color="#ef4444"/>
+      <stop offset="80%" stop-color="#dc2626"/>
+      <stop offset="100%" stop-color="#991b1b"/>
+    </linearGradient>
+
+    <!-- Metallic Chrome Silver Gradient -->
+    <linearGradient id="tfg-chrome" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="50%" stop-color="#e4e4e7"/>
+      <stop offset="100%" stop-color="#a1a1aa"/>
+    </linearGradient>
+
+    <!-- Deep 3D Red Glow Filter -->
+    <filter id="red-3d-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#ef4444" flood-opacity="0.65"/>
+      <feDropShadow dx="0" dy="1" stdDeviation="1" flood-color="#000000" flood-opacity="0.9"/>
+    </filter>
+
+    <!-- 3D Bevel Highlight -->
+    <filter id="bevel-highlight" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="-1" stdDeviation="0.5" flood-color="#ffffff" flood-opacity="0.4"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#000000" flood-opacity="0.8"/>
+    </filter>
+  </defs>
+
+  <!-- Circular 3D Athletic Shield Emblem -->
+  <g transform="translate(10, 5)">
+    <!-- 3D Outer Cast Shadow -->
+    <circle cx="45" cy="47" r="44" fill="#000000" opacity="0.7"/>
+
+    <!-- Outer 3D Red Bezel Ring -->
+    <circle cx="45" cy="45" r="43" stroke="url(#tfg-red-3d)" stroke-width="3" filter="url(#red-3d-glow)"/>
+    <!-- Outer Dashed Orbit -->
+    <circle cx="45" cy="45" r="39" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="7 4" opacity="0.7"/>
+    
+    <!-- Obsidian Black Core Disc -->
+    <circle cx="45" cy="45" r="36" fill="#09090b" stroke="#27272a" stroke-width="1.5"/>
+
+    <!-- Male Muscle Silhouette (Left) in Crimson -->
+    <path d="M 24,49 C 19,45 15,35 19,27 C 23,21 30,23 32,29 C 34,35 31,43 28,47 Z" fill="url(#tfg-red-3d)" filter="url(#bevel-highlight)"/>
+    <circle cx="24.5" cy="22" r="4.2" fill="url(#tfg-red-3d)"/>
+
+    <!-- Female Muscle Silhouette (Right) in Crimson -->
+    <path d="M 66,49 C 71,45 75,35 71,27 C 67,21 60,23 58,29 C 56,35 59,43 62,47 Z" fill="url(#tfg-red-3d)" filter="url(#bevel-highlight)"/>
+    <circle cx="65.5" cy="22" r="4.2" fill="url(#tfg-red-3d)"/>
+
+    <!-- 3D Chrome Barbell Centerpiece -->
+    <rect x="42" y="27" width="6" height="36" rx="3" fill="url(#tfg-chrome)" filter="url(#bevel-highlight)"/>
+    <rect x="31" y="29" width="28" height="6" rx="2" fill="url(#tfg-red-3d)"/>
+
+    <!-- TFG 3D Embossed Core Text -->
+    <text x="45" y="58" font-family="'Oswald', Arial, sans-serif" font-weight="900" font-size="14" fill="#ffffff" text-anchor="middle" letter-spacing="1.5" filter="url(#red-3d-glow)">TFG</text>
+  </g>
+
+  <!-- 3D Brand Typography (TEMPLE in White, FIT GYM in Vivid Red) -->
+  <g transform="translate(118, 20)">
+    <!-- 3D Drop Shadow Text -->
+    <text x="0" y="40" font-family="'Oswald', Arial, sans-serif" font-weight="900" font-size="38" fill="#000000" opacity="0.6" letter-spacing="2.5">
+      TEMPLE<tspan dx="10">FIT GYM</tspan>
+    </text>
+    
+    <!-- Main Raised Text -->
+    <text x="0" y="38" font-family="'Oswald', Arial, sans-serif" font-weight="900" font-size="38" fill="url(#tfg-chrome)" letter-spacing="2">
+      TEMPLE<tspan fill="url(#tfg-red-3d)" dx="10" filter="url(#red-3d-glow)">FIT GYM</tspan>
+    </text>
+    
+    <!-- Badges Row: 3D Red Pill Badges -->
+    <g transform="translate(2, 48)">
+      <!-- 3D A/C Badge -->
+      <rect x="0" y="0" width="36" height="19" rx="5" fill="#7f1d1d" stroke="#ef4444" stroke-width="1.5" filter="url(#bevel-highlight)"/>
+      <text x="18" y="14" font-family="'Inter', sans-serif" font-weight="900" font-size="10.5" fill="#ffffff" text-anchor="middle" letter-spacing="1">A/C</text>
+      
+      <!-- 3D UNISEX Badge -->
+      <rect x="42" y="0" width="56" height="19" rx="5" fill="#18181b" stroke="#ef4444" stroke-width="1.2" stroke-opacity="0.6"/>
+      <text x="70" y="14" font-family="'Inter', sans-serif" font-weight="800" font-size="10" fill="#f4f4f5" text-anchor="middle" letter-spacing="1">UNISEX</text>
+      
+      <!-- CARDIO + STRENGTH Badge in Chrome/Red -->
+      <text x="106" y="14" font-family="'Inter', sans-serif" font-weight="800" font-size="10.5" fill="#ef4444" letter-spacing="1.5">
+        CARDIO <tspan fill="#a1a1aa">+</tspan> STRENGTH
+      </text>
+    </g>
+  </g>
+</svg>
