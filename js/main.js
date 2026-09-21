@@ -1,25 +1,47 @@
 /**
- * TEMPLE FIT GYM — MAIN INTERACTIVE SCRIPT
- * Modern, Dependency-Free Vanilla JavaScript
+ * TEMPLE FIT GYM — PROFESSIONAL JAVASCRIPT ENGINE
+ * Production-Ready, Dependency-Free Vanilla JavaScript
  * Proprietor: Gopal Periyasamy | Contact: 9884557280
  */
 
 document.addEventListener('DOMContentLoaded', () => {
 
   /* --------------------------------------------------------------------------
-     1. NAVBAR BACKGROUND CHANGE ON SCROLL
+     1. NAVBAR BACKGROUND CHANGE & ACTIVE SECTION INDICATOR ON SCROLL
      -------------------------------------------------------------------------- */
   const navbar = document.getElementById('navbar');
+  const navLinks = document.querySelectorAll('.nav-link');
+  const sections = document.querySelectorAll('section[id]');
 
   const handleNavbarScroll = () => {
     if (!navbar) return;
     if (window.scrollY > 40) {
-      navbar.classList.add('bg-dark-950', 'shadow-xl', 'border-zinc-800');
-      navbar.classList.remove('bg-dark-950/70', 'border-white/5');
+      navbar.classList.add('bg-[#0a0a0a]', 'shadow-2xl', 'border-white/10');
+      navbar.classList.remove('bg-transparent', 'border-transparent');
     } else {
-      navbar.classList.remove('bg-dark-950', 'shadow-xl', 'border-zinc-800');
-      navbar.classList.add('bg-dark-950/70', 'border-white/5');
+      navbar.classList.remove('bg-[#0a0a0a]', 'shadow-2xl', 'border-white/10');
+      navbar.classList.add('bg-transparent', 'border-transparent');
     }
+
+    // ScrollSpy: Update active nav link
+    const scrollPosition = window.scrollY + 120;
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.offsetHeight;
+      const sectionId = section.getAttribute('id');
+
+      if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+        navLinks.forEach(link => {
+          if (link.getAttribute('href') === `#${sectionId}`) {
+            link.classList.add('active', 'text-white');
+            link.classList.remove('text-zinc-400');
+          } else {
+            link.classList.remove('active', 'text-white');
+            link.classList.add('text-zinc-400');
+          }
+        });
+      }
+    });
   };
 
   window.addEventListener('scroll', handleNavbarScroll, { passive: true });
@@ -27,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /* --------------------------------------------------------------------------
-     2. MOBILE HAMBURGER MENU TOGGLE
+     2. MOBILE DRAWER MENU (Hamburger Toggle & Auto-Close)
      -------------------------------------------------------------------------- */
   const mobileMenuBtn = document.getElementById('mobile-menu-btn');
   const mobileMenu = document.getElementById('mobile-menu');
@@ -70,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /* --------------------------------------------------------------------------
-     3. SMOOTH SCROLLING WITH NAVBAR OFFSET
+     3. SMOOTH SCROLLING WITH STICKY NAVBAR OFFSET
      -------------------------------------------------------------------------- */
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
@@ -79,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const targetElement = document.querySelector(targetId);
       if (targetElement) {
         e.preventDefault();
-        const navHeight = navbar ? navbar.offsetHeight : 70;
+        const navHeight = navbar ? navbar.offsetHeight : 76;
         const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navHeight;
         window.scrollTo({
           top: targetPosition,
@@ -91,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /* --------------------------------------------------------------------------
-     4. SCROLL-TRIGGERED FADE-IN REVEAL ANIMATIONS
+     4. SCROLL-TRIGGERED REVEAL ANIMATIONS
      -------------------------------------------------------------------------- */
   const revealElements = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window) {
@@ -102,90 +124,301 @@ document.addEventListener('DOMContentLoaded', () => {
           observer.unobserve(entry.target);
         }
       });
-    }, {
-      threshold: 0.12,
-      rootMargin: '0px 0px -40px 0px'
-    });
+    }, { root: null, threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
     revealElements.forEach(el => revealObserver.observe(el));
   } else {
-    // Fallback if browser doesn't support IntersectionObserver
     revealElements.forEach(el => el.classList.add('active'));
   }
 
 
   /* --------------------------------------------------------------------------
-     5. PLAN SELECTION & AUTOMATIC CONTACT FORM SYNC
+     5. QUICK BMI CHECK CALCULATOR (Validation, Dynamic Gauging & CTAs)
      -------------------------------------------------------------------------- */
-  const pricingCards = document.querySelectorAll('.pricing-card');
+  const bmiHeightInput = document.getElementById('bmi-height');
+  const bmiWeightInput = document.getElementById('bmi-weight');
+  const btnCalcBmi = document.getElementById('btn-calc-bmi');
+  const btnResetBmi = document.getElementById('btn-reset-bmi');
 
-  pricingCards.forEach(card => {
-    const selectBtn = card.querySelector('.plan-select-btn');
-    const planName = card.getAttribute('data-plan');
+  const bmiHeightError = document.getElementById('bmi-height-error');
+  const bmiWeightError = document.getElementById('bmi-weight-error');
 
-    const selectPlan = () => {
-      pricingCards.forEach(c => {
-        c.classList.remove('active-plan', 'border-2', 'border-brand');
-        c.classList.add('border-zinc-800');
-        const btn = c.querySelector('.plan-select-btn');
-        if (btn) {
-          const isAnnual = c.getAttribute('data-plan').includes('1 Year');
-          btn.textContent = isAnnual ? 'Join 1-Year Plan' : 'Select Plan';
-          btn.classList.remove('bg-gradient-to-r', 'from-brand', 'to-brand-hover', 'shadow-glow-orange');
-          btn.classList.add('bg-zinc-900');
+  const bmiResultContainer = document.getElementById('bmi-result-container');
+  const bmiValueDisplay = document.getElementById('bmi-value');
+  const bmiCategoryBadge = document.getElementById('bmi-category-badge');
+  const bmiCategoryTitle = document.getElementById('bmi-category-title');
+  const bmiDescription = document.getElementById('bmi-description');
+  const bmiGaugeProgress = document.getElementById('bmi-gauge-circle');
+  const bmiScalePin = document.getElementById('bmi-scale-pin');
+  const bmiWhatsappCta = document.getElementById('bmi-whatsapp-cta');
+  const bmiLiveRegion = document.getElementById('bmi-live-region');
+
+  // Gauge circumference: 2 * PI * r (r=45 => 282.74)
+  const GAUGE_CIRCUMFERENCE = 282.74;
+
+  const calculateBMI = () => {
+    let isValid = true;
+
+    // Reset error messages
+    if (bmiHeightError) bmiHeightError.classList.add('hidden');
+    if (bmiWeightError) bmiWeightError.classList.add('hidden');
+    if (bmiHeightInput) bmiHeightInput.classList.remove('border-red-500');
+    if (bmiWeightInput) bmiWeightInput.classList.remove('border-red-500');
+
+    const heightVal = parseFloat(bmiHeightInput ? bmiHeightInput.value : '');
+    const weightVal = parseFloat(bmiWeightInput ? bmiWeightInput.value : '');
+
+    // Height Validation (50 cm to 250 cm)
+    if (isNaN(heightVal) || heightVal < 50 || heightVal > 250) {
+      if (bmiHeightError) {
+        bmiHeightError.textContent = 'Please enter a valid height (50 - 250 cm).';
+        bmiHeightError.classList.remove('hidden');
+      }
+      if (bmiHeightInput) bmiHeightInput.classList.add('border-red-500');
+      isValid = false;
+    }
+
+    // Weight Validation (10 kg to 300 kg)
+    if (isNaN(weightVal) || weightVal < 10 || weightVal > 300) {
+      if (bmiWeightError) {
+        bmiWeightError.textContent = 'Please enter a valid weight (10 - 300 kg).';
+        bmiWeightError.classList.remove('hidden');
+      }
+      if (bmiWeightInput) bmiWeightInput.classList.add('border-red-500');
+      isValid = false;
+    }
+
+    if (!isValid) {
+      if (bmiResultContainer) bmiResultContainer.classList.add('hidden');
+      return;
+    }
+
+    // Height in meters
+    const heightInMeters = heightVal / 100;
+    const rawBmi = weightVal / (heightInMeters * heightInMeters);
+    const bmi = parseFloat(rawBmi.toFixed(1));
+
+    // Category determination
+    let category = '';
+    let categoryClass = '';
+    let gaugeColor = '';
+    let desc = '';
+    let pinPercentage = 0;
+
+    if (bmi < 18.5) {
+      category = 'Underweight';
+      categoryClass = 'bg-sky-500/20 text-sky-400 border-sky-500/40';
+      gaugeColor = '#38bdf8';
+      desc = 'Your BMI is below the standard healthy range. Coach Gopal can customize a high-protein nutrition and progressive strength routine to safely build lean muscle mass.';
+      // Pin scale 0 to 18.5 mapped to 0% to 25%
+      pinPercentage = Math.max(5, (bmi / 18.5) * 25);
+    } else if (bmi >= 18.5 && bmi <= 24.9) {
+      category = 'Normal Weight';
+      categoryClass = 'bg-emerald-500/20 text-emerald-400 border-emerald-500/40';
+      gaugeColor = '#10b981';
+      desc = 'Great news! Your BMI is within the healthy range (18.5 – 24.9). Maintain your conditioning with our cardio zone and sculpted hypertrophy routines.';
+      // Pin scale 18.5 to 24.9 mapped to 25% to 50%
+      pinPercentage = 25 + ((bmi - 18.5) / 6.4) * 25;
+    } else if (bmi >= 25.0 && bmi <= 29.9) {
+      category = 'Overweight';
+      categoryClass = 'bg-amber-500/20 text-amber-400 border-amber-500/40';
+      gaugeColor = '#f59e0b';
+      desc = 'Your BMI is slightly above the standard range. Our air-conditioned cardio training and metabolic fat-burn circuits will help you shed weight while retaining strength.';
+      // Pin scale 25.0 to 29.9 mapped to 50% to 75%
+      pinPercentage = 50 + ((bmi - 25.0) / 4.9) * 25;
+    } else {
+      category = 'Obesity';
+      categoryClass = 'bg-red-500/20 text-red-400 border-red-500/40';
+      gaugeColor = '#ef4444';
+      desc = 'Your BMI indicates obesity. Step into Temple Fit Gym for a dedicated, respectful coaching plan combining steady-state cardio, core conditioning, and sustainable diet discipline.';
+      // Pin scale 30.0 to 45.0 mapped to 75% to 98%
+      pinPercentage = Math.min(96, 75 + ((bmi - 30.0) / 15.0) * 25);
+    }
+
+    // Populate Results UI
+    if (bmiValueDisplay) bmiValueDisplay.textContent = bmi;
+    if (bmiCategoryTitle) bmiCategoryTitle.textContent = category;
+
+    if (bmiCategoryBadge) {
+      bmiCategoryBadge.className = `px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider border ${categoryClass}`;
+      bmiCategoryBadge.textContent = category;
+    }
+
+    if (bmiDescription) bmiDescription.textContent = desc;
+
+    // Animate Circular Gauge
+    if (bmiGaugeProgress) {
+      bmiGaugeProgress.style.stroke = gaugeColor;
+      // Map BMI 15 to 40 across gauge circumference
+      const clampedBmi = Math.min(Math.max(bmi, 15), 40);
+      const ratio = (clampedBmi - 15) / 25; // 0 to 1
+      const offset = GAUGE_CIRCUMFERENCE - (ratio * GAUGE_CIRCUMFERENCE);
+      bmiGaugeProgress.style.strokeDashoffset = offset;
+    }
+
+    // Animate Linear Pin
+    if (bmiScalePin) {
+      bmiScalePin.style.left = `${pinPercentage}%`;
+    }
+
+    // Update WhatsApp CTA prefilled text with the user's BMI
+    if (bmiWhatsappCta) {
+      const msg = encodeURIComponent(`Hi Coach Gopal, I just checked my BMI on the Temple Fit Gym website. My BMI is ${bmi} (${category}). I want to know how to get started!`);
+      bmiWhatsappCta.href = `https://wa.me/919884557280?text=${msg}`;
+    }
+
+    // Accessible live region announcement
+    if (bmiLiveRegion) {
+      bmiLiveRegion.textContent = `Your calculated BMI is ${bmi}, which is classified as ${category}. Healthy BMI range is 18.5 to 24.9.`;
+    }
+
+    // Show Result Container with smooth fade
+    if (bmiResultContainer) {
+      bmiResultContainer.classList.remove('hidden');
+      bmiResultContainer.classList.add('animate-scale-up');
+      bmiResultContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+  };
+
+  const resetBMI = () => {
+    if (bmiHeightInput) {
+      bmiHeightInput.value = '170';
+      bmiHeightInput.classList.remove('border-red-500');
+    }
+    if (bmiWeightInput) {
+      bmiWeightInput.value = '70';
+      bmiWeightInput.classList.remove('border-red-500');
+    }
+    if (bmiHeightError) bmiHeightError.classList.add('hidden');
+    if (bmiWeightError) bmiWeightError.classList.add('hidden');
+    if (bmiResultContainer) bmiResultContainer.classList.add('hidden');
+    if (bmiGaugeProgress) bmiGaugeProgress.style.strokeDashoffset = GAUGE_CIRCUMFERENCE;
+  };
+
+  if (btnCalcBmi) {
+    btnCalcBmi.addEventListener('click', calculateBMI);
+  }
+
+  if (btnResetBmi) {
+    btnResetBmi.addEventListener('click', resetBMI);
+  }
+
+  // Enter key support for BMI form
+  [bmiHeightInput, bmiWeightInput].forEach(input => {
+    if (input) {
+      input.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          calculateBMI();
         }
       });
-
-      card.classList.add('active-plan', 'border-2', 'border-brand');
-      card.classList.remove('border-zinc-800');
-      if (selectBtn) {
-        selectBtn.textContent = 'Selected Plan ✓';
-        selectBtn.classList.remove('bg-zinc-900');
-        selectBtn.classList.add('bg-gradient-to-r', 'from-brand', 'to-brand-hover', 'shadow-glow-orange');
-      }
-
-      // Pre-select plan in contact form dropdown
-      const interestSelect = document.getElementById('contact-interest');
-      if (interestSelect && planName) {
-        for (let option of interestSelect.options) {
-          if (option.value.toLowerCase().includes(planName.toLowerCase()) || planName.toLowerCase().includes(option.value.toLowerCase())) {
-            interestSelect.value = option.value;
-            break;
-          }
-        }
-      }
-    };
-
-    card.addEventListener('click', selectPlan);
+    }
   });
 
 
   /* --------------------------------------------------------------------------
-     6. TRAINER PROFILE POPUP MODAL
+     6. MEMBERSHIP PLANS INTERACTION & FORM SYNC
      -------------------------------------------------------------------------- */
-  const trainerCards = document.querySelectorAll('.trainer-card');
-  const trainerModal = document.getElementById('trainer-modal');
-  const trainerModalClose = document.getElementById('trainer-modal-close');
-  const trainerModalBackdrop = document.getElementById('trainer-modal-backdrop');
-  const modalBookTrainerBtn = document.getElementById('modal-book-trainer-btn');
+  const pricingCards = document.querySelectorAll('.pricing-card');
+  const planSelectButtons = document.querySelectorAll('.plan-select-btn');
+  const interestSelect = document.getElementById('contact-interest');
 
-  const modalTrainerImg = document.getElementById('modal-trainer-img');
-  const modalTrainerName = document.getElementById('modal-trainer-name');
-  const modalTrainerTitle = document.getElementById('modal-trainer-title');
-  const modalTrainerExp = document.getElementById('modal-trainer-exp');
-  const modalTrainerBio = document.getElementById('modal-trainer-bio');
-  const modalTrainerSpecialties = document.getElementById('modal-trainer-specialties');
-  const modalTrainerCerts = document.getElementById('modal-trainer-certs');
+  const selectPlan = (selectedCard) => {
+    pricingCards.forEach(card => {
+      card.classList.remove('active-plan');
+      const btn = card.querySelector('.plan-select-btn');
+      if (btn) {
+        btn.textContent = 'Select Plan';
+        btn.classList.remove('btn-primary');
+        btn.classList.add('btn-secondary');
+      }
+    });
+
+    selectedCard.classList.add('active-plan');
+    const activeBtn = selectedCard.querySelector('.plan-select-btn');
+    if (activeBtn) {
+      activeBtn.textContent = 'Selected Plan ✓';
+      activeBtn.classList.remove('btn-secondary');
+      activeBtn.classList.add('btn-primary');
+    }
+
+    const planName = selectedCard.getAttribute('data-plan');
+    if (interestSelect && planName) {
+      for (let i = 0; i < interestSelect.options.length; i++) {
+        if (interestSelect.options[i].value === planName) {
+          interestSelect.selectedIndex = i;
+          break;
+        }
+      }
+    }
+  };
+
+  pricingCards.forEach(card => {
+    card.addEventListener('click', (e) => {
+      if (e.target.tagName !== 'BUTTON' && !e.target.closest('button')) {
+        selectPlan(card);
+      }
+    });
+  });
+
+  planSelectButtons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const parentCard = btn.closest('.pricing-card');
+      if (parentCard) {
+        selectPlan(parentCard);
+        // Scroll to contact form
+        const contactSection = document.getElementById('contact');
+        if (contactSection) {
+          const navHeight = navbar ? navbar.offsetHeight : 76;
+          window.scrollTo({
+            top: contactSection.offsetTop - navHeight,
+            behavior: 'smooth'
+          });
+        }
+      }
+    });
+  });
+
+
+  /* --------------------------------------------------------------------------
+     7. TRAINER PROFILE POPUP MODAL
+     -------------------------------------------------------------------------- */
+  const trainerModal = document.getElementById('trainer-modal');
+  const trainerModalBackdrop = document.getElementById('trainer-modal-backdrop');
+  const trainerModalClose = document.getElementById('trainer-modal-close');
+  const trainerCards = document.querySelectorAll('.trainer-card');
+
+  const modalImg = document.getElementById('modal-trainer-img');
+  const modalName = document.getElementById('modal-trainer-name');
+  const modalTitle = document.getElementById('modal-trainer-title');
+  const modalExp = document.getElementById('modal-trainer-exp');
+  const modalBio = document.getElementById('modal-trainer-bio');
+  const modalSpecialties = document.getElementById('modal-trainer-specialties');
+  const modalCerts = document.getElementById('modal-trainer-certs');
+  const modalBookBtn = document.getElementById('modal-book-trainer-btn');
 
   const openTrainerModal = (card) => {
     if (!trainerModal) return;
-    if (modalTrainerImg) modalTrainerImg.src = card.getAttribute('data-image') || '';
-    if (modalTrainerName) modalTrainerName.textContent = card.getAttribute('data-name') || '';
-    if (modalTrainerTitle) modalTrainerTitle.textContent = card.getAttribute('data-title') || '';
-    if (modalTrainerExp) modalTrainerExp.textContent = card.getAttribute('data-exp') || '';
-    if (modalTrainerBio) modalTrainerBio.textContent = card.getAttribute('data-bio') || '';
-    if (modalTrainerSpecialties) modalTrainerSpecialties.textContent = card.getAttribute('data-specialties') || '';
-    if (modalTrainerCerts) modalTrainerCerts.textContent = card.getAttribute('data-certs') || '';
+    const name = card.getAttribute('data-name') || '';
+    const title = card.getAttribute('data-title') || '';
+    const exp = card.getAttribute('data-exp') || '';
+    const img = card.getAttribute('data-image') || '';
+    const bio = card.getAttribute('data-bio') || '';
+    const specialties = card.getAttribute('data-specialties') || '';
+    const certs = card.getAttribute('data-certs') || '';
+
+    if (modalImg) modalImg.src = img;
+    if (modalName) modalName.textContent = name;
+    if (modalTitle) modalTitle.textContent = title;
+    if (modalExp) modalExp.textContent = exp;
+    if (modalBio) modalBio.textContent = bio;
+    if (modalSpecialties) modalSpecialties.textContent = specialties;
+    if (modalCerts) modalCerts.textContent = certs;
+
+    if (modalBookBtn) {
+      modalBookBtn.href = `https://wa.me/919884557280?text=Hi%20Temple%20Fit%20Gym,%20I%20am%20interested%20in%20training%20with%20${encodeURIComponent(name)}.`;
+    }
 
     trainerModal.classList.remove('hidden');
     document.body.classList.add('overflow-hidden');
@@ -210,13 +443,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (trainerModalClose) trainerModalClose.addEventListener('click', closeTrainerModal);
   if (trainerModalBackdrop) trainerModalBackdrop.addEventListener('click', closeTrainerModal);
-  if (modalBookTrainerBtn) modalBookTrainerBtn.addEventListener('click', closeTrainerModal);
 
 
   /* --------------------------------------------------------------------------
-     7. GALLERY LIGHTBOX MODAL WITH KEYBOARD NAVIGATION
+     8. GALLERY LIGHTBOX MODAL WITH KEYBOARD NAVIGATION
      -------------------------------------------------------------------------- */
-  const galleryItems = Array.from(document.querySelectorAll('.gallery-item'));
+  const galleryItems = document.querySelectorAll('.gallery-item');
   const lightboxModal = document.getElementById('lightbox-modal');
   const lightboxImg = document.getElementById('lightbox-img');
   const lightboxTitle = document.getElementById('lightbox-title');
@@ -226,18 +458,21 @@ document.addEventListener('DOMContentLoaded', () => {
   const lightboxNext = document.getElementById('lightbox-next');
 
   let currentGalleryIndex = 0;
+  const galleryData = Array.from(galleryItems).map(item => ({
+    src: item.getAttribute('data-img') || '',
+    title: item.getAttribute('data-title') || '',
+    category: item.getAttribute('data-category') || ''
+  }));
 
   const showLightboxImage = (index) => {
-    if (!galleryItems.length || !lightboxImg) return;
-    currentGalleryIndex = (index + galleryItems.length) % galleryItems.length;
-    const currentItem = galleryItems[currentGalleryIndex];
-    const highResUrl = currentItem.getAttribute('data-img') || '';
-    const title = currentItem.getAttribute('data-title') || '';
-    const category = currentItem.getAttribute('data-category') || '';
+    if (index < 0) index = galleryData.length - 1;
+    if (index >= galleryData.length) index = 0;
+    currentGalleryIndex = index;
 
-    lightboxImg.src = highResUrl;
-    if (lightboxTitle) lightboxTitle.textContent = title;
-    if (lightboxCategory) lightboxCategory.textContent = category;
+    const data = galleryData[currentGalleryIndex];
+    if (lightboxImg) lightboxImg.src = data.src;
+    if (lightboxTitle) lightboxTitle.textContent = data.title;
+    if (lightboxCategory) lightboxCategory.textContent = data.category;
   };
 
   const openLightbox = (index) => {
@@ -258,18 +493,14 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
-  if (lightboxPrev) {
-    lightboxPrev.addEventListener('click', (e) => {
-      e.stopPropagation();
-      showLightboxImage(currentGalleryIndex - 1);
-    });
-  }
-  if (lightboxNext) {
-    lightboxNext.addEventListener('click', (e) => {
-      e.stopPropagation();
-      showLightboxImage(currentGalleryIndex + 1);
-    });
-  }
+  if (lightboxPrev) lightboxPrev.addEventListener('click', (e) => {
+    e.stopPropagation();
+    showLightboxImage(currentGalleryIndex - 1);
+  });
+  if (lightboxNext) lightboxNext.addEventListener('click', (e) => {
+    e.stopPropagation();
+    showLightboxImage(currentGalleryIndex + 1);
+  });
 
   if (lightboxModal) {
     lightboxModal.addEventListener('click', (e) => {
@@ -277,104 +508,130 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Keyboard accessibility
-  window.addEventListener('keydown', (e) => {
+  // Global Keyboard shortcuts (Escape, ArrowLeft, ArrowRight)
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeLightbox();
+      closeTrainerModal();
+    }
     if (lightboxModal && !lightboxModal.classList.contains('hidden')) {
-      if (e.key === 'Escape') closeLightbox();
       if (e.key === 'ArrowLeft') showLightboxImage(currentGalleryIndex - 1);
       if (e.key === 'ArrowRight') showLightboxImage(currentGalleryIndex + 1);
-    } else if (trainerModal && !trainerModal.classList.contains('hidden')) {
-      if (e.key === 'Escape') closeTrainerModal();
     }
   });
 
 
   /* --------------------------------------------------------------------------
-     8. TESTIMONIALS CAROUSEL
+     9. TESTIMONIALS CAROUSEL (Prev, Next, Dots & Auto-Slide)
      -------------------------------------------------------------------------- */
-  const slides = document.querySelectorAll('.testimonial-slide');
-  const dots = document.querySelectorAll('.carousel-dot');
-  const prevBtn = document.getElementById('carousel-prev');
-  const nextBtn = document.getElementById('carousel-next');
+  const testimonialSlides = document.querySelectorAll('.testimonial-slide');
+  const carouselPrev = document.getElementById('carousel-prev');
+  const carouselNext = document.getElementById('carousel-next');
+  const carouselDots = document.querySelectorAll('.carousel-dot');
 
   let currentSlide = 0;
-  let slideInterval;
+  let carouselTimer = null;
 
-  const setSlide = (index) => {
-    if (!slides.length) return;
-    currentSlide = (index + slides.length) % slides.length;
+  const showSlide = (index) => {
+    if (testimonialSlides.length === 0) return;
+    if (index < 0) index = testimonialSlides.length - 1;
+    if (index >= testimonialSlides.length) index = 0;
+    currentSlide = index;
 
-    slides.forEach((slide, idx) => {
+    testimonialSlides.forEach((slide, idx) => {
       if (idx === currentSlide) {
         slide.classList.remove('hidden');
+        slide.classList.add('flex', 'animate-scale-up');
       } else {
         slide.classList.add('hidden');
+        slide.classList.remove('flex', 'animate-scale-up');
       }
     });
 
-    dots.forEach((dot, idx) => {
+    carouselDots.forEach((dot, idx) => {
       if (idx === currentSlide) {
-        dot.classList.add('w-8', 'bg-brand');
-        dot.classList.remove('w-2', 'bg-zinc-700');
+        dot.classList.add('w-8', 'bg-red-500');
+        dot.classList.remove('w-2.5', 'bg-zinc-700');
       } else {
-        dot.classList.remove('w-8', 'bg-brand');
-        dot.classList.add('w-2', 'bg-zinc-700');
+        dot.classList.remove('w-8', 'bg-red-500');
+        dot.classList.add('w-2.5', 'bg-zinc-700');
       }
     });
   };
 
-  const nextSlide = () => setSlide(currentSlide + 1);
-  const prevSlide = () => setSlide(currentSlide - 1);
+  const startAutoSlide = () => {
+    stopAutoSlide();
+    carouselTimer = setInterval(() => {
+      showSlide(currentSlide + 1);
+    }, 6000);
+  };
 
-  if (nextBtn) nextBtn.addEventListener('click', nextSlide);
-  if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+  const stopAutoSlide = () => {
+    if (carouselTimer) clearInterval(carouselTimer);
+  };
 
-  dots.forEach(dot => {
+  if (carouselPrev) {
+    carouselPrev.addEventListener('click', () => {
+      stopAutoSlide();
+      showSlide(currentSlide - 1);
+      startAutoSlide();
+    });
+  }
+
+  if (carouselNext) {
+    carouselNext.addEventListener('click', () => {
+      stopAutoSlide();
+      showSlide(currentSlide + 1);
+      startAutoSlide();
+    });
+  }
+
+  carouselDots.forEach((dot, idx) => {
     dot.addEventListener('click', () => {
-      const slideIndex = parseInt(dot.getAttribute('data-index') || '0', 10);
-      setSlide(slideIndex);
+      stopAutoSlide();
+      showSlide(idx);
+      startAutoSlide();
     });
   });
 
-  const startSlideTimer = () => {
-    slideInterval = setInterval(nextSlide, 6000);
-  };
-  const stopSlideTimer = () => {
-    clearInterval(slideInterval);
-  };
-
-  const carouselContainer = document.getElementById('testimonial-carousel');
-  if (carouselContainer) {
-    carouselContainer.addEventListener('mouseenter', stopSlideTimer);
-    carouselContainer.addEventListener('mouseleave', startSlideTimer);
-    startSlideTimer();
+  if (testimonialSlides.length > 0) {
+    showSlide(0);
+    startAutoSlide();
   }
 
 
   /* --------------------------------------------------------------------------
-     9. FAQ ACCORDION INTERACTION
+     10. FAQ ACCORDION (Smooth Single-Open Toggle)
      -------------------------------------------------------------------------- */
   const faqItems = document.querySelectorAll('.faq-item');
 
   faqItems.forEach(item => {
-    const toggle = item.querySelector('.faq-toggle');
+    const toggleBtn = item.querySelector('.faq-toggle');
     const content = item.querySelector('.faq-content');
     const icon = item.querySelector('.faq-icon');
 
-    if (toggle && content) {
-      toggle.addEventListener('click', () => {
+    if (toggleBtn && content) {
+      toggleBtn.addEventListener('click', () => {
         const isOpen = !content.classList.contains('hidden');
 
+        // Close other FAQ items for a clean single-open accordion UX
         faqItems.forEach(otherItem => {
           const otherContent = otherItem.querySelector('.faq-content');
           const otherIcon = otherItem.querySelector('.faq-icon');
-          if (otherContent) otherContent.classList.add('hidden');
-          if (otherIcon) otherIcon.classList.remove('rotate-180');
+          if (otherContent && otherContent !== content) {
+            otherContent.classList.add('hidden');
+            if (otherIcon) otherIcon.style.transform = 'rotate(0deg)';
+          }
         });
 
-        if (!isOpen) {
+        if (isOpen) {
+          content.classList.add('hidden');
+          if (icon) icon.style.transform = 'rotate(0deg)';
+          toggleBtn.setAttribute('aria-expanded', 'false');
+        } else {
           content.classList.remove('hidden');
-          if (icon) icon.classList.add('rotate-180');
+          if (icon) icon.style.transform = 'rotate(180deg)';
+          toggleBtn.setAttribute('aria-expanded', 'true');
         }
       });
     }
@@ -382,11 +639,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /* --------------------------------------------------------------------------
-     10. CONTACT FORM VALIDATION & SUCCESS TOAST
+     11. CONTACT FORM VALIDATION & SUCCESS TOAST
      -------------------------------------------------------------------------- */
   const contactForm = document.getElementById('contact-form');
   const nameInput = document.getElementById('contact-name');
   const emailInput = document.getElementById('contact-email');
+  const phoneInput = document.getElementById('contact-phone');
   const messageInput = document.getElementById('contact-message');
 
   const nameError = document.getElementById('name-error');
@@ -424,7 +682,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       // Message Field Validation
-      if (!messageInput || !messageInput.value.trim() || messageInput.value.trim().length < 10) {
+      if (!messageInput || !messageInput.value.trim() || messageInput.value.trim().length < 6) {
         if (messageError) messageError.classList.remove('hidden');
         if (messageInput) messageInput.classList.add('border-red-500');
         isValid = false;
@@ -434,13 +692,13 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       // Successful Client-Side Validation
-      if (isValid && toast) {
-        toast.classList.remove('hidden');
-
-        setTimeout(() => {
-          toast.classList.add('hidden');
-        }, 5000);
-
+      if (isValid) {
+        if (toast) {
+          toast.classList.remove('hidden');
+          setTimeout(() => {
+            toast.classList.add('hidden');
+          }, 5000);
+        }
         contactForm.reset();
       }
     });
@@ -452,31 +710,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* --------------------------------------------------------------------------
-     11. DYNAMIC 3D CARD TILT INTERACTION (Red & Black Athletic Physics)
-     -------------------------------------------------------------------------- */
-  const tiltCards = document.querySelectorAll('.card-3d-tilt');
-  
-  tiltCards.forEach(card => {
-    card.addEventListener('mousemove', (e) => {
-      const rect = card.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      
-      const centerX = rect.width / 2;
-      const centerY = rect.height / 2;
-      
-      // Calculate rotation angles
-      const rotateX = ((y - centerY) / centerY) * -8;
-      const rotateY = ((x - centerX) / centerX) * 8;
-      
-      card.style.transform = `perspective(1000px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) translateY(-8px) scale3d(1.02, 1.02, 1.02)`;
-    });
-    
-    card.addEventListener('mouseleave', () => {
-      card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px) scale3d(1, 1, 1)';
-    });
-  });
-
 });
-

@@ -3,13 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TEMPLE FIT GYM | Stop Wishing Start Doing - 3D A/C Unisex Fitness Center</title>
-  <meta name="description" content="Temple Fit Gym (TFG) - Fully Air Conditioned Unisex Fitness Center for Cardio and Strength Training. Prop: Gopal Periyasamy. Contact: 9884557280." />
+  <title>TEMPLE FIT GYM | Stop Wishing Start Doing — Premium A/C Unisex Fitness Center</title>
+  <meta name="description" content="Temple Fit Gym (TFG) - Fully Air Conditioned Unisex Fitness Center for Cardio and Heavy Strength Training. Prop: Gopal Periyasamy. Contact: 9884557280." />
+  <meta name="keywords" content="Temple Fit Gym, TFG, gym, fitness center, cardio training, strength training, A/C gym, unisex gym, Gopal Periyasamy, BMI calculator" />
 
-  <!-- Google Fonts: Oswald (Heading) & Inter (Body) -->
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="TEMPLE FIT GYM | Stop Wishing Start Doing" />
+  <meta property="og:description" content="Fully Air Conditioned Unisex Fitness Center for Cardio & Heavy Strength Training. Prop: Gopal Periyasamy." />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts: Montserrat (Heading) & Inter (Body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Oswald:wght@500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@600;700;800;900&family=Oswald:wght@600;700&display=swap" rel="stylesheet" />
 
   <!-- Font Awesome 6 Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -23,40 +29,32 @@
         extend: {
           colors: {
             brand: {
-              DEFAULT: '#ef4444', // Intense Crimson Red
-              hover: '#dc2626',   // Deep Red
-              dark: '#991b1b',    // Blood Red 
-              darker: '#7f1d1d',  // Burgundy Core
-              light: '#f87171',   // Light Crimson Accent
-              glow: 'rgba(239, 68, 68, 0.45)',
+              DEFAULT: '#ef4444',
+              hover: '#dc2626',
+              dark: '#b91c1c',
+              light: '#f87171',
             },
-            dark: {
-              950: '#050507', // Deepest Pitch Obsidian
-              900: '#0c0c10', // Dark Carbon Base
-              850: '#121217', // Elevate 1
-              800: '#181822', // Elevate 2
-              700: '#262634', // Border Neutral
+            obsidian: {
+              950: '#050505',
+              900: '#0a0a0a',
+              850: '#111111',
+              800: '#18181b',
+              700: '#27272a',
             }
           },
           fontFamily: {
-            heading: ['Oswald', 'sans-serif'],
+            heading: ['Montserrat', 'Oswald', 'sans-serif'],
             sans: ['Inter', 'sans-serif'],
-          },
-          boxShadow: {
-            'glow-red': '0 0 25px rgba(239, 68, 68, 0.45)',
-            'glow-red-lg': '0 0 50px rgba(239, 68, 68, 0.65)',
-            '3d-red': '0 6px 0 #991b1b, 0 12px 25px rgba(0,0,0,0.7)',
-            '3d-dark': '0 6px 0 #000000, 0 12px 25px rgba(0,0,0,0.8)',
           }
         }
       }
     };
   </script>
 
-  <!-- Modular 3D Red & Black Styling Engine -->
+  <!-- Modern Commercial Stylesheet -->
   <link rel="stylesheet" href="css/style.css" />
 
-  <!-- Schema.org JSON-LD Structured Data for Local Gym Business -->
+  <!-- Schema.org JSON-LD Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -98,46 +96,47 @@
   </script>
 </head>
 
-<body class="bg-dark-950 text-zinc-100 font-sans antialiased selection:bg-brand selection:text-white overflow-x-hidden bg-carbon-pattern">
+<body class="bg-obsidian-950 text-zinc-100 font-sans antialiased selection:bg-brand selection:text-white overflow-x-hidden">
 
   <!-- ========================================================================= -->
   <!-- 1. NAVBAR                                                                 -->
   <!-- ========================================================================= -->
-  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-dark-950/85 backdrop-blur-md border-b border-red-950/40">
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent border-b border-transparent">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
         
-        <!-- Gym Logo / Name: 3D Red Shield Logo -->
-        <a href="#home" class="flex items-center gap-3.5 group">
-          <div class="relative transition-transform duration-300 group-hover:scale-105 filter drop-shadow-[0_4px_12px_rgba(239,68,68,0.35)]">
-            <img src="assets/logo.svg" alt="Temple Fit Gym 3D Logo" class="h-12 w-auto max-w-[200px] sm:max-w-[240px] object-contain" />
-          </div>
+        <!-- Gym Logo with prominent 'M' in GYM -->
+        <a href="#home" class="flex items-center gap-3 group" aria-label="Temple Fit Gym Home">
+          <img src="assets/logo.svg" alt="Temple Fit Gym Logo" class="h-11 sm:h-12 w-auto object-contain transition-transform duration-200 group-hover:scale-105" />
         </a>
 
-        <!-- Desktop Navigation Links -->
-        <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold tracking-wide text-zinc-300">
-          <a href="#home" class="nav-link hover:text-brand transition-colors">Home</a>
-          <a href="#about" class="nav-link hover:text-brand transition-colors">About</a>
-          <a href="#services" class="nav-link hover:text-brand transition-colors">Services</a>
-          <a href="#pricing" class="nav-link hover:text-brand transition-colors">Fees Structure</a>
-          <a href="#trainers" class="nav-link hover:text-brand transition-colors">Trainers</a>
-          <a href="#gallery" class="nav-link hover:text-brand transition-colors">Gallery</a>
-          <a href="#testimonials" class="nav-link hover:text-brand transition-colors">Reviews</a>
-          <a href="#faq" class="nav-link hover:text-brand transition-colors">FAQ</a>
-          <a href="#contact" class="nav-link hover:text-brand transition-colors">Contact</a>
+        <!-- Desktop Navigation Links with ScrollSpy Active Indicator -->
+        <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold tracking-wide text-zinc-300" aria-label="Primary Navigation">
+          <a href="#home" class="nav-link active hover:text-white transition-colors">Home</a>
+          <a href="#about" class="nav-link hover:text-white transition-colors">About</a>
+          <a href="#services" class="nav-link hover:text-white transition-colors">Services</a>
+          <a href="#bmi" class="nav-link hover:text-white transition-colors flex items-center gap-1.5">
+            <span>BMI Check</span>
+            <span class="text-[10px] uppercase font-bold bg-brand/20 text-brand px-1.5 py-0.5 rounded border border-brand/30">Free</span>
+          </a>
+          <a href="#pricing" class="nav-link hover:text-white transition-colors">Plans</a>
+          <a href="#trainers" class="nav-link hover:text-white transition-colors">Trainers</a>
+          <a href="#gallery" class="nav-link hover:text-white transition-colors">Gallery</a>
+          <a href="#testimonials" class="nav-link hover:text-white transition-colors">Reviews</a>
+          <a href="#faq" class="nav-link hover:text-white transition-colors">FAQ</a>
+          <a href="#contact" class="nav-link hover:text-white transition-colors">Contact</a>
         </nav>
 
-        <!-- Navbar CTA Button (Desktop): 3D Beveled Red Button -->
+        <!-- Navbar CTA Button -->
         <div class="hidden lg:flex items-center gap-4">
-          <a href="#pricing" class="btn-3d-red px-6 py-2.5 rounded-xl font-bold text-sm tracking-wider uppercase flex items-center gap-2">
-            <i class="fa-solid fa-bolt text-xs"></i>
+          <a href="#pricing" class="btn-primary text-xs font-bold uppercase tracking-wider py-2.5 px-5">
             <span>Join Now</span>
           </a>
         </div>
 
         <!-- Mobile Hamburger Menu Button -->
         <div class="flex lg:hidden">
-          <button id="mobile-menu-btn" type="button" class="text-zinc-300 hover:text-brand p-2 focus:outline-none transition-colors" aria-label="Toggle navigation menu" aria-expanded="false">
+          <button id="mobile-menu-btn" type="button" class="text-zinc-300 hover:text-white p-2.5 focus:outline-none transition-colors" aria-label="Toggle navigation menu" aria-expanded="false">
             <i id="hamburger-icon" class="fa-solid fa-bars-staggered text-2xl"></i>
           </button>
         </div>
@@ -146,19 +145,23 @@
     </div>
 
     <!-- Mobile Drawer Menu -->
-    <div id="mobile-menu" class="lg:hidden hidden bg-dark-900/98 backdrop-blur-xl border-b border-red-950/60 transition-all duration-300 px-6 pt-4 pb-8">
+    <div id="mobile-menu" class="lg:hidden hidden bg-obsidian-900/98 backdrop-blur-2xl border-b border-white/10 transition-all duration-300 px-6 pt-4 pb-8">
       <div class="flex flex-col space-y-3 text-base font-semibold">
-        <a href="#home" class="mobile-nav-link text-zinc-200 hover:text-brand py-2.5 border-b border-zinc-800/60">Home</a>
-        <a href="#about" class="mobile-nav-link text-zinc-200 hover:text-brand py-2.5 border-b border-zinc-800/60">About Us</a>
-        <a href="#services" class="mobile-nav-link text-zinc-200 hover:text-brand py-2.5 border-b border-zinc-800/60">Services</a>
-        <a href="#pricing" class="mobile-nav-link text-zinc-200 hover:text-brand py-2.5 border-b border-zinc-800/60">Fees Structure</a>
-        <a href="#trainers" class="mobile-nav-link text-zinc-200 hover:text-brand py-2.5 border-b border-zinc-800/60">Trainers</a>
-        <a href="#gallery" class="mobile-nav-link text-zinc-200 hover:text-brand py-2.5 border-b border-zinc-800/60">Gallery</a>
-        <a href="#testimonials" class="mobile-nav-link text-zinc-200 hover:text-brand py-2.5 border-b border-zinc-800/60">Reviews</a>
-        <a href="#faq" class="mobile-nav-link text-zinc-200 hover:text-brand py-2.5 border-b border-zinc-800/60">FAQ</a>
-        <a href="#contact" class="mobile-nav-link text-zinc-200 hover:text-brand py-2.5">Contact</a>
+        <a href="#home" class="mobile-nav-link text-zinc-200 hover:text-brand py-2 border-b border-zinc-800/60">Home</a>
+        <a href="#about" class="mobile-nav-link text-zinc-200 hover:text-brand py-2 border-b border-zinc-800/60">About Us</a>
+        <a href="#services" class="mobile-nav-link text-zinc-200 hover:text-brand py-2 border-b border-zinc-800/60">Services</a>
+        <a href="#bmi" class="mobile-nav-link text-zinc-200 hover:text-brand py-2 border-b border-zinc-800/60 flex items-center justify-between">
+          <span>Quick BMI Check</span>
+          <span class="text-[10px] font-bold bg-brand/20 text-brand px-2 py-0.5 rounded border border-brand/30">Free</span>
+        </a>
+        <a href="#pricing" class="mobile-nav-link text-zinc-200 hover:text-brand py-2 border-b border-zinc-800/60">Fees & Plans</a>
+        <a href="#trainers" class="mobile-nav-link text-zinc-200 hover:text-brand py-2 border-b border-zinc-800/60">Trainers</a>
+        <a href="#gallery" class="mobile-nav-link text-zinc-200 hover:text-brand py-2 border-b border-zinc-800/60">Gallery</a>
+        <a href="#testimonials" class="mobile-nav-link text-zinc-200 hover:text-brand py-2 border-b border-zinc-800/60">Reviews</a>
+        <a href="#faq" class="mobile-nav-link text-zinc-200 hover:text-brand py-2 border-b border-zinc-800/60">FAQ</a>
+        <a href="#contact" class="mobile-nav-link text-zinc-200 hover:text-brand py-2">Contact</a>
         <div class="pt-4">
-          <a href="#pricing" class="mobile-nav-link btn-3d-red block text-center w-full py-3.5 rounded-xl font-bold uppercase tracking-wider">
+          <a href="#pricing" class="mobile-nav-link btn-primary block text-center w-full py-3.5 text-xs uppercase tracking-wider">
             Join Now
           </a>
         </div>
@@ -168,201 +171,250 @@
 
 
   <!-- ========================================================================= -->
-  <!-- 2. HOME / HERO SECTION (3D Chiseled Text & Red Radial Glow)              -->
+  <!-- 2. HOME / HERO SECTION (Modern 2-Column Athletic Commercial Layout)       -->
   <!-- ========================================================================= -->
-  <section id="home" class="relative min-h-screen flex items-center justify-center pt-24 pb-16 overflow-hidden bg-radial-red-spot">
-    <!-- Background Hero Image with Dark Obsidian Red Gradient Overlay -->
-    <div class="absolute inset-0 z-0">
-      <img 
-        src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1920&auto=format&fit=crop" 
-        alt="Temple Fit Gym Workout Floor" 
-        class="w-full h-full object-cover object-center transform scale-105 filter brightness-[0.22] contrast-130" 
-      />
-      <div class="absolute inset-0 bg-gradient-to-t from-dark-950 via-dark-950/70 to-transparent"></div>
-      <div class="absolute inset-0 bg-gradient-to-r from-dark-950 via-transparent to-dark-950/95"></div>
-      <!-- Radial Deep Red Spotlight Center -->
-      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(239,68,68,0.18)_0%,_transparent_70%)] pointer-events-none"></div>
+  <section id="home" class="relative min-h-screen flex flex-col justify-center pt-28 pb-16 overflow-hidden">
+    <!-- Subtle Ambient Radial Background -->
+    <div class="absolute inset-0 z-0 pointer-events-none">
+      <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-brand/10 rounded-full filter blur-[120px]"></div>
+      <div class="absolute bottom-10 right-1/4 w-80 h-80 bg-brand/5 rounded-full filter blur-[100px]"></div>
     </div>
 
-    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-8">
-      
-      <!-- 3D Announcement Tag: A/C & Unisex -->
-      <div class="inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-red-950/60 border border-red-600/40 text-brand text-xs sm:text-sm font-bold uppercase tracking-widest mb-6 shadow-[0_4px_20px_rgba(239,68,68,0.25)] backdrop-blur-md animate-pulse">
-        <i class="fa-solid fa-bolt text-brand text-sm"></i>
-        <span>100% A/C &bull; UNISEX FITNESS CENTER &bull; CARDIO + STRENGTH</span>
-      </div>
-
-      <!-- 3D Headline: "STOP WISHING START DOING" (From Client Banner) -->
-      <h1 class="font-heading text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight uppercase leading-[0.92] max-w-5xl mx-auto">
-        <span class="text-3d-white block">STOP WISHING.</span>
-        <span class="text-3d-red text-glow-red block mt-2">START DOING.</span>
-      </h1>
-
-      <!-- Strong Tagline with High Contrast Red Accents -->
-      <p class="mt-6 text-base sm:text-lg md:text-xl text-zinc-300 max-w-2xl mx-auto font-normal leading-relaxed">
-        Welcome to <strong class="text-white font-bold tracking-wide">Temple Fit Gym (TFG)</strong> — your high-intensity air-conditioned unisex fitness arena. Led by <span class="text-brand font-bold">Prop: Gopal Periyasamy</span>, we combine cutting-edge cardio and raw heavy iron to transform your body into a living temple.
-      </p>
-
-      <!-- Two 3D CTA Buttons -->
-      <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-5">
-        <a href="#pricing" class="btn-3d-red w-full sm:w-auto px-9 py-4 rounded-2xl font-black text-base uppercase tracking-wider flex items-center justify-center gap-2.5">
-          <span>View Fees Structure</span>
-          <i class="fa-solid fa-arrow-right text-sm"></i>
-        </a>
-        <a href="https://wa.me/919884557280" target="_blank" rel="noopener noreferrer" class="btn-3d-dark w-full sm:w-auto px-9 py-4 rounded-2xl font-bold text-base uppercase tracking-wider flex items-center justify-center gap-2.5">
-          <i class="fa-brands fa-whatsapp text-emerald-400 text-lg"></i>
-          <span>WhatsApp (9884557280)</span>
-        </a>
-      </div>
-
-      <!-- Quick Stats Row: 3D Tilt Cards -->
-      <div class="mt-16 sm:mt-20 pt-10 border-t border-red-950/60 grid grid-cols-2 md:grid-cols-4 gap-5 max-w-4xl mx-auto perspective-container">
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-auto w-full">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
         
-        <!-- Stat 1 -->
-        <div class="card-3d card-3d-tilt reveal p-5 rounded-2xl bg-dark-900/80 border border-zinc-800/80 hover:border-red-600/60 backdrop-blur-md transition-all shadow-lg text-center">
-          <div class="font-heading text-3xl sm:text-4xl font-black text-brand text-glow-red">1,500+</div>
-          <div class="text-xs sm:text-sm text-zinc-400 font-semibold uppercase tracking-wider mt-1">Happy Members</div>
+        <!-- Left Column: Hero Content & Taglines -->
+        <div class="lg:col-span-7 space-y-6 text-left">
+          
+          <!-- Category Tag -->
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand/10 border border-brand/25 text-brand text-xs font-bold uppercase tracking-widest">
+            <i class="fa-solid fa-bolt text-brand"></i>
+            <span>100% A/C &bull; UNISEX FITNESS CENTER</span>
+          </div>
+
+          <!-- Headline -->
+          <h1 class="font-heading text-4xl sm:text-6xl lg:text-7xl font-black uppercase tracking-tight text-white leading-[1.02]">
+            STOP WISHING.<br />
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand via-red-400 to-rose-300">
+              START DOING.
+            </span>
+          </h1>
+
+          <!-- Value Sub-Statements -->
+          <div class="text-lg sm:text-xl text-zinc-300 font-semibold space-y-1">
+            <p>Build strength. Build confidence. Build your best self.</p>
+          </div>
+
+          <!-- Description -->
+          <p class="text-sm sm:text-base text-zinc-400 max-w-xl font-normal leading-relaxed">
+            <strong class="text-white font-semibold">Temple Fit Gym (TFG)</strong> is your premier air-conditioned unisex fitness destination for high-efficiency cardio, heavy strength training, and guided transformation. Supervised directly by <span class="text-zinc-200 font-semibold">Prop: Gopal Periyasamy</span>.
+          </p>
+
+          <!-- Primary CTA Buttons -->
+          <div class="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+            <a href="#pricing" class="btn-primary text-sm font-bold uppercase tracking-wider py-4 px-8 flex items-center justify-center gap-2">
+              <span>View Membership Plans</span>
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+            <a href="https://wa.me/919884557280" target="_blank" rel="noopener noreferrer" class="btn-secondary text-sm font-semibold uppercase tracking-wider py-4 px-7 flex items-center justify-center gap-2.5">
+              <i class="fa-brands fa-whatsapp text-emerald-400 text-lg"></i>
+              <span>WhatsApp Us</span>
+            </a>
+          </div>
+
         </div>
 
-        <!-- Stat 2 -->
-        <div class="card-3d card-3d-tilt reveal p-5 rounded-2xl bg-dark-900/80 border border-zinc-800/80 hover:border-red-600/60 backdrop-blur-md transition-all shadow-lg text-center">
-          <div class="font-heading text-3xl sm:text-4xl font-black text-white">100% A/C</div>
-          <div class="text-xs sm:text-sm text-zinc-400 font-semibold uppercase tracking-wider mt-1">Air Conditioned</div>
-        </div>
+        <!-- Right Column: Powerful Framing Image + Verified Stat Badges -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative mx-auto max-w-md lg:max-w-none">
+            <!-- Framing Image Container -->
+            <div class="relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl bg-obsidian-900 group">
+              <img 
+                src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1000&auto=format&fit=crop" 
+                alt="Temple Fit Gym Training Arena" 
+                class="w-full h-[420px] sm:h-[480px] object-cover object-center group-hover:scale-105 transition-transform duration-700 filter brightness-90 contrast-110" 
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-obsidian-950 via-obsidian-950/20 to-transparent"></div>
+            </div>
 
-        <!-- Stat 3 -->
-        <div class="card-3d card-3d-tilt reveal p-5 rounded-2xl bg-dark-900/80 border border-zinc-800/80 hover:border-red-600/60 backdrop-blur-md transition-all shadow-lg text-center">
-          <div class="font-heading text-3xl sm:text-4xl font-black text-brand text-glow-red">UNISEX</div>
-          <div class="text-xs sm:text-sm text-zinc-400 font-semibold uppercase tracking-wider mt-1">Men & Women</div>
-        </div>
+            <!-- Floating Verified Stat Card 1 (Top Right) -->
+            <div class="absolute -top-4 -right-2 sm:-right-4 bg-obsidian-900/95 border border-white/10 p-4 rounded-2xl shadow-xl backdrop-blur-md flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-brand/10 border border-brand/30 flex items-center justify-center text-brand text-lg">
+                <i class="fa-solid fa-snowflake"></i>
+              </div>
+              <div>
+                <div class="font-heading text-lg font-bold text-white leading-none">100% A/C</div>
+                <div class="text-[11px] text-zinc-400 font-medium mt-0.5">Full Climate Comfort</div>
+              </div>
+            </div>
 
-        <!-- Stat 4 -->
-        <div class="card-3d card-3d-tilt reveal p-5 rounded-2xl bg-dark-900/80 border border-zinc-800/80 hover:border-red-600/60 backdrop-blur-md transition-all shadow-lg text-center">
-          <div class="font-heading text-3xl sm:text-4xl font-black text-white">CARDIO +</div>
-          <div class="text-xs sm:text-sm text-zinc-400 font-semibold uppercase tracking-wider mt-1">Heavy Strength</div>
+            <!-- Floating Verified Stat Card 2 (Bottom Left) -->
+            <div class="absolute -bottom-5 -left-2 sm:-left-4 bg-obsidian-900/95 border border-white/10 p-4 rounded-2xl shadow-xl backdrop-blur-md flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-brand/10 border border-brand/30 flex items-center justify-center text-brand text-lg">
+                <i class="fa-solid fa-users"></i>
+              </div>
+              <div>
+                <div class="font-heading text-lg font-bold text-white leading-none">1,500+</div>
+                <div class="text-[11px] text-zinc-400 font-medium mt-0.5">Active Members &bull; Unisex</div>
+              </div>
+            </div>
+
+          </div>
         </div>
 
       </div>
+    </div>
 
+
+    <!-- ======================================================================= -->
+    <!-- HERO QUICK ACTIONS (Immediate 3 Highly Clickable Cards)                 -->
+    <!-- ======================================================================= -->
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full mt-14 sm:mt-16">
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        
+        <!-- Action 1: BMI Check -->
+        <a href="#bmi" class="gym-card p-5 flex items-center gap-4 group hover:border-brand/40">
+          <div class="w-12 h-12 rounded-xl bg-brand/10 border border-brand/20 flex items-center justify-center text-brand text-xl group-hover:bg-brand group-hover:text-white transition-all duration-200">
+            <i class="fa-solid fa-calculator"></i>
+          </div>
+          <div>
+            <div class="text-xs font-bold text-brand uppercase tracking-wider">Free Health Tool</div>
+            <div class="text-base font-heading font-bold text-white group-hover:text-brand transition-colors">Quick BMI Check</div>
+            <div class="text-xs text-zinc-400">Check your BMI instantly &rarr;</div>
+          </div>
+        </a>
+
+        <!-- Action 2: Membership -->
+        <a href="#pricing" class="gym-card p-5 flex items-center gap-4 group hover:border-brand/40">
+          <div class="w-12 h-12 rounded-xl bg-brand/10 border border-brand/20 flex items-center justify-center text-brand text-xl group-hover:bg-brand group-hover:text-white transition-all duration-200">
+            <i class="fa-solid fa-tags"></i>
+          </div>
+          <div>
+            <div class="text-xs font-bold text-brand uppercase tracking-wider">Fees & Structure</div>
+            <div class="text-base font-heading font-bold text-white group-hover:text-brand transition-colors">Membership Plans</div>
+            <div class="text-xs text-zinc-400">Starting from Rs. 708/mo &rarr;</div>
+          </div>
+        </a>
+
+        <!-- Action 3: Contact / Inquire -->
+        <a href="#contact" class="gym-card p-5 flex items-center gap-4 group hover:border-brand/40">
+          <div class="w-12 h-12 rounded-xl bg-brand/10 border border-brand/20 flex items-center justify-center text-brand text-xl group-hover:bg-brand group-hover:text-white transition-all duration-200">
+            <i class="fa-solid fa-phone"></i>
+          </div>
+          <div>
+            <div class="text-xs font-bold text-brand uppercase tracking-wider">Get In Touch</div>
+            <div class="text-base font-heading font-bold text-white group-hover:text-brand transition-colors">Talk To Coach Gopal</div>
+            <div class="text-xs text-zinc-400">Call or WhatsApp 9884557280 &rarr;</div>
+          </div>
+        </a>
+
+      </div>
     </div>
   </section>
 
 
   <!-- ========================================================================= -->
-  <!-- 3. ABOUT SECTION                                                          -->
+  <!-- 3. ABOUT SECTION (Two-Column Commercial Layout)                           -->
   <!-- ========================================================================= -->
-  <section id="about" class="py-24 bg-dark-900 relative bg-carbon-pattern border-t border-b border-red-950/40">
+  <section id="about" class="py-24 bg-obsidian-900 border-t border-b border-white/5 relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
         
-        <!-- Left Visual Side with 3D Overlaid Badges -->
-        <div class="lg:col-span-6 reveal relative perspective-container">
-          <div class="relative mx-auto max-w-lg lg:max-w-none card-3d card-3d-tilt">
+        <!-- Left Column: Visual with Overlaid Coach Badge -->
+        <div class="lg:col-span-6 reveal relative">
+          <div class="relative mx-auto max-w-lg lg:max-w-none">
             <!-- Main Photo -->
-            <div class="overflow-hidden rounded-3xl border-2 border-red-950/60 shadow-[0_20px_50px_rgba(0,0,0,0.9)] relative group">
+            <div class="overflow-hidden rounded-3xl border border-white/10 shadow-2xl relative group">
               <img 
                 src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=1000&auto=format&fit=crop" 
                 alt="Athlete Training at Temple Fit Gym" 
-                class="w-full h-[450px] sm:h-[520px] object-cover object-center group-hover:scale-105 transition-transform duration-500 filter contrast-110" 
+                loading="lazy"
+                class="w-full h-[440px] sm:h-[500px] object-cover object-center group-hover:scale-105 transition-transform duration-500 filter brightness-95 contrast-105" 
               />
-              <div class="absolute inset-0 bg-gradient-to-t from-dark-950 via-dark-950/30 to-transparent"></div>
-              <div class="absolute inset-0 border border-red-500/20 rounded-3xl pointer-events-none"></div>
+              <div class="absolute inset-0 bg-gradient-to-t from-obsidian-950 via-transparent to-transparent opacity-80"></div>
             </div>
 
-            <!-- Floating 3D Badge: Leadership & Contact -->
-            <div class="absolute -bottom-6 -left-4 sm:left-6 bg-dark-900/95 border border-red-600/40 p-5 rounded-2xl shadow-3d-dark backdrop-blur-md flex items-center gap-4 animate-float">
-              <div class="w-13 h-13 p-3 rounded-xl bg-gradient-to-br from-red-600 to-red-900 text-white flex items-center justify-center text-2xl shadow-glow-red">
+            <!-- Overlaid Proprietor Badge -->
+            <div class="absolute -bottom-6 -left-2 sm:left-6 bg-obsidian-950/95 border border-white/10 p-5 rounded-2xl shadow-2xl backdrop-blur-md flex items-center gap-4">
+              <div class="w-12 h-12 rounded-xl bg-brand/15 border border-brand/30 flex items-center justify-center text-brand text-2xl">
                 <i class="fa-solid fa-id-badge"></i>
               </div>
               <div>
-                <div class="text-[11px] text-zinc-400 uppercase font-bold tracking-wider">Proprietor & Coach</div>
-                <div class="text-xl font-heading font-black text-white tracking-wide">Gopal Periyasamy</div>
-                <div class="text-xs text-brand font-bold flex items-center gap-1.5 mt-0.5">
+                <div class="text-xs text-zinc-400 uppercase font-semibold">Proprietor & Master Coach</div>
+                <div class="text-lg font-heading font-bold text-white">Gopal Periyasamy</div>
+                <div class="text-xs text-brand font-semibold flex items-center gap-1 mt-0.5">
                   <i class="fa-solid fa-phone text-[10px]"></i> 9884557280
                 </div>
               </div>
             </div>
-
-            <!-- Floating 3D Pill: A/C Unisex -->
-            <div class="absolute -top-4 -right-2 sm:right-6 bg-gradient-to-r from-red-600 to-red-700 text-white px-5 py-2.5 rounded-full font-black text-xs uppercase tracking-widest shadow-glow-red border border-red-400/40">
-              100% A/C Unisex Gym
-            </div>
           </div>
         </div>
 
-        <!-- Right Content Side -->
+        <!-- Right Column: Clean Hierarchy & Verified Features -->
         <div class="lg:col-span-6 reveal space-y-6">
-          <div class="inline-flex items-center gap-2.5 text-brand font-bold text-xs sm:text-sm uppercase tracking-widest">
-            <span class="w-8 h-[3px] bg-brand inline-block rounded-full shadow-glow-red"></span>
+          <div class="inline-flex items-center gap-2 text-brand font-bold text-xs uppercase tracking-widest">
+            <span class="w-6 h-[2px] bg-brand inline-block rounded-full"></span>
             About Temple Fit Gym
           </div>
 
-          <h2 class="font-heading text-3xl sm:text-5xl font-black uppercase tracking-tight text-white leading-tight">
-            YOUR BODY IS YOUR TEMPLE.<br />
-            <span class="text-brand text-glow-red">FORGE IT WITH STRENGTH.</span>
+          <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold uppercase tracking-tight text-white leading-tight">
+            A PLACE TO BUILD STRENGTH, DISCIPLINE & CONFIDENCE.
           </h2>
 
-          <!-- Mission -->
-          <p class="text-zinc-300 text-base leading-relaxed">
-            At <strong class="text-white">Temple Fit Gym (TFG)</strong>, we believe fitness is not an occasional hobby — it is a holy discipline that reshapes your life. Founded and personally supervised by <strong class="text-white">Prop: Gopal Periyasamy</strong>, our fully air-conditioned unisex facility was built to provide premium athletic fitness access with complete cardio setups and heavy strength equipment at unbeatable fee rates.
+          <p class="text-zinc-300 text-sm sm:text-base leading-relaxed">
+            <strong class="text-white">Temple Fit Gym (TFG)</strong> provides a professional fitness environment for people who want to improve their physical strength, cardiovascular endurance, and overall lifestyle. Founded and personally supervised by <strong class="text-white">Prop: Gopal Periyasamy</strong>, our facility is engineered to deliver results without intimidating barriers.
           </p>
 
-          <!-- Philosophy -->
           <p class="text-zinc-400 text-sm leading-relaxed">
-            Whether your target is rapid fat reduction, lean muscle hypertrophy, or building high cardiovascular stamina, our respectful community and disciplined trainers ensure men and women train safely, confidently, and effectively.
+            Whether your goal is shedding weight, building sculpted muscle, or simply adopting a disciplined daily routine, our welcoming unisex community ensures men and women train safely, comfortably, and productively.
           </p>
 
-          <!-- Why Choose Us Grid: 3D Feature Tiles -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+          <!-- Verified Feature Checklist -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-2">
             
-            <div class="flex items-start gap-3.5 p-4 rounded-2xl bg-dark-950/80 border border-zinc-800 hover:border-red-600/40 transition-colors">
-              <div class="w-9 h-9 rounded-lg bg-red-950/60 border border-red-600/40 flex items-center justify-center text-brand text-base flex-shrink-0 mt-0.5">
-                <i class="fa-solid fa-snowflake"></i>
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-obsidian-950 border border-white/5">
+              <div class="w-7 h-7 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-sm flex-shrink-0">
+                <i class="fa-solid fa-check"></i>
               </div>
-              <div>
-                <h4 class="text-white font-bold text-sm uppercase font-heading tracking-wide">100% Full A/C Comfort</h4>
-                <p class="text-zinc-400 text-xs mt-1">High-grade air conditioning to keep high-intensity workouts cool, fresh, and energetic.</p>
-              </div>
+              <span class="text-xs sm:text-sm text-zinc-200 font-medium">100% Air-Conditioned Facility</span>
             </div>
 
-            <div class="flex items-start gap-3.5 p-4 rounded-2xl bg-dark-950/80 border border-zinc-800 hover:border-red-600/40 transition-colors">
-              <div class="w-9 h-9 rounded-lg bg-red-950/60 border border-red-600/40 flex items-center justify-center text-brand text-base flex-shrink-0 mt-0.5">
-                <i class="fa-solid fa-venus-mars"></i>
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-obsidian-950 border border-white/5">
+              <div class="w-7 h-7 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-sm flex-shrink-0">
+                <i class="fa-solid fa-check"></i>
               </div>
-              <div>
-                <h4 class="text-white font-bold text-sm uppercase font-heading tracking-wide">Safe Unisex Center</h4>
-                <p class="text-zinc-400 text-xs mt-1">A welcoming, respectful training environment curated for both men and women.</p>
-              </div>
+              <span class="text-xs sm:text-sm text-zinc-200 font-medium">Safe Unisex Environment</span>
             </div>
 
-            <div class="flex items-start gap-3.5 p-4 rounded-2xl bg-dark-950/80 border border-zinc-800 hover:border-red-600/40 transition-colors">
-              <div class="w-9 h-9 rounded-lg bg-red-950/60 border border-red-600/40 flex items-center justify-center text-brand text-base flex-shrink-0 mt-0.5">
-                <i class="fa-solid fa-dumbbell"></i>
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-obsidian-950 border border-white/5">
+              <div class="w-7 h-7 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-sm flex-shrink-0">
+                <i class="fa-solid fa-check"></i>
               </div>
-              <div>
-                <h4 class="text-white font-bold text-sm uppercase font-heading tracking-wide">Cardio + Heavy Strength</h4>
-                <p class="text-zinc-400 text-xs mt-1">Olympic barbells, calibrated plates, squat racks, and motorized cardio stations.</p>
-              </div>
+              <span class="text-xs sm:text-sm text-zinc-200 font-medium">Modern Cardio Equipment</span>
             </div>
 
-            <div class="flex items-start gap-3.5 p-4 rounded-2xl bg-dark-950/80 border border-zinc-800 hover:border-red-600/40 transition-colors">
-              <div class="w-9 h-9 rounded-lg bg-red-950/60 border border-red-600/40 flex items-center justify-center text-brand text-base flex-shrink-0 mt-0.5">
-                <i class="fa-solid fa-indian-rupee-sign"></i>
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-obsidian-950 border border-white/5">
+              <div class="w-7 h-7 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-sm flex-shrink-0">
+                <i class="fa-solid fa-check"></i>
               </div>
-              <div>
-                <h4 class="text-white font-bold text-sm uppercase font-heading tracking-wide">Best Value Pricing</h4>
-                <p class="text-zinc-400 text-xs mt-1">Direct from poster: 1-Year at Rs. 8,499/- (Only Rs. 708/mo) with zero hidden fees.</p>
+              <span class="text-xs sm:text-sm text-zinc-200 font-medium">Heavy Strength Free Weights</span>
+            </div>
+
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-obsidian-950 border border-white/5 sm:col-span-2">
+              <div class="w-7 h-7 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-sm flex-shrink-0">
+                <i class="fa-solid fa-check"></i>
               </div>
+              <span class="text-xs sm:text-sm text-zinc-200 font-medium">Supportive & Disciplined Training Atmosphere</span>
             </div>
 
           </div>
 
-          <!-- About CTA: 3D Button -->
-          <div class="pt-4">
-            <a href="#pricing" class="btn-3d-red inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-bold text-xs uppercase tracking-wider">
-              <span>View Official Fees Structure</span>
-              <i class="fa-solid fa-arrow-right"></i>
+          <!-- About CTA Link -->
+          <div class="pt-2">
+            <a href="#pricing" class="inline-flex items-center gap-2 text-brand font-bold text-sm hover:text-white transition-colors group">
+              <span>View Our Official Fees & Packages</span>
+              <i class="fa-solid fa-arrow-right transform group-hover:translate-x-1 transition-transform"></i>
             </a>
           </div>
 
@@ -375,188 +427,242 @@
 
 
   <!-- ========================================================================= -->
-  <!-- 4. SERVICES SECTION (3D Perspective Interactive Cards)                   -->
+  <!-- 4. SERVICES SECTION (Clean Modern Commercial Cards)                       -->
   <!-- ========================================================================= -->
-  <section id="services" class="py-24 bg-dark-950 relative">
+  <section id="services" class="py-24 bg-obsidian-950 relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <!-- Section Header -->
       <div class="text-center max-w-3xl mx-auto mb-16 reveal">
         <div class="inline-flex items-center gap-2 text-brand font-bold text-xs uppercase tracking-widest mb-2">
-          <span class="w-8 h-[3px] bg-brand inline-block rounded-full shadow-glow-red"></span>
+          <span class="w-6 h-[2px] bg-brand inline-block rounded-full"></span>
           Training Programs
-          <span class="w-8 h-[3px] bg-brand inline-block rounded-full shadow-glow-red"></span>
+          <span class="w-6 h-[2px] bg-brand inline-block rounded-full"></span>
         </div>
-        <h2 class="font-heading text-4xl sm:text-5xl font-black uppercase tracking-tight text-white">
-          Cardio & Strength Training Services
+        <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold uppercase tracking-tight text-white">
+          CARDIO & STRENGTH SERVICES
         </h2>
-        <p class="mt-4 text-zinc-400 text-base">
-          All-inclusive athletic coaching tailored for beginners, fitness enthusiasts, and dedicated lifters.
+        <p class="mt-4 text-zinc-400 text-sm sm:text-base">
+          Structured, results-oriented training programs tailored for beginners, enthusiasts, and dedicated lifters.
         </p>
       </div>
 
-      <!-- Services Grid: 6 3D Tilt Cards -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 perspective-container">
+      <!-- Services Grid: 6 Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
         
         <!-- Service 1: Strength Training -->
-        <div class="card-3d card-3d-tilt reveal group relative bg-dark-900 rounded-3xl overflow-hidden border border-zinc-800/80 hover:border-red-600/70 transition-all duration-300 shadow-xl">
-          <div class="h-52 overflow-hidden relative">
-            <img 
-              src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=800&auto=format&fit=crop" 
-              alt="Heavy Strength Training at Temple Fit Gym" 
-              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 filter contrast-115" 
-            />
-            <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/40 to-transparent"></div>
-            <div class="absolute top-4 left-4 w-12 h-12 rounded-2xl bg-gradient-to-br from-red-600 to-red-900 text-white flex items-center justify-center text-xl shadow-glow-red border border-red-400/30">
-              <i class="fa-solid fa-dumbbell"></i>
+        <div class="gym-card reveal overflow-hidden flex flex-col justify-between group">
+          <div>
+            <div class="h-48 overflow-hidden relative">
+              <img 
+                src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=800&auto=format&fit=crop" 
+                alt="Strength Training at Temple Fit Gym" 
+                loading="lazy"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 filter brightness-90" 
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-obsidian-900 via-obsidian-900/30 to-transparent"></div>
+              <div class="absolute top-4 left-4 w-10 h-10 rounded-xl bg-brand text-white flex items-center justify-center text-lg shadow-lg">
+                <i class="fa-solid fa-dumbbell"></i>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-heading text-xl font-bold uppercase text-white group-hover:text-brand transition-colors">
+                Strength Training
+              </h3>
+              <p class="text-zinc-400 text-xs sm:text-sm mt-2.5 leading-relaxed">
+                Build raw physical strength and dense muscle with Olympic barbells, power racks, custom plates, and heavy dumbbell stations.
+              </p>
+              <div class="mt-4 flex flex-wrap gap-2">
+                <span class="text-[11px] font-medium bg-zinc-800/80 text-zinc-300 px-2.5 py-1 rounded-md">Free Weights</span>
+                <span class="text-[11px] font-medium bg-zinc-800/80 text-zinc-300 px-2.5 py-1 rounded-md">Technique Coaching</span>
+              </div>
             </div>
           </div>
-          <div class="p-7">
-            <h3 class="font-heading text-2xl font-bold uppercase text-white group-hover:text-brand transition-colors">
-              Heavy Strength Training
-            </h3>
-            <p class="text-zinc-400 text-sm mt-3 leading-relaxed">
-              Build raw power and dense muscle with Olympic barbells, calibrated iron plates, power racks, and heavy dumbbells.
-            </p>
-            <div class="mt-5 flex flex-wrap gap-2">
-              <span class="text-[11px] font-semibold bg-zinc-800/90 text-zinc-300 px-3 py-1 rounded-lg border border-zinc-700/60">Free Weights</span>
-              <span class="text-[11px] font-semibold bg-zinc-800/90 text-zinc-300 px-3 py-1 rounded-lg border border-zinc-700/60">Form Coaching</span>
-            </div>
+          <div class="px-6 pb-6 pt-2">
+            <a href="#contact" class="inline-flex items-center gap-1.5 text-xs font-semibold text-brand hover:text-white transition-colors">
+              <span>Join Program</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
           </div>
         </div>
 
         <!-- Service 2: Cardio & Stamina -->
-        <div class="card-3d card-3d-tilt reveal group relative bg-dark-900 rounded-3xl overflow-hidden border border-zinc-800/80 hover:border-red-600/70 transition-all duration-300 shadow-xl">
-          <div class="h-52 overflow-hidden relative">
-            <img 
-              src="https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=800&auto=format&fit=crop" 
-              alt="Cardio at Temple Fit Gym" 
-              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 filter contrast-115" 
-            />
-            <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/40 to-transparent"></div>
-            <div class="absolute top-4 left-4 w-12 h-12 rounded-2xl bg-gradient-to-br from-red-600 to-red-900 text-white flex items-center justify-center text-xl shadow-glow-red border border-red-400/30">
-              <i class="fa-solid fa-heart-pulse"></i>
+        <div class="gym-card reveal overflow-hidden flex flex-col justify-between group">
+          <div>
+            <div class="h-48 overflow-hidden relative">
+              <img 
+                src="https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=800&auto=format&fit=crop" 
+                alt="Cardio at Temple Fit Gym" 
+                loading="lazy"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 filter brightness-90" 
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-obsidian-900 via-obsidian-900/30 to-transparent"></div>
+              <div class="absolute top-4 left-4 w-10 h-10 rounded-xl bg-brand text-white flex items-center justify-center text-lg shadow-lg">
+                <i class="fa-solid fa-heart-pulse"></i>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-heading text-xl font-bold uppercase text-white group-hover:text-brand transition-colors">
+                Cardio Training & Stamina
+              </h3>
+              <p class="text-zinc-400 text-xs sm:text-sm mt-2.5 leading-relaxed">
+                Improve endurance and cardiovascular health with high-efficiency motorized treadmills, spin bikes, and cross-trainers in our chilled A/C zone.
+              </p>
+              <div class="mt-4 flex flex-wrap gap-2">
+                <span class="text-[11px] font-medium bg-zinc-800/80 text-zinc-300 px-2.5 py-1 rounded-md">A/C Zone</span>
+                <span class="text-[11px] font-medium bg-zinc-800/80 text-zinc-300 px-2.5 py-1 rounded-md">Heart Health</span>
+              </div>
             </div>
           </div>
-          <div class="p-7">
-            <h3 class="font-heading text-2xl font-bold uppercase text-white group-hover:text-brand transition-colors">
-              Cardio Zone & Stamina
-            </h3>
-            <p class="text-zinc-400 text-sm mt-3 leading-relaxed">
-              High-efficiency motorized treadmills, spin bikes, and cross-trainers in our chilled air-conditioned cardio section.
-            </p>
-            <div class="mt-5 flex flex-wrap gap-2">
-              <span class="text-[11px] font-semibold bg-zinc-800/90 text-zinc-300 px-3 py-1 rounded-lg border border-zinc-700/60">A/C Cardio Area</span>
-              <span class="text-[11px] font-semibold bg-zinc-800/90 text-zinc-300 px-3 py-1 rounded-lg border border-zinc-700/60">Calorie Burn</span>
-            </div>
+          <div class="px-6 pb-6 pt-2">
+            <a href="#contact" class="inline-flex items-center gap-1.5 text-xs font-semibold text-brand hover:text-white transition-colors">
+              <span>Join Program</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
           </div>
         </div>
 
         <!-- Service 3: Personal Training -->
-        <div class="card-3d card-3d-tilt reveal group relative bg-dark-900 rounded-3xl overflow-hidden border border-zinc-800/80 hover:border-red-600/70 transition-all duration-300 shadow-xl">
-          <div class="h-52 overflow-hidden relative">
-            <img 
-              src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=800&auto=format&fit=crop" 
-              alt="Personal Training" 
-              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 filter contrast-115" 
-            />
-            <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/40 to-transparent"></div>
-            <div class="absolute top-4 left-4 w-12 h-12 rounded-2xl bg-gradient-to-br from-red-600 to-red-900 text-white flex items-center justify-center text-xl shadow-glow-red border border-red-400/30">
-              <i class="fa-solid fa-user-ninja"></i>
+        <div class="gym-card reveal overflow-hidden flex flex-col justify-between group">
+          <div>
+            <div class="h-48 overflow-hidden relative">
+              <img 
+                src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=800&auto=format&fit=crop" 
+                alt="Personal Training" 
+                loading="lazy"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 filter brightness-90" 
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-obsidian-900 via-obsidian-900/30 to-transparent"></div>
+              <div class="absolute top-4 left-4 w-10 h-10 rounded-xl bg-brand text-white flex items-center justify-center text-lg shadow-lg">
+                <i class="fa-solid fa-user-ninja"></i>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-heading text-xl font-bold uppercase text-white group-hover:text-brand transition-colors">
+                1-on-1 Personal Training
+              </h3>
+              <p class="text-zinc-400 text-xs sm:text-sm mt-2.5 leading-relaxed">
+                Accelerate results with individualized workout plans, posture correction, and focused mentorship from Coach Gopal.
+              </p>
+              <div class="mt-4 flex flex-wrap gap-2">
+                <span class="text-[11px] font-medium bg-zinc-800/80 text-zinc-300 px-2.5 py-1 rounded-md">Personalized</span>
+                <span class="text-[11px] font-medium bg-zinc-800/80 text-zinc-300 px-2.5 py-1 rounded-md">Diet Advice</span>
+              </div>
             </div>
           </div>
-          <div class="p-7">
-            <h3 class="font-heading text-2xl font-bold uppercase text-white group-hover:text-brand transition-colors">
-              1-on-1 Personal Training
-            </h3>
-            <p class="text-zinc-400 text-sm mt-3 leading-relaxed">
-              Accelerate your transformation with individual workout plans, posture audits, and dedicated coaching by Gopal Periyasamy.
-            </p>
-            <div class="mt-5 flex flex-wrap gap-2">
-              <span class="text-[11px] font-semibold bg-zinc-800/90 text-zinc-300 px-3 py-1 rounded-lg border border-zinc-700/60">Custom Routines</span>
-              <span class="text-[11px] font-semibold bg-zinc-800/90 text-zinc-300 px-3 py-1 rounded-lg border border-zinc-700/60">Personal Coach</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Service 4: Weight Loss -->
-        <div class="card-3d card-3d-tilt reveal group relative bg-dark-900 rounded-3xl overflow-hidden border border-zinc-800/80 hover:border-red-600/70 transition-all duration-300 shadow-xl">
-          <div class="h-52 overflow-hidden relative">
-            <img 
-              src="https://images.unsplash.com/photo-1434682881908-b43d0467b798?q=80&w=800&auto=format&fit=crop" 
-              alt="Weight Loss & Conditioning" 
-              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 filter contrast-115" 
-            />
-            <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/40 to-transparent"></div>
-            <div class="absolute top-4 left-4 w-12 h-12 rounded-2xl bg-gradient-to-br from-red-600 to-red-900 text-white flex items-center justify-center text-xl shadow-glow-red border border-red-400/30">
-              <i class="fa-solid fa-fire-flame-curved"></i>
-            </div>
-          </div>
-          <div class="p-7">
-            <h3 class="font-heading text-2xl font-bold uppercase text-white group-hover:text-brand transition-colors">
-              Weight Loss & Fat Reduction
-            </h3>
-            <p class="text-zinc-400 text-sm mt-3 leading-relaxed">
-              Targeted fat reduction programs combining high-sweat circuits and strength preservation for men and women.
-            </p>
-            <div class="mt-5 flex flex-wrap gap-2">
-              <span class="text-[11px] font-semibold bg-zinc-800/90 text-zinc-300 px-3 py-1 rounded-lg border border-zinc-700/60">Fat Loss Track</span>
-              <span class="text-[11px] font-semibold bg-zinc-800/90 text-zinc-300 px-3 py-1 rounded-lg border border-zinc-700/60">Body Toning</span>
-            </div>
+          <div class="px-6 pb-6 pt-2">
+            <a href="#contact" class="inline-flex items-center gap-1.5 text-xs font-semibold text-brand hover:text-white transition-colors">
+              <span>Join Program</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
           </div>
         </div>
 
-        <!-- Service 5: Muscle Building -->
-        <div class="card-3d card-3d-tilt reveal group relative bg-dark-900 rounded-3xl overflow-hidden border border-zinc-800/80 hover:border-red-600/70 transition-all duration-300 shadow-xl">
-          <div class="h-52 overflow-hidden relative">
-            <img 
-              src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?q=80&w=800&auto=format&fit=crop" 
-              alt="Muscle Building" 
-              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 filter contrast-115" 
-            />
-            <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/40 to-transparent"></div>
-            <div class="absolute top-4 left-4 w-12 h-12 rounded-2xl bg-gradient-to-br from-red-600 to-red-900 text-white flex items-center justify-center text-xl shadow-glow-red border border-red-400/30">
-              <i class="fa-solid fa-medal"></i>
+        <!-- Service 4: Weight Loss & Fat Reduction -->
+        <div class="gym-card reveal overflow-hidden flex flex-col justify-between group">
+          <div>
+            <div class="h-48 overflow-hidden relative">
+              <img 
+                src="https://images.unsplash.com/photo-1434682881908-b43d0467b798?q=80&w=800&auto=format&fit=crop" 
+                alt="Weight Loss & Conditioning" 
+                loading="lazy"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 filter brightness-90" 
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-obsidian-900 via-obsidian-900/30 to-transparent"></div>
+              <div class="absolute top-4 left-4 w-10 h-10 rounded-xl bg-brand text-white flex items-center justify-center text-lg shadow-lg">
+                <i class="fa-solid fa-fire-flame-curved"></i>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-heading text-xl font-bold uppercase text-white group-hover:text-brand transition-colors">
+                Weight Loss & Fat Reduction
+              </h3>
+              <p class="text-zinc-400 text-xs sm:text-sm mt-2.5 leading-relaxed">
+                Calorie-burning circuit routines combining aerobic intervals with muscle preservation exercises for sustainable fat loss.
+              </p>
+              <div class="mt-4 flex flex-wrap gap-2">
+                <span class="text-[11px] font-medium bg-zinc-800/80 text-zinc-300 px-2.5 py-1 rounded-md">Fat Loss Track</span>
+                <span class="text-[11px] font-medium bg-zinc-800/80 text-zinc-300 px-2.5 py-1 rounded-md">Body Toning</span>
+              </div>
             </div>
           </div>
-          <div class="p-7">
-            <h3 class="font-heading text-2xl font-bold uppercase text-white group-hover:text-brand transition-colors">
-              Muscle Sculpting & Hypertrophy
-            </h3>
-            <p class="text-zinc-400 text-sm mt-3 leading-relaxed">
-              Targeted resistance machines and cable stations designed to sculpt every muscle group with continuous tension.
-            </p>
-            <div class="mt-5 flex flex-wrap gap-2">
-              <span class="text-[11px] font-semibold bg-zinc-800/90 text-zinc-300 px-3 py-1 rounded-lg border border-zinc-700/60">Cable Rigs</span>
-              <span class="text-[11px] font-semibold bg-zinc-800/90 text-zinc-300 px-3 py-1 rounded-lg border border-zinc-700/60">Chest & Arms</span>
-            </div>
+          <div class="px-6 pb-6 pt-2">
+            <a href="#contact" class="inline-flex items-center gap-1.5 text-xs font-semibold text-brand hover:text-white transition-colors">
+              <span>Join Program</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
           </div>
         </div>
 
-        <!-- Service 6: Cross Training -->
-        <div class="card-3d card-3d-tilt reveal group relative bg-dark-900 rounded-3xl overflow-hidden border border-zinc-800/80 hover:border-red-600/70 transition-all duration-300 shadow-xl">
-          <div class="h-52 overflow-hidden relative">
-            <img 
-              src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?q=80&w=800&auto=format&fit=crop" 
-              alt="Cross Training" 
-              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 filter contrast-115" 
-            />
-            <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/40 to-transparent"></div>
-            <div class="absolute top-4 left-4 w-12 h-12 rounded-2xl bg-gradient-to-br from-red-600 to-red-900 text-white flex items-center justify-center text-xl shadow-glow-red border border-red-400/30">
-              <i class="fa-solid fa-arrows-split-up-and-left"></i>
+        <!-- Service 5: Muscle Sculpting & Hypertrophy -->
+        <div class="gym-card reveal overflow-hidden flex flex-col justify-between group">
+          <div>
+            <div class="h-48 overflow-hidden relative">
+              <img 
+                src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?q=80&w=800&auto=format&fit=crop" 
+                alt="Muscle Building" 
+                loading="lazy"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 filter brightness-90" 
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-obsidian-900 via-obsidian-900/30 to-transparent"></div>
+              <div class="absolute top-4 left-4 w-10 h-10 rounded-xl bg-brand text-white flex items-center justify-center text-lg shadow-lg">
+                <i class="fa-solid fa-medal"></i>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-heading text-xl font-bold uppercase text-white group-hover:text-brand transition-colors">
+                Muscle Sculpting & Hypertrophy
+              </h3>
+              <p class="text-zinc-400 text-xs sm:text-sm mt-2.5 leading-relaxed">
+                Precision resistance machines and cable stations designed to stimulate hypertrophy and sculpt lean muscle definition.
+              </p>
+              <div class="mt-4 flex flex-wrap gap-2">
+                <span class="text-[11px] font-medium bg-zinc-800/80 text-zinc-300 px-2.5 py-1 rounded-md">Cable Rigs</span>
+                <span class="text-[11px] font-medium bg-zinc-800/80 text-zinc-300 px-2.5 py-1 rounded-md">Hypertrophy</span>
+              </div>
             </div>
           </div>
-          <div class="p-7">
-            <h3 class="font-heading text-2xl font-bold uppercase text-white group-hover:text-brand transition-colors">
-              Cross-Training & Functional
-            </h3>
-            <p class="text-zinc-400 text-sm mt-3 leading-relaxed">
-              Kettlebells, battle ropes, and functional conditioning circuits that elevate real-world athletic power and agility.
-            </p>
-            <div class="mt-5 flex flex-wrap gap-2">
-              <span class="text-[11px] font-semibold bg-zinc-800/90 text-zinc-300 px-3 py-1 rounded-lg border border-zinc-700/60">Battle Ropes</span>
-              <span class="text-[11px] font-semibold bg-zinc-800/90 text-zinc-300 px-3 py-1 rounded-lg border border-zinc-700/60">Kettlebells</span>
+          <div class="px-6 pb-6 pt-2">
+            <a href="#contact" class="inline-flex items-center gap-1.5 text-xs font-semibold text-brand hover:text-white transition-colors">
+              <span>Join Program</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Service 6: Cross-Training & Functional -->
+        <div class="gym-card reveal overflow-hidden flex flex-col justify-between group">
+          <div>
+            <div class="h-48 overflow-hidden relative">
+              <img 
+                src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?q=80&w=800&auto=format&fit=crop" 
+                alt="Cross Training" 
+                loading="lazy"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 filter brightness-90" 
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-obsidian-900 via-obsidian-900/30 to-transparent"></div>
+              <div class="absolute top-4 left-4 w-10 h-10 rounded-xl bg-brand text-white flex items-center justify-center text-lg shadow-lg">
+                <i class="fa-solid fa-arrows-split-up-and-left"></i>
+              </div>
             </div>
+            <div class="p-6">
+              <h3 class="font-heading text-xl font-bold uppercase text-white group-hover:text-brand transition-colors">
+                Cross-Training & Functional
+              </h3>
+              <p class="text-zinc-400 text-xs sm:text-sm mt-2.5 leading-relaxed">
+                Kettlebells, battle ropes, and functional conditioning circuits that elevate real-world athletic agility, core strength, and grit.
+              </p>
+              <div class="mt-4 flex flex-wrap gap-2">
+                <span class="text-[11px] font-medium bg-zinc-800/80 text-zinc-300 px-2.5 py-1 rounded-md">Battle Ropes</span>
+                <span class="text-[11px] font-medium bg-zinc-800/80 text-zinc-300 px-2.5 py-1 rounded-md">Mobility</span>
+              </div>
+            </div>
+          </div>
+          <div class="px-6 pb-6 pt-2">
+            <a href="#contact" class="inline-flex items-center gap-1.5 text-xs font-semibold text-brand hover:text-white transition-colors">
+              <span>Join Program</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
           </div>
         </div>
 
@@ -567,228 +673,470 @@
 
 
   <!-- ========================================================================= -->
-  <!-- 5. MEMBERSHIP PLANS SECTION (Exact Fees from Temple Fit Gym Poster)       -->
+  <!-- 5. QUICK BMI CHECK SECTION (REQUIRED FEATURE)                             -->
   <!-- ========================================================================= -->
-  <section id="pricing" class="py-24 bg-dark-900 relative bg-carbon-pattern border-t border-b border-red-950/40">
+  <section id="bmi" class="py-24 bg-obsidian-900 border-t border-b border-white/5 relative">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Heading -->
+      <div class="text-center max-w-3xl mx-auto mb-14 reveal">
+        <div class="inline-flex items-center gap-2 text-brand font-bold text-xs uppercase tracking-widest mb-2">
+          <span class="w-6 h-[2px] bg-brand inline-block rounded-full"></span>
+          Fitness Starting Point
+          <span class="w-6 h-[2px] bg-brand inline-block rounded-full"></span>
+        </div>
+        <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold uppercase tracking-tight text-white">
+          QUICK BMI CHECK
+        </h2>
+        <p class="mt-3 text-zinc-300 text-base font-medium">
+          Know your starting point. Take a quick BMI check before you begin your fitness journey.
+        </p>
+      </div>
+
+      <!-- Main BMI Card -->
+      <div class="gym-card p-6 sm:p-10 border border-white/10 shadow-2xl relative">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          
+          <!-- Left: Input Form Controls -->
+          <div class="lg:col-span-6 space-y-5">
+            <div>
+              <h3 class="font-heading text-xl font-bold uppercase text-white">Enter Your Measurements</h3>
+              <p class="text-zinc-400 text-xs mt-1">Provide your height and weight for an instant calculation.</p>
+            </div>
+
+            <!-- Height Input -->
+            <div>
+              <div class="flex items-center justify-between mb-1.5">
+                <label for="bmi-height" class="block text-xs font-bold uppercase tracking-wider text-zinc-300">
+                  Height <span class="text-brand">*</span>
+                </label>
+                <span class="text-[11px] text-zinc-400">Unit: Centimeters (cm)</span>
+              </div>
+              <div class="relative">
+                <input 
+                  type="number" 
+                  id="bmi-height" 
+                  value="170" 
+                  min="50" 
+                  max="250" 
+                  step="0.5"
+                  placeholder="e.g. 170"
+                  class="w-full px-4 py-3.5 rounded-xl bg-obsidian-950 border border-zinc-700 text-white placeholder-zinc-500 text-sm font-semibold focus:outline-none focus:border-brand focus:ring-1 focus:ring-brand transition-all" 
+                />
+                <span class="absolute right-4 top-1/2 -translate-y-1/2 text-xs font-bold text-zinc-400">cm</span>
+              </div>
+              <span id="bmi-height-error" class="text-red-500 text-xs mt-1 hidden">Please enter a valid height (50–250 cm).</span>
+            </div>
+
+            <!-- Weight Input -->
+            <div>
+              <div class="flex items-center justify-between mb-1.5">
+                <label for="bmi-weight" class="block text-xs font-bold uppercase tracking-wider text-zinc-300">
+                  Weight <span class="text-brand">*</span>
+                </label>
+                <span class="text-[11px] text-zinc-400">Unit: Kilograms (kg)</span>
+              </div>
+              <div class="relative">
+                <input 
+                  type="number" 
+                  id="bmi-weight" 
+                  value="70" 
+                  min="10" 
+                  max="300" 
+                  step="0.5"
+                  placeholder="e.g. 70"
+                  class="w-full px-4 py-3.5 rounded-xl bg-obsidian-950 border border-zinc-700 text-white placeholder-zinc-500 text-sm font-semibold focus:outline-none focus:border-brand focus:ring-1 focus:ring-brand transition-all" 
+                />
+                <span class="absolute right-4 top-1/2 -translate-y-1/2 text-xs font-bold text-zinc-400">kg</span>
+              </div>
+              <span id="bmi-weight-error" class="text-red-500 text-xs mt-1 hidden">Please enter a valid weight (10–300 kg).</span>
+            </div>
+
+            <!-- Optional Age & Gender (Not Mandatory) -->
+            <div class="grid grid-cols-2 gap-3 pt-1">
+              <div>
+                <label for="bmi-age" class="block text-[11px] font-semibold uppercase tracking-wider text-zinc-400 mb-1">
+                  Age <span class="text-zinc-500 font-normal">(Optional)</span>
+                </label>
+                <input 
+                  type="number" 
+                  id="bmi-age" 
+                  placeholder="e.g. 25" 
+                  class="w-full px-3 py-2.5 rounded-xl bg-obsidian-950 border border-zinc-800 text-white placeholder-zinc-600 text-xs focus:outline-none focus:border-brand"
+                />
+              </div>
+              <div>
+                <label for="bmi-gender" class="block text-[11px] font-semibold uppercase tracking-wider text-zinc-400 mb-1">
+                  Gender <span class="text-zinc-500 font-normal">(Optional)</span>
+                </label>
+                <select 
+                  id="bmi-gender" 
+                  class="w-full px-3 py-2.5 rounded-xl bg-obsidian-950 border border-zinc-800 text-white text-xs focus:outline-none focus:border-brand">
+                  <option value="">Select</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                  <option value="other">Prefer not to say</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex items-center gap-3 pt-2">
+              <button 
+                type="button" 
+                id="btn-calc-bmi" 
+                class="btn-primary flex-1 py-3.5 text-xs font-bold uppercase tracking-wider">
+                <i class="fa-solid fa-calculator mr-2"></i>
+                <span>Check My BMI</span>
+              </button>
+              <button 
+                type="button" 
+                id="btn-reset-bmi" 
+                class="btn-secondary py-3.5 px-4 text-xs font-semibold text-zinc-400 hover:text-white" 
+                title="Reset values">
+                <i class="fa-solid fa-rotate-right"></i>
+              </button>
+            </div>
+
+          </div>
+
+          <!-- Right: Circular Gauge & Dynamic Results UI -->
+          <div class="lg:col-span-6 bg-obsidian-950/80 rounded-2xl p-6 sm:p-8 border border-white/5 flex flex-col justify-between min-h-[340px]">
+            
+            <!-- Accessible Live Region -->
+            <div id="bmi-live-region" class="sr-only" aria-live="polite"></div>
+
+            <!-- Initial / Result Container -->
+            <div id="bmi-result-container">
+              
+              <!-- Result Header -->
+              <div class="flex items-center justify-between pb-4 border-b border-zinc-800">
+                <span class="text-xs font-bold uppercase tracking-wider text-zinc-400">Calculated Result</span>
+                <span id="bmi-category-badge" class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-500/20 text-emerald-400 border border-emerald-500/40">
+                  Normal Weight
+                </span>
+              </div>
+
+              <!-- Circular Progress Gauge & Score -->
+              <div class="flex flex-col sm:flex-row items-center gap-6 my-6">
+                <!-- SVG Circle Gauge -->
+                <div class="relative w-32 h-32 flex-shrink-0">
+                  <svg class="w-full h-full" viewBox="0 0 100 100">
+                    <circle class="bmi-gauge-bg" cx="50" cy="50" r="45" />
+                    <circle 
+                      id="bmi-gauge-circle" 
+                      class="bmi-gauge-progress" 
+                      cx="50" 
+                      cy="50" 
+                      r="45" 
+                      style="stroke-dasharray: 282.74; stroke-dashoffset: 178; stroke: #10b981;" 
+                    />
+                  </svg>
+                  <div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+                    <span id="bmi-value" class="font-heading text-3xl font-black text-white leading-none">24.2</span>
+                    <span class="text-[10px] uppercase font-bold text-zinc-400 tracking-wider mt-1">BMI Score</span>
+                  </div>
+                </div>
+
+                <!-- Explanation Details -->
+                <div class="space-y-1.5 text-center sm:text-left">
+                  <div id="bmi-category-title" class="font-heading text-xl font-bold uppercase text-white">
+                    Normal Weight
+                  </div>
+                  <p id="bmi-description" class="text-zinc-400 text-xs leading-relaxed">
+                    Great news! Your BMI is within the healthy range (18.5 – 24.9). Maintain your conditioning with our cardio zone and sculpted hypertrophy routines.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Linear Range Scale Bar -->
+              <div class="space-y-1.5 pt-2">
+                <div class="flex justify-between text-[10px] font-bold text-zinc-400 uppercase tracking-wider">
+                  <span>Underweight</span>
+                  <span class="text-emerald-400">Normal (18.5-24.9)</span>
+                  <span>Overweight</span>
+                  <span class="text-brand">Obese</span>
+                </div>
+                
+                <div class="relative">
+                  <div class="bmi-scale-bar">
+                    <div class="bmi-scale-under" title="Underweight: Below 18.5"></div>
+                    <div class="bmi-scale-normal" title="Normal: 18.5 - 24.9"></div>
+                    <div class="bmi-scale-over" title="Overweight: 25.0 - 29.9"></div>
+                    <div class="bmi-scale-obese" title="Obesity: 30.0+"></div>
+                  </div>
+                  <!-- Marker Pin -->
+                  <div 
+                    id="bmi-scale-pin" 
+                    class="bmi-scale-pin absolute -top-1 w-3 h-4 bg-white rounded-full shadow-lg border border-black" 
+                    style="left: 47%; transform: translateX(-50%);">
+                  </div>
+                </div>
+              </div>
+
+              <!-- Standard Range Note & Medical Disclaimer -->
+              <div class="mt-4 pt-4 border-t border-zinc-800 text-[11px] text-zinc-500 space-y-1">
+                <p class="font-medium text-zinc-400">Healthy BMI range: <strong>18.5 – 24.9</strong></p>
+                <p>Note: BMI is a general screening guide and does not directly measure body fat or muscular proportion.</p>
+              </div>
+
+              <!-- Next Step Gym CTA -->
+              <div class="mt-6 pt-5 border-t border-zinc-800/80 bg-obsidian-900 p-4 rounded-xl">
+                <div class="text-xs font-bold uppercase tracking-wider text-white">Ready to take the next step?</div>
+                <p class="text-zinc-400 text-xs mt-1">Our coaches can help you build a personalized cardio and strength routine based on your goals.</p>
+                
+                <div class="mt-4 flex flex-col sm:flex-row items-center gap-3">
+                  <a 
+                    id="bmi-whatsapp-cta" 
+                    href="https://wa.me/919884557280?text=Hi%20Coach%20Gopal,%20I%20just%20checked%20my%20BMI%20on%20the%20Temple%20Fit%20Gym%20website.%20I%20would%20like%20guidance." 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    class="btn-primary w-full sm:w-auto py-2.5 px-4 text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-emerald-300 text-sm"></i>
+                    <span>Talk to Temple Fit</span>
+                  </a>
+                  <a 
+                    href="#pricing" 
+                    class="btn-secondary w-full sm:w-auto py-2.5 px-4 text-xs font-semibold uppercase tracking-wider flex items-center justify-center">
+                    <span>View Membership Plans</span>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 6. MEMBERSHIP PLANS SECTION (Exact Fees Structure from Poster)            -->
+  <!-- ========================================================================= -->
+  <section id="pricing" class="py-24 bg-obsidian-950 relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <!-- Section Header -->
       <div class="text-center max-w-3xl mx-auto mb-14 reveal">
         <div class="inline-flex items-center gap-2 text-brand font-bold text-xs uppercase tracking-widest mb-2">
-          <span class="w-8 h-[3px] bg-brand inline-block rounded-full shadow-glow-red"></span>
+          <span class="w-6 h-[2px] bg-brand inline-block rounded-full"></span>
           Official Fees Structure
-          <span class="w-8 h-[3px] bg-brand inline-block rounded-full shadow-glow-red"></span>
+          <span class="w-6 h-[2px] bg-brand inline-block rounded-full"></span>
         </div>
-        <h2 class="font-heading text-4xl sm:text-5xl font-black uppercase tracking-tight text-white">
-          FEES STRUCTURE &mdash; CARDIO + STRENGTH
+        <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold uppercase tracking-tight text-white">
+          MEMBERSHIP PLANS &mdash; CARDIO + STRENGTH
         </h2>
-        <p class="mt-4 text-zinc-400 text-base">
+        <p class="mt-4 text-zinc-400 text-sm sm:text-base">
           100% Fully Air-Conditioned (A/C) facility for Men & Women. Select your preferred membership tenure.
         </p>
 
-        <!-- Pricing Mode Info Badge -->
-        <div class="mt-6 inline-flex items-center gap-2 px-5 py-2.5 rounded-2xl bg-dark-950 border border-red-600/30 text-xs text-zinc-300 shadow-md">
+        <!-- Fees Highlight Note -->
+        <div class="mt-6 inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-obsidian-900 border border-white/10 text-xs text-zinc-300 shadow-md">
           <i class="fa-solid fa-circle-check text-brand"></i>
           <span>First Month With Membership: <strong class="text-white font-bold">Rs. 2,000/-</strong> &bull; Monthly Renewal: <strong class="text-brand font-bold">Rs. 1,500/-</strong></span>
         </div>
       </div>
 
-      <!-- Pricing Cards Grid: 4 Tiers from Client Poster with 3D Tilt -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch pt-4 perspective-container">
+      <!-- Pricing Cards Grid: 4 Tiers from Poster -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch pt-2">
         
-        <!-- Plan 1: Monthly Fees -->
-        <div class="pricing-card card-3d card-3d-tilt reveal bg-dark-950 rounded-3xl p-6 border border-zinc-800 flex flex-col justify-between transition-all duration-300 hover:border-red-600/50 relative group cursor-pointer shadow-lg" data-plan="Monthly Plan">
+        <!-- Plan 1: Monthly -->
+        <div class="pricing-card gym-card p-6 flex flex-col justify-between relative group cursor-pointer" data-plan="Monthly Plan">
           <div>
             <div class="flex items-center justify-between">
-              <h3 class="font-heading text-2xl font-black uppercase text-white">Monthly</h3>
-              <span class="text-[10px] font-bold uppercase tracking-wider text-zinc-400 bg-zinc-850 px-2.5 py-1 rounded-full border border-zinc-700">Standard</span>
+              <h3 class="font-heading text-xl font-bold uppercase text-white">Monthly</h3>
+              <span class="text-[10px] font-semibold uppercase tracking-wider text-zinc-400 bg-zinc-800 px-2.5 py-1 rounded-full">Flexible</span>
             </div>
-            <p class="text-zinc-400 text-xs mt-2">Flexible month-to-month access.</p>
+            <p class="text-zinc-400 text-xs mt-2">Month-to-month access.</p>
             
             <!-- Price Display -->
             <div class="my-5 flex items-baseline gap-1">
-              <span class="text-xl font-bold text-zinc-400">Rs.</span>
-              <span class="font-heading text-4xl sm:text-5xl font-black text-white">1,500</span>
+              <span class="text-lg font-bold text-zinc-400">Rs.</span>
+              <span class="font-heading text-4xl sm:text-5xl font-extrabold text-white">1,500</span>
               <span class="text-zinc-400 text-xs font-semibold">/- mo</span>
             </div>
-            <div class="text-[11px] text-amber-400 font-semibold bg-amber-500/10 border border-amber-500/20 p-2.5 rounded-xl">
+            <div class="text-[11px] text-amber-400 font-medium bg-amber-500/10 border border-amber-500/20 p-2.5 rounded-lg">
               *First Month with Membership: Rs. 2,000/-
             </div>
 
             <!-- Features List -->
             <ul class="mt-6 space-y-3 text-xs text-zinc-300">
               <li class="flex items-center gap-2.5">
-                <i class="fa-solid fa-check text-brand font-bold"></i>
+                <i class="fa-solid fa-check text-brand"></i>
                 <span>Cardio + Strength Access</span>
               </li>
               <li class="flex items-center gap-2.5">
-                <i class="fa-solid fa-check text-brand font-bold"></i>
+                <i class="fa-solid fa-check text-brand"></i>
                 <span>100% Fully Air Conditioned</span>
               </li>
               <li class="flex items-center gap-2.5">
-                <i class="fa-solid fa-check text-brand font-bold"></i>
+                <i class="fa-solid fa-check text-brand"></i>
                 <span>Unisex Facility</span>
               </li>
               <li class="flex items-center gap-2.5">
-                <i class="fa-solid fa-check text-brand font-bold"></i>
+                <i class="fa-solid fa-check text-brand"></i>
                 <span>Locker & Dressing Room</span>
               </li>
             </ul>
           </div>
 
           <div class="mt-8">
-            <button type="button" class="plan-select-btn btn-3d-dark w-full py-3 rounded-xl font-bold text-xs uppercase tracking-wider">
-              Select Monthly
+            <button type="button" class="plan-select-btn btn-secondary w-full py-3 text-xs font-bold uppercase tracking-wider">
+              Select Plan
             </button>
           </div>
         </div>
 
         <!-- Plan 2: 3 Months -->
-        <div class="pricing-card card-3d card-3d-tilt reveal bg-dark-950 rounded-3xl p-6 border border-zinc-800 flex flex-col justify-between transition-all duration-300 hover:border-red-600/50 relative group cursor-pointer shadow-lg" data-plan="3 Months Plan">
+        <div class="pricing-card gym-card p-6 flex flex-col justify-between relative group cursor-pointer" data-plan="3 Months Plan">
           <div>
             <div class="flex items-center justify-between">
-              <h3 class="font-heading text-2xl font-black uppercase text-white">3 Months</h3>
-              <span class="text-[10px] font-bold uppercase tracking-wider text-brand bg-red-950/60 border border-red-600/40 px-2.5 py-1 rounded-full">Quarterly</span>
+              <h3 class="font-heading text-xl font-bold uppercase text-white">3 Months</h3>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-brand bg-brand/10 border border-brand/20 px-2.5 py-1 rounded-full">Quarterly</span>
             </div>
-            <p class="text-zinc-400 text-xs mt-2">Perfect for noticeable transformation.</p>
+            <p class="text-zinc-400 text-xs mt-2">Build steady consistency.</p>
             
             <!-- Price Display -->
             <div class="my-5 flex items-baseline gap-1">
-              <span class="text-xl font-bold text-zinc-400">Rs.</span>
-              <span class="font-heading text-4xl sm:text-5xl font-black text-white">3,999</span>
+              <span class="text-lg font-bold text-zinc-400">Rs.</span>
+              <span class="font-heading text-4xl sm:text-5xl font-extrabold text-white">3,999</span>
               <span class="text-zinc-400 text-xs font-semibold">/-</span>
             </div>
-            <div class="text-[11px] text-zinc-400 bg-zinc-900 p-2 rounded-xl border border-zinc-800">
+            <div class="text-[11px] text-zinc-400 bg-obsidian-950 p-2 rounded-lg border border-zinc-800">
               Only <strong class="text-white">Rs. 1,333/month</strong> (Save on renewal!)
             </div>
 
             <!-- Features List -->
             <ul class="mt-6 space-y-3 text-xs text-zinc-300">
               <li class="flex items-center gap-2.5">
-                <i class="fa-solid fa-check text-brand font-bold"></i>
+                <i class="fa-solid fa-check text-brand"></i>
                 <span>Complete Cardio + Strength</span>
               </li>
               <li class="flex items-center gap-2.5">
-                <i class="fa-solid fa-check text-brand font-bold"></i>
+                <i class="fa-solid fa-check text-brand"></i>
                 <span>A/C Unisex Gym Floor</span>
               </li>
               <li class="flex items-center gap-2.5">
-                <i class="fa-solid fa-check text-brand font-bold"></i>
+                <i class="fa-solid fa-check text-brand"></i>
                 <span>Membership Registration Included</span>
               </li>
               <li class="flex items-center gap-2.5">
-                <i class="fa-solid fa-check text-brand font-bold"></i>
+                <i class="fa-solid fa-check text-brand"></i>
                 <span>Workout Routine Guidance</span>
               </li>
             </ul>
           </div>
 
           <div class="mt-8">
-            <button type="button" class="plan-select-btn btn-3d-dark w-full py-3 rounded-xl font-bold text-xs uppercase tracking-wider">
-              Select 3 Months
+            <button type="button" class="plan-select-btn btn-secondary w-full py-3 text-xs font-bold uppercase tracking-wider">
+              Select Plan
             </button>
           </div>
         </div>
 
         <!-- Plan 3: 6 Months -->
-        <div class="pricing-card card-3d card-3d-tilt reveal bg-dark-950 rounded-3xl p-6 border border-zinc-800 flex flex-col justify-between transition-all duration-300 hover:border-red-600/50 relative group cursor-pointer shadow-lg" data-plan="6 Months Plan">
+        <div class="pricing-card gym-card p-6 flex flex-col justify-between relative group cursor-pointer" data-plan="6 Months Plan">
           <div>
             <div class="flex items-center justify-between">
-              <h3 class="font-heading text-2xl font-black uppercase text-white">6 Months</h3>
+              <h3 class="font-heading text-xl font-bold uppercase text-white">6 Months</h3>
               <span class="text-[10px] font-bold uppercase tracking-wider text-rose-400 bg-rose-950/60 border border-rose-600/40 px-2.5 py-1 rounded-full">Half-Year</span>
             </div>
-            <p class="text-zinc-400 text-xs mt-2">Substantial savings for committed members.</p>
+            <p class="text-zinc-400 text-xs mt-2">Substantial savings tier.</p>
             
             <!-- Price Display -->
             <div class="my-5 flex items-baseline gap-1">
-              <span class="text-xl font-bold text-zinc-400">Rs.</span>
-              <span class="font-heading text-4xl sm:text-5xl font-black text-white">6,499</span>
+              <span class="text-lg font-bold text-zinc-400">Rs.</span>
+              <span class="font-heading text-4xl sm:text-5xl font-extrabold text-white">6,499</span>
               <span class="text-zinc-400 text-xs font-semibold">/-</span>
             </div>
-            <div class="text-[11px] text-zinc-400 bg-zinc-900 p-2 rounded-xl border border-zinc-800">
+            <div class="text-[11px] text-zinc-400 bg-obsidian-950 p-2 rounded-lg border border-zinc-800">
               Only <strong class="text-white">Rs. 1,083/month</strong> (Big Savings!)
             </div>
 
             <!-- Features List -->
             <ul class="mt-6 space-y-3 text-xs text-zinc-300">
               <li class="flex items-center gap-2.5">
-                <i class="fa-solid fa-check text-brand font-bold"></i>
+                <i class="fa-solid fa-check text-brand"></i>
                 <span>Full 6 Months Unlimited Access</span>
               </li>
               <li class="flex items-center gap-2.5">
-                <i class="fa-solid fa-check text-brand font-bold"></i>
+                <i class="fa-solid fa-check text-brand"></i>
                 <span>Complete Cardio + Strength</span>
               </li>
               <li class="flex items-center gap-2.5">
-                <i class="fa-solid fa-check text-brand font-bold"></i>
+                <i class="fa-solid fa-check text-brand"></i>
                 <span>Full A/C Unisex Facilities</span>
               </li>
               <li class="flex items-center gap-2.5">
-                <i class="fa-solid fa-check text-brand font-bold"></i>
+                <i class="fa-solid fa-check text-brand"></i>
                 <span>Regular Progress Tracking</span>
               </li>
             </ul>
           </div>
 
           <div class="mt-8">
-            <button type="button" class="plan-select-btn btn-3d-dark w-full py-3 rounded-xl font-bold text-xs uppercase tracking-wider">
-              Select 6 Months
+            <button type="button" class="plan-select-btn btn-secondary w-full py-3 text-xs font-bold uppercase tracking-wider">
+              Select Plan
             </button>
           </div>
         </div>
 
-        <!-- Plan 4: 1 Year (Best Value / Poster Highlight) -->
-        <div class="pricing-card active-plan card-3d card-3d-tilt reveal bg-dark-850 rounded-3xl p-6 border-2 border-red-600 flex flex-col justify-between shadow-glow-red relative transition-all duration-300 cursor-pointer" data-plan="1 Year Annual Plan">
-          <!-- 3D Popular Ribbon -->
-          <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 px-4 py-1.5 rounded-full bg-gradient-to-r from-red-600 to-red-800 text-white font-black text-[11px] uppercase tracking-wider shadow-lg border border-red-400/40">
-            ⚡ Best Value &bull; Save Over 50%
+        <!-- Plan 4: 1 Year (Most Popular / Best Value from Poster) -->
+        <div class="pricing-card active-plan gym-card p-6 flex flex-col justify-between relative cursor-pointer border-2 border-brand" data-plan="1 Year Annual Plan">
+          <!-- Most Popular Ribbon -->
+          <div class="absolute -top-3.5 left-1/2 transform -translate-x-1/2 px-4 py-1 rounded-full bg-brand text-white font-black text-[10px] uppercase tracking-wider shadow-lg">
+            Most Popular &bull; Save 50%+
           </div>
 
           <div>
-            <div class="flex items-center justify-between mt-2">
-              <h3 class="font-heading text-2xl font-black uppercase text-white">1 Year</h3>
-              <span class="text-[10px] font-bold uppercase tracking-wider text-white bg-red-600 px-2.5 py-1 rounded-full shadow-glow-red">Annual</span>
+            <div class="flex items-center justify-between mt-1">
+              <h3 class="font-heading text-xl font-bold uppercase text-white">1 Year</h3>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-white bg-brand px-2.5 py-0.5 rounded-full">Annual</span>
             </div>
-            <p class="text-zinc-300 text-xs mt-2">Maximum value & ultimate body transformation.</p>
+            <p class="text-zinc-300 text-xs mt-2">Maximum transformation & value.</p>
             
             <!-- Price Display -->
             <div class="my-5 flex items-baseline gap-1">
-              <span class="text-xl font-bold text-brand">Rs.</span>
-              <span class="font-heading text-4xl sm:text-5xl font-black text-white text-glow-red">8,499</span>
+              <span class="text-lg font-bold text-brand">Rs.</span>
+              <span class="font-heading text-4xl sm:text-5xl font-black text-white">8,499</span>
               <span class="text-zinc-300 text-xs font-semibold">/- yr</span>
             </div>
-            <div class="text-[11px] text-white font-bold bg-gradient-to-r from-red-950 to-dark-900 border border-red-600/40 p-2.5 rounded-xl">
-              🔥 Only Rs. 708/month &mdash; Lowest Daily Rate!
+            <div class="text-[11px] text-white font-bold bg-brand/20 border border-brand/30 p-2.5 rounded-lg">
+              ⚡ Only Rs. 708/month &mdash; Best Commercial Rate!
             </div>
 
             <!-- Features List -->
             <ul class="mt-6 space-y-3 text-xs text-zinc-100 font-medium">
               <li class="flex items-center gap-2.5">
-                <i class="fa-solid fa-check text-brand font-black"></i>
+                <i class="fa-solid fa-check text-brand font-bold"></i>
                 <span class="font-bold text-white">Full 12 Months A/C Access</span>
               </li>
               <li class="flex items-center gap-2.5">
-                <i class="fa-solid fa-check text-brand font-black"></i>
+                <i class="fa-solid fa-check text-brand font-bold"></i>
                 <span>Complete Cardio + Heavy Strength</span>
               </li>
               <li class="flex items-center gap-2.5">
-                <i class="fa-solid fa-check text-brand font-black"></i>
+                <i class="fa-solid fa-check text-brand font-bold"></i>
                 <span>Zero Admission / Renewal Fees</span>
               </li>
               <li class="flex items-center gap-2.5">
-                <i class="fa-solid fa-check text-brand font-black"></i>
+                <i class="fa-solid fa-check text-brand font-bold"></i>
                 <span>Priority Locker Facility</span>
               </li>
               <li class="flex items-center gap-2.5">
-                <i class="fa-solid fa-check text-brand font-black"></i>
-                <span>Custom Diet & Workout Routine</span>
+                <i class="fa-solid fa-check text-brand font-bold"></i>
+                <span>Custom Diet & Routine Blueprint</span>
               </li>
             </ul>
           </div>
 
           <div class="mt-8">
-            <button type="button" class="plan-select-btn btn-3d-red w-full py-3.5 rounded-xl font-black text-xs uppercase tracking-wider">
-              Join 1-Year Plan
+            <button type="button" class="plan-select-btn btn-primary w-full py-3.5 text-xs font-bold uppercase tracking-wider">
+              Selected Plan ✓
             </button>
           </div>
         </div>
@@ -800,70 +1148,71 @@
 
 
   <!-- ========================================================================= -->
-  <!-- 6. TRAINERS SECTION (Proprietor & Certified Coaching Team)                -->
+  <!-- 7. TRAINERS SECTION (Proprietor & Certified Coaching Team)                -->
   <!-- ========================================================================= -->
-  <section id="trainers" class="py-24 bg-dark-950 relative">
+  <section id="trainers" class="py-24 bg-obsidian-900 border-t border-b border-white/5 relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <!-- Section Header -->
       <div class="text-center max-w-3xl mx-auto mb-16 reveal">
         <div class="inline-flex items-center gap-2 text-brand font-bold text-xs uppercase tracking-widest mb-2">
-          <span class="w-8 h-[3px] bg-brand inline-block rounded-full shadow-glow-red"></span>
-          Leadership & Coaching Team
-          <span class="w-8 h-[3px] bg-brand inline-block rounded-full shadow-glow-red"></span>
+          <span class="w-6 h-[2px] bg-brand inline-block rounded-full"></span>
+          Leadership & Mentors
+          <span class="w-6 h-[2px] bg-brand inline-block rounded-full"></span>
         </div>
-        <h2 class="font-heading text-4xl sm:text-5xl font-black uppercase tracking-tight text-white">
-          Certified Fitness Trainers
+        <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold uppercase tracking-tight text-white">
+          CERTIFIED FITNESS COACHES
         </h2>
-        <p class="mt-4 text-zinc-400 text-base">
-          Personally guided by <strong class="text-white font-bold">Proprietor Gopal Periyasamy</strong> and certified coaches dedicated to helping men and women achieve safe, fast, and lasting results.
+        <p class="mt-4 text-zinc-400 text-sm sm:text-base">
+          Guided by <strong class="text-white font-semibold">Proprietor Gopal Periyasamy</strong> and certified coaches dedicated to helping men and women achieve safe, fast, and lasting physical results.
         </p>
       </div>
 
-      <!-- Trainers Grid: 4 3D Tilt Cards -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 perspective-container">
+      <!-- Trainers Grid: 4 Coaches -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         
         <!-- Trainer 1: Gopal Periyasamy -->
-        <div class="trainer-card card-3d card-3d-tilt reveal bg-dark-900 rounded-3xl overflow-hidden border border-zinc-800 hover:border-red-600/60 transition-all duration-300 shadow-xl flex flex-col justify-between"
+        <div class="trainer-card gym-card reveal overflow-hidden flex flex-col justify-between group cursor-pointer"
           data-name="Gopal Periyasamy"
           data-title="Proprietor & Master Coach"
           data-exp="12+ Years Experience"
           data-image="https://images.unsplash.com/photo-1567013127542-490d757e51fc?q=80&w=600&auto=format&fit=crop"
-          data-bio="Gopal is the proprietor and master trainer of Temple Fit Gym. With over a decade of fitness expertise, he specializes in cardio conditioning, heavy compound strength training, and personalized nutritional guidance for maximum transformation."
+          data-bio="Gopal is the proprietor and founder of Temple Fit Gym. With over a decade of fitness expertise, he specializes in cardio conditioning, heavy compound strength training, and personalized nutritional guidance for everyday achievers."
           data-specialties="Cardio + Strength Programming, Hypertrophy, Body Transformation, Nutrition"
           data-certs="Certified Master Trainer, Fitness Nutrition Specialist, Proprietor TFG">
           
-          <div class="relative h-80 overflow-hidden group">
+          <div class="relative h-72 overflow-hidden">
             <img 
               src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?q=80&w=600&auto=format&fit=crop" 
               alt="Gopal Periyasamy - Temple Fit Gym" 
-              class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500 filter contrast-115" 
+              loading="lazy"
+              class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500 filter brightness-95" 
             />
-            <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-obsidian-950 via-transparent to-transparent"></div>
             <div class="absolute bottom-3 left-4 right-4 flex items-center justify-between">
-              <span class="text-[11px] font-black uppercase tracking-wider bg-red-600 text-white px-3 py-1 rounded-lg shadow-glow-red">
+              <span class="text-[10px] font-bold uppercase tracking-wider bg-brand text-white px-2.5 py-1 rounded-md">
                 12+ Yrs Exp
               </span>
-              <span class="text-xs text-zinc-300 flex items-center gap-1 font-bold">
+              <span class="text-xs text-zinc-300 font-semibold flex items-center gap-1">
                 <i class="fa-solid fa-star text-amber-400 text-xs"></i> 5.0 (Proprietor)
               </span>
             </div>
           </div>
 
           <div class="p-6">
-            <h3 class="font-heading text-2xl font-black uppercase text-white">Gopal Periyasamy</h3>
-            <div class="text-brand text-xs font-bold uppercase tracking-wider mt-1">Proprietor & Master Coach</div>
+            <h3 class="font-heading text-xl font-bold uppercase text-white">Gopal Periyasamy</h3>
+            <div class="text-brand text-xs font-semibold uppercase tracking-wider mt-1">Proprietor & Master Coach</div>
             <p class="text-zinc-400 text-xs mt-3 line-clamp-2">
-              Founder of Temple Fit Gym. Leading fitness transformations in cardio and strength training.
+              Founder of Temple Fit Gym. Specialist in cardio routines, strength training, and nutritional structure.
             </p>
-            <button type="button" class="view-trainer-btn btn-3d-dark mt-5 w-full py-2.5 rounded-xl text-xs font-bold tracking-wider uppercase">
+            <button type="button" class="view-trainer-btn btn-secondary mt-5 w-full py-2.5 text-xs font-bold tracking-wider uppercase">
               View Profile
             </button>
           </div>
         </div>
 
         <!-- Trainer 2: Karthik Raj -->
-        <div class="trainer-card card-3d card-3d-tilt reveal bg-dark-900 rounded-3xl overflow-hidden border border-zinc-800 hover:border-red-600/60 transition-all duration-300 shadow-xl flex flex-col justify-between"
+        <div class="trainer-card gym-card reveal overflow-hidden flex flex-col justify-between group cursor-pointer"
           data-name="Karthik Raj"
           data-title="Strength & Heavy Compound Coach"
           data-exp="8+ Years Experience"
@@ -872,76 +1221,78 @@
           data-specialties="Compound Lifting, Form Correction, Muscle Hypertrophy, Dumbbell Circuits"
           data-certs="Certified Strength Coach, CPR/AED Certified">
           
-          <div class="relative h-80 overflow-hidden group">
+          <div class="relative h-72 overflow-hidden">
             <img 
               src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=600&auto=format&fit=crop" 
               alt="Karthik Raj - Trainer" 
-              class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500 filter contrast-115" 
+              loading="lazy"
+              class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500 filter brightness-95" 
             />
-            <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-obsidian-950 via-transparent to-transparent"></div>
             <div class="absolute bottom-3 left-4 right-4 flex items-center justify-between">
-              <span class="text-[11px] font-black uppercase tracking-wider bg-red-600 text-white px-3 py-1 rounded-lg shadow-glow-red">
+              <span class="text-[10px] font-bold uppercase tracking-wider bg-brand text-white px-2.5 py-1 rounded-md">
                 8+ Yrs Exp
               </span>
-              <span class="text-xs text-zinc-300 flex items-center gap-1 font-bold">
+              <span class="text-xs text-zinc-300 font-semibold flex items-center gap-1">
                 <i class="fa-solid fa-star text-amber-400 text-xs"></i> 4.9 (100+ clients)
               </span>
             </div>
           </div>
 
           <div class="p-6">
-            <h3 class="font-heading text-2xl font-black uppercase text-white">Karthik Raj</h3>
-            <div class="text-brand text-xs font-bold uppercase tracking-wider mt-1">Strength & Power Coach</div>
+            <h3 class="font-heading text-xl font-bold uppercase text-white">Karthik Raj</h3>
+            <div class="text-brand text-xs font-semibold uppercase tracking-wider mt-1">Strength & Power Coach</div>
             <p class="text-zinc-400 text-xs mt-3 line-clamp-2">
-              Compound lifting specialist focused on safe progression and functional power building.
+              Compound lifting specialist focused on safe technique progression and functional power building.
             </p>
-            <button type="button" class="view-trainer-btn btn-3d-dark mt-5 w-full py-2.5 rounded-xl text-xs font-bold tracking-wider uppercase">
+            <button type="button" class="view-trainer-btn btn-secondary mt-5 w-full py-2.5 text-xs font-bold tracking-wider uppercase">
               View Profile
             </button>
           </div>
         </div>
 
         <!-- Trainer 3: Priya Natarajan -->
-        <div class="trainer-card card-3d card-3d-tilt reveal bg-dark-900 rounded-3xl overflow-hidden border border-zinc-800 hover:border-red-600/60 transition-all duration-300 shadow-xl flex flex-col justify-between"
+        <div class="trainer-card gym-card reveal overflow-hidden flex flex-col justify-between group cursor-pointer"
           data-name="Priya Natarajan"
           data-title="Women’s Fitness & Aerobic Conditioning"
           data-exp="7+ Years Experience"
           data-image="https://images.unsplash.com/photo-1594381898411-846e7d193883?q=80&w=600&auto=format&fit=crop"
-          data-bio="Priya is passionate about helping women gain confidence, strength, and tone. She conducts specialized cardio circuits, core workouts, and postpartum fitness recovery programs in our comfortable unisex gym."
+          data-bio="Priya is passionate about helping women gain confidence, strength, and tone. She conducts specialized cardio circuits, core workouts, and posture correction in our comfortable unisex facility."
           data-specialties="Women's Toning, Core & Glute Sculpting, High-Burn Cardio, Mobility"
           data-certs="Certified Personal Trainer, Group Aerobics Specialist">
           
-          <div class="relative h-80 overflow-hidden group">
+          <div class="relative h-72 overflow-hidden">
             <img 
               src="https://images.unsplash.com/photo-1594381898411-846e7d193883?q=80&w=600&auto=format&fit=crop" 
               alt="Priya Natarajan - Trainer" 
-              class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500 filter contrast-115" 
+              loading="lazy"
+              class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500 filter brightness-95" 
             />
-            <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-obsidian-950 via-transparent to-transparent"></div>
             <div class="absolute bottom-3 left-4 right-4 flex items-center justify-between">
-              <span class="text-[11px] font-black uppercase tracking-wider bg-red-600 text-white px-3 py-1 rounded-lg shadow-glow-red">
+              <span class="text-[10px] font-bold uppercase tracking-wider bg-brand text-white px-2.5 py-1 rounded-md">
                 7+ Yrs Exp
               </span>
-              <span class="text-xs text-zinc-300 flex items-center gap-1 font-bold">
+              <span class="text-xs text-zinc-300 font-semibold flex items-center gap-1">
                 <i class="fa-solid fa-star text-amber-400 text-xs"></i> 4.9 (130+ clients)
               </span>
             </div>
           </div>
 
           <div class="p-6">
-            <h3 class="font-heading text-2xl font-black uppercase text-white">Priya Natarajan</h3>
-            <div class="text-brand text-xs font-bold uppercase tracking-wider mt-1">Women’s Fitness & Cardio</div>
+            <h3 class="font-heading text-xl font-bold uppercase text-white">Priya Natarajan</h3>
+            <div class="text-brand text-xs font-semibold uppercase tracking-wider mt-1">Women’s Fitness & Cardio</div>
             <p class="text-zinc-400 text-xs mt-3 line-clamp-2">
               Empowering women through toning, fat loss circuits, and functional strength exercises.
             </p>
-            <button type="button" class="view-trainer-btn btn-3d-dark mt-5 w-full py-2.5 rounded-xl text-xs font-bold tracking-wider uppercase">
+            <button type="button" class="view-trainer-btn btn-secondary mt-5 w-full py-2.5 text-xs font-bold tracking-wider uppercase">
               View Profile
             </button>
           </div>
         </div>
 
         <!-- Trainer 4: Suresh Kumar -->
-        <div class="trainer-card card-3d card-3d-tilt reveal bg-dark-900 rounded-3xl overflow-hidden border border-zinc-800 hover:border-red-600/60 transition-all duration-300 shadow-xl flex flex-col justify-between"
+        <div class="trainer-card gym-card reveal overflow-hidden flex flex-col justify-between group cursor-pointer"
           data-name="Suresh Kumar"
           data-title="Weight Loss & HIIT Specialist"
           data-exp="6+ Years Experience"
@@ -950,30 +1301,31 @@
           data-specialties="Metabolic HIIT, Rapid Calorie Burn, Cardiovascular Stamina, Core Stability"
           data-certs="ACE Certified Fitness Coach, Functional Conditioning Certified">
           
-          <div class="relative h-80 overflow-hidden group">
+          <div class="relative h-72 overflow-hidden">
             <img 
               src="https://images.unsplash.com/photo-1507398941214-572c25f4b1dc?q=80&w=600&auto=format&fit=crop" 
               alt="Suresh Kumar - Trainer" 
-              class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500 filter contrast-115" 
+              loading="lazy"
+              class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500 filter brightness-95" 
             />
-            <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-obsidian-950 via-transparent to-transparent"></div>
             <div class="absolute bottom-3 left-4 right-4 flex items-center justify-between">
-              <span class="text-[11px] font-black uppercase tracking-wider bg-red-600 text-white px-3 py-1 rounded-lg shadow-glow-red">
+              <span class="text-[10px] font-bold uppercase tracking-wider bg-brand text-white px-2.5 py-1 rounded-md">
                 6+ Yrs Exp
               </span>
-              <span class="text-xs text-zinc-300 flex items-center gap-1 font-bold">
+              <span class="text-xs text-zinc-300 font-semibold flex items-center gap-1">
                 <i class="fa-solid fa-star text-amber-400 text-xs"></i> 4.9 (110+ clients)
               </span>
             </div>
           </div>
 
           <div class="p-6">
-            <h3 class="font-heading text-2xl font-black uppercase text-white">Suresh Kumar</h3>
-            <div class="text-brand text-xs font-bold uppercase tracking-wider mt-1">Weight Loss & HIIT Coach</div>
+            <h3 class="font-heading text-xl font-bold uppercase text-white">Suresh Kumar</h3>
+            <div class="text-brand text-xs font-semibold uppercase tracking-wider mt-1">Weight Loss & HIIT Coach</div>
             <p class="text-zinc-400 text-xs mt-3 line-clamp-2">
               High-intensity interval conditioning specialist for rapid fat oxidation and endurance.
             </p>
-            <button type="button" class="view-trainer-btn btn-3d-dark mt-5 w-full py-2.5 rounded-xl text-xs font-bold tracking-wider uppercase">
+            <button type="button" class="view-trainer-btn btn-secondary mt-5 w-full py-2.5 text-xs font-bold tracking-wider uppercase">
               View Profile
             </button>
           </div>
@@ -986,177 +1338,185 @@
 
 
   <!-- ========================================================================= -->
-  <!-- 7. GALLERY SECTION (With Lightbox Interaction & 3D Cards)                 -->
+  <!-- 8. GALLERY SECTION (Responsive Grid with Lightbox Interaction)            -->
   <!-- ========================================================================= -->
-  <section id="gallery" class="py-24 bg-dark-900 relative bg-carbon-pattern border-t border-b border-red-950/40">
+  <section id="gallery" class="py-24 bg-obsidian-950 relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <!-- Section Header -->
       <div class="text-center max-w-3xl mx-auto mb-16 reveal">
         <div class="inline-flex items-center gap-2 text-brand font-bold text-xs uppercase tracking-widest mb-2">
-          <span class="w-8 h-[3px] bg-brand inline-block rounded-full shadow-glow-red"></span>
+          <span class="w-6 h-[2px] bg-brand inline-block rounded-full"></span>
           Inside Temple Fit Gym
-          <span class="w-8 h-[3px] bg-brand inline-block rounded-full shadow-glow-red"></span>
+          <span class="w-6 h-[2px] bg-brand inline-block rounded-full"></span>
         </div>
-        <h2 class="font-heading text-4xl sm:text-5xl font-black uppercase tracking-tight text-white">
-          Our Facilities & Workout Floor
+        <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold uppercase tracking-tight text-white">
+          FACILITIES & WORKOUT FLOOR
         </h2>
-        <p class="mt-4 text-zinc-400 text-base">
+        <p class="mt-4 text-zinc-400 text-sm sm:text-base">
           Explore our fully air-conditioned unisex workout floor, cardio setup, dumbbells, and weight stations.
         </p>
       </div>
 
-      <!-- Responsive Image Grid with 3D Hover Lift -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 perspective-container">
+      <!-- Responsive Image Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5">
         
         <!-- Image 1: Barbells -->
-        <div class="gallery-item card-3d card-3d-tilt reveal group relative h-64 rounded-3xl overflow-hidden cursor-pointer border border-zinc-800 hover:border-red-600/70 shadow-lg"
+        <div class="gallery-item gym-card reveal group relative h-64 rounded-2xl overflow-hidden cursor-pointer"
              data-img="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=1200&auto=format&fit=crop"
              data-title="Olympic Barbells & Calibrated Plates"
              data-category="Strength Equipment">
           <img 
             src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=600&auto=format&fit=crop" 
             alt="Olympic Barbells" 
-            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 filter contrast-115" 
+            loading="lazy"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 filter brightness-95" 
           />
-          <div class="absolute inset-0 bg-dark-950/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-5">
-            <span class="self-start text-[10px] font-black uppercase tracking-wider bg-red-600 text-white px-2.5 py-1 rounded-md shadow-glow-red">Strength</span>
+          <div class="absolute inset-0 bg-obsidian-950/70 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex flex-col justify-between p-5">
+            <span class="self-start text-[10px] font-bold uppercase tracking-wider bg-brand text-white px-2 py-0.5 rounded">Strength</span>
             <div>
               <p class="text-white font-heading text-lg font-bold">Barbells & Free Weights</p>
-              <span class="text-xs text-zinc-300 flex items-center gap-1.5 mt-1 font-semibold"><i class="fa-solid fa-expand text-brand"></i> Click to enlarge</span>
+              <span class="text-xs text-zinc-300 flex items-center gap-1.5 mt-1 font-medium"><i class="fa-solid fa-expand text-brand"></i> Click to enlarge</span>
             </div>
           </div>
         </div>
 
         <!-- Image 2: Interior -->
-        <div class="gallery-item card-3d card-3d-tilt reveal group relative h-64 rounded-3xl overflow-hidden cursor-pointer border border-zinc-800 hover:border-red-600/70 shadow-lg"
+        <div class="gallery-item gym-card reveal group relative h-64 rounded-2xl overflow-hidden cursor-pointer"
              data-img="https://images.unsplash.com/photo-1593079831268-3381b0db4a77?q=80&w=1200&auto=format&fit=crop"
              data-title="A/C Unisex Training Floor"
              data-category="A/C Facility">
           <img 
             src="https://images.unsplash.com/photo-1593079831268-3381b0db4a77?q=80&w=600&auto=format&fit=crop" 
             alt="A/C Training Floor" 
-            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 filter contrast-115" 
+            loading="lazy"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 filter brightness-95" 
           />
-          <div class="absolute inset-0 bg-dark-950/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-5">
-            <span class="self-start text-[10px] font-black uppercase tracking-wider bg-red-600 text-white px-2.5 py-1 rounded-md shadow-glow-red">Facility</span>
+          <div class="absolute inset-0 bg-obsidian-950/70 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex flex-col justify-between p-5">
+            <span class="self-start text-[10px] font-bold uppercase tracking-wider bg-brand text-white px-2 py-0.5 rounded">Facility</span>
             <div>
               <p class="text-white font-heading text-lg font-bold">A/C Training Floor</p>
-              <span class="text-xs text-zinc-300 flex items-center gap-1.5 mt-1 font-semibold"><i class="fa-solid fa-expand text-brand"></i> Click to enlarge</span>
+              <span class="text-xs text-zinc-300 flex items-center gap-1.5 mt-1 font-medium"><i class="fa-solid fa-expand text-brand"></i> Click to enlarge</span>
             </div>
           </div>
         </div>
 
         <!-- Image 3: Conditioning -->
-        <div class="gallery-item card-3d card-3d-tilt reveal group relative h-64 rounded-3xl overflow-hidden cursor-pointer border border-zinc-800 hover:border-red-600/70 shadow-lg"
+        <div class="gallery-item gym-card reveal group relative h-64 rounded-2xl overflow-hidden cursor-pointer"
              data-img="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=1200&auto=format&fit=crop"
              data-title="Cardio & Conditioning Session"
              data-category="Cardio + Strength">
           <img 
             src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=600&auto=format&fit=crop" 
             alt="Cardio Conditioning Session" 
-            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 filter contrast-115" 
+            loading="lazy"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 filter brightness-95" 
           />
-          <div class="absolute inset-0 bg-dark-950/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-5">
-            <span class="self-start text-[10px] font-black uppercase tracking-wider bg-red-600 text-white px-2.5 py-1 rounded-md shadow-glow-red">Cardio</span>
+          <div class="absolute inset-0 bg-obsidian-950/70 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex flex-col justify-between p-5">
+            <span class="self-start text-[10px] font-bold uppercase tracking-wider bg-brand text-white px-2 py-0.5 rounded">Cardio</span>
             <div>
               <p class="text-white font-heading text-lg font-bold">Cardio & HIIT Conditioning</p>
-              <span class="text-xs text-zinc-300 flex items-center gap-1.5 mt-1 font-semibold"><i class="fa-solid fa-expand text-brand"></i> Click to enlarge</span>
+              <span class="text-xs text-zinc-300 flex items-center gap-1.5 mt-1 font-medium"><i class="fa-solid fa-expand text-brand"></i> Click to enlarge</span>
             </div>
           </div>
         </div>
 
         <!-- Image 4: Dumbbells -->
-        <div class="gallery-item card-3d card-3d-tilt reveal group relative h-64 rounded-3xl overflow-hidden cursor-pointer border border-zinc-800 hover:border-red-600/70 shadow-lg"
+        <div class="gallery-item gym-card reveal group relative h-64 rounded-2xl overflow-hidden cursor-pointer"
              data-img="https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?q=80&w=1200&auto=format&fit=crop"
              data-title="Complete Heavy Dumbbell Set"
              data-category="Strength Equipment">
           <img 
             src="https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?q=80&w=600&auto=format&fit=crop" 
             alt="Dumbbell Rack" 
-            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 filter contrast-115" 
+            loading="lazy"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 filter brightness-95" 
           />
-          <div class="absolute inset-0 bg-dark-950/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-5">
-            <span class="self-start text-[10px] font-black uppercase tracking-wider bg-red-600 text-white px-2.5 py-1 rounded-md shadow-glow-red">Dumbbells</span>
+          <div class="absolute inset-0 bg-obsidian-950/70 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex flex-col justify-between p-5">
+            <span class="self-start text-[10px] font-bold uppercase tracking-wider bg-brand text-white px-2 py-0.5 rounded">Dumbbells</span>
             <div>
               <p class="text-white font-heading text-lg font-bold">Complete Dumbbell Alley</p>
-              <span class="text-xs text-zinc-300 flex items-center gap-1.5 mt-1 font-semibold"><i class="fa-solid fa-expand text-brand"></i> Click to enlarge</span>
+              <span class="text-xs text-zinc-300 flex items-center gap-1.5 mt-1 font-medium"><i class="fa-solid fa-expand text-brand"></i> Click to enlarge</span>
             </div>
           </div>
         </div>
 
-        <!-- Image 5: Ropes -->
-        <div class="gallery-item card-3d card-3d-tilt reveal group relative h-64 rounded-3xl overflow-hidden cursor-pointer border border-zinc-800 hover:border-red-600/70 shadow-lg"
+        <!-- Image 5: Functional Ropes -->
+        <div class="gallery-item gym-card reveal group relative h-64 rounded-2xl overflow-hidden cursor-pointer"
              data-img="https://images.unsplash.com/photo-1517963879433-6ad2b056d712?q=80&w=1200&auto=format&fit=crop"
              data-title="Battle Ropes & Metabolic Zone"
              data-category="Cardio + Strength">
           <img 
             src="https://images.unsplash.com/photo-1517963879433-6ad2b056d712?q=80&w=600&auto=format&fit=crop" 
             alt="Battle Ropes" 
-            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 filter contrast-115" 
+            loading="lazy"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 filter brightness-95" 
           />
-          <div class="absolute inset-0 bg-dark-950/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-5">
-            <span class="self-start text-[10px] font-black uppercase tracking-wider bg-red-600 text-white px-2.5 py-1 rounded-md shadow-glow-red">Conditioning</span>
+          <div class="absolute inset-0 bg-obsidian-950/70 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex flex-col justify-between p-5">
+            <span class="self-start text-[10px] font-bold uppercase tracking-wider bg-brand text-white px-2 py-0.5 rounded">Conditioning</span>
             <div>
               <p class="text-white font-heading text-lg font-bold">Battle Ropes & Core</p>
-              <span class="text-xs text-zinc-300 flex items-center gap-1.5 mt-1 font-semibold"><i class="fa-solid fa-expand text-brand"></i> Click to enlarge</span>
+              <span class="text-xs text-zinc-300 flex items-center gap-1.5 mt-1 font-medium"><i class="fa-solid fa-expand text-brand"></i> Click to enlarge</span>
             </div>
           </div>
         </div>
 
         <!-- Image 6: Power Platform -->
-        <div class="gallery-item card-3d card-3d-tilt reveal group relative h-64 rounded-3xl overflow-hidden cursor-pointer border border-zinc-800 hover:border-red-600/70 shadow-lg"
+        <div class="gallery-item gym-card reveal group relative h-64 rounded-2xl overflow-hidden cursor-pointer"
              data-img="https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?q=80&w=1200&auto=format&fit=crop"
              data-title="Heavy Lifting & Squat Platforms"
              data-category="Strength Equipment">
           <img 
             src="https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?q=80&w=600&auto=format&fit=crop" 
             alt="Powerlifting Platform" 
-            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 filter contrast-115" 
+            loading="lazy"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 filter brightness-95" 
           />
-          <div class="absolute inset-0 bg-dark-950/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-5">
-            <span class="self-start text-[10px] font-black uppercase tracking-wider bg-red-600 text-white px-2.5 py-1 rounded-md shadow-glow-red">Strength</span>
+          <div class="absolute inset-0 bg-obsidian-950/70 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex flex-col justify-between p-5">
+            <span class="self-start text-[10px] font-bold uppercase tracking-wider bg-brand text-white px-2 py-0.5 rounded">Strength</span>
             <div>
               <p class="text-white font-heading text-lg font-bold">Squat & Deadlift Zone</p>
-              <span class="text-xs text-zinc-300 flex items-center gap-1.5 mt-1 font-semibold"><i class="fa-solid fa-expand text-brand"></i> Click to enlarge</span>
+              <span class="text-xs text-zinc-300 flex items-center gap-1.5 mt-1 font-medium"><i class="fa-solid fa-expand text-brand"></i> Click to enlarge</span>
             </div>
           </div>
         </div>
 
         <!-- Image 7: Cardio Treadmills -->
-        <div class="gallery-item card-3d card-3d-tilt reveal group relative h-64 rounded-3xl overflow-hidden cursor-pointer border border-zinc-800 hover:border-red-600/70 shadow-lg"
+        <div class="gallery-item gym-card reveal group relative h-64 rounded-2xl overflow-hidden cursor-pointer"
              data-img="https://images.unsplash.com/photo-1574680096145-d05b474e2155?q=80&w=1200&auto=format&fit=crop"
              data-title="Air-Conditioned Cardio Treadmills"
              data-category="Cardio">
           <img 
             src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?q=80&w=600&auto=format&fit=crop" 
             alt="Cardio Treadmills" 
-            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 filter contrast-115" 
+            loading="lazy"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 filter brightness-95" 
           />
-          <div class="absolute inset-0 bg-dark-950/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-5">
-            <span class="self-start text-[10px] font-black uppercase tracking-wider bg-red-600 text-white px-2.5 py-1 rounded-md shadow-glow-red">Cardio</span>
+          <div class="absolute inset-0 bg-obsidian-950/70 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex flex-col justify-between p-5">
+            <span class="self-start text-[10px] font-bold uppercase tracking-wider bg-brand text-white px-2 py-0.5 rounded">Cardio</span>
             <div>
               <p class="text-white font-heading text-lg font-bold">Treadmills & Spin Bikes</p>
-              <span class="text-xs text-zinc-300 flex items-center gap-1.5 mt-1 font-semibold"><i class="fa-solid fa-expand text-brand"></i> Click to enlarge</span>
+              <span class="text-xs text-zinc-300 flex items-center gap-1.5 mt-1 font-medium"><i class="fa-solid fa-expand text-brand"></i> Click to enlarge</span>
             </div>
           </div>
         </div>
 
         <!-- Image 8: Unisex Fitness Community -->
-        <div class="gallery-item card-3d card-3d-tilt reveal group relative h-64 rounded-3xl overflow-hidden cursor-pointer border border-zinc-800 hover:border-red-600/70 shadow-lg"
+        <div class="gallery-item gym-card reveal group relative h-64 rounded-2xl overflow-hidden cursor-pointer"
              data-img="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1200&auto=format&fit=crop"
              data-title="Unisex Training Community at Temple Fit"
              data-category="Community">
           <img 
             src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=600&auto=format&fit=crop" 
             alt="Unisex Fitness Community" 
-            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 filter contrast-115" 
+            loading="lazy"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 filter brightness-95" 
           />
-          <div class="absolute inset-0 bg-dark-950/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-5">
-            <span class="self-start text-[10px] font-black uppercase tracking-wider bg-red-600 text-white px-2.5 py-1 rounded-md shadow-glow-red">Community</span>
+          <div class="absolute inset-0 bg-obsidian-950/70 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex flex-col justify-between p-5">
+            <span class="self-start text-[10px] font-bold uppercase tracking-wider bg-brand text-white px-2 py-0.5 rounded">Community</span>
             <div>
               <p class="text-white font-heading text-lg font-bold">Unisex Fitness Community</p>
-              <span class="text-xs text-zinc-300 flex items-center gap-1.5 mt-1 font-semibold"><i class="fa-solid fa-expand text-brand"></i> Click to enlarge</span>
+              <span class="text-xs text-zinc-300 flex items-center gap-1.5 mt-1 font-medium"><i class="fa-solid fa-expand text-brand"></i> Click to enlarge</span>
             </div>
           </div>
         </div>
@@ -1168,45 +1528,44 @@
 
 
   <!-- ========================================================================= -->
-  <!-- 8. TESTIMONIALS SECTION (3D Radial Glowing Showcase)                      -->
+  <!-- 9. REVIEWS SECTION (Clean Modern Testimonial Carousel)                    -->
   <!-- ========================================================================= -->
-  <section id="testimonials" class="py-24 bg-dark-950 relative">
+  <section id="testimonials" class="py-24 bg-obsidian-900 border-t border-b border-white/5 relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <!-- Section Header -->
       <div class="text-center max-w-3xl mx-auto mb-16 reveal">
         <div class="inline-flex items-center gap-2 text-brand font-bold text-xs uppercase tracking-widest mb-2">
-          <span class="w-8 h-[3px] bg-brand inline-block rounded-full shadow-glow-red"></span>
+          <span class="w-6 h-[2px] bg-brand inline-block rounded-full"></span>
           Real Member Stories
-          <span class="w-8 h-[3px] bg-brand inline-block rounded-full shadow-glow-red"></span>
+          <span class="w-6 h-[2px] bg-brand inline-block rounded-full"></span>
         </div>
-        <h2 class="font-heading text-4xl sm:text-5xl font-black uppercase tracking-tight text-white">
-          What Temple Fit Members Say
+        <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold uppercase tracking-tight text-white">
+          WHAT TEMPLE FIT MEMBERS SAY
         </h2>
-        <p class="mt-4 text-zinc-400 text-base">
-          Proven transformations from men and women who train at Temple Fit Gym.
+        <p class="mt-4 text-zinc-400 text-sm sm:text-base">
+          Proven feedback from men and women who train consistently at Temple Fit Gym.
         </p>
       </div>
 
-      <!-- Carousel Container with 3D Depth -->
-      <div class="relative max-w-4xl mx-auto reveal perspective-container">
+      <!-- Carousel Container -->
+      <div class="relative max-w-4xl mx-auto reveal">
         
         <!-- Slides Viewport -->
-        <div id="testimonial-carousel" class="card-3d overflow-hidden relative rounded-3xl bg-dark-900 border border-red-950/80 p-8 sm:p-12 shadow-[0_25px_60px_rgba(0,0,0,0.85)]">
-          <div class="absolute -right-20 -top-20 w-64 h-64 bg-red-600/10 rounded-full filter blur-3xl pointer-events-none"></div>
+        <div id="testimonial-carousel" class="gym-card overflow-hidden relative p-8 sm:p-12 shadow-2xl border border-white/10">
           
           <!-- Testimonial Slide 1 -->
-          <div class="testimonial-slide flex flex-col justify-between transition-opacity duration-500 relative z-10">
+          <div class="testimonial-slide flex flex-col justify-between transition-opacity duration-500">
             <div>
-              <div class="flex items-center gap-1.5 text-amber-400 text-lg mb-6">
+              <div class="flex items-center gap-1 text-amber-400 text-base mb-6">
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
               </div>
-              <blockquote class="font-heading text-xl sm:text-2xl lg:text-3xl font-semibold text-zinc-100 leading-snug">
-                "Temple Fit Gym is hands down the most disciplined and welcoming fitness center in the area. Coach Gopal personally guided my form on heavy squats and cardio circuits. The A/C makes intense workouts comfortable even during hot summers, and the 1-year fee of Rs. 8499 is unbeatable value!"
+              <blockquote class="font-heading text-lg sm:text-2xl font-medium text-zinc-100 leading-snug">
+                "Temple Fit Gym is hands down the best fitness club in the area. Coach Gopal personally guided my form on heavy squats and cardio circuits. The A/C makes intense workouts comfortable even during hot summers, and the 1-year fee of Rs. 8499 is unbeatable value!"
               </blockquote>
             </div>
 
@@ -1214,26 +1573,27 @@
               <img 
                 src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=200&auto=format&fit=crop" 
                 alt="Member Ramesh V." 
-                class="w-14 h-14 rounded-full object-cover border-2 border-red-600 shadow-glow-red" 
+                loading="lazy"
+                class="w-13 h-13 rounded-full object-cover border-2 border-brand" 
               />
               <div>
                 <div class="font-bold text-white text-base">Ramesh Venkat</div>
-                <div class="text-xs text-brand font-semibold">1-Year Member &bull; Lost 12 kg</div>
+                <div class="text-xs text-zinc-400 font-medium">1-Year Member &bull; Lost 12 kg</div>
               </div>
             </div>
           </div>
 
           <!-- Testimonial Slide 2 -->
-          <div class="testimonial-slide hidden flex-col justify-between transition-opacity duration-500 relative z-10">
+          <div class="testimonial-slide hidden flex-col justify-between transition-opacity duration-500">
             <div>
-              <div class="flex items-center gap-1.5 text-amber-400 text-lg mb-6">
+              <div class="flex items-center gap-1 text-amber-400 text-base mb-6">
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
               </div>
-              <blockquote class="font-heading text-xl sm:text-2xl lg:text-3xl font-semibold text-zinc-100 leading-snug">
+              <blockquote class="font-heading text-lg sm:text-2xl font-medium text-zinc-100 leading-snug">
                 "As a woman looking for a safe, supportive unisex gym, Temple Fit Gym has been phenomenal. The trainers are respectful, motivating, and always ready to help. The cardio setup and clean dressing rooms make workouts a pleasure."
               </blockquote>
             </div>
@@ -1242,26 +1602,27 @@
               <img 
                 src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=200&auto=format&fit=crop" 
                 alt="Member Deepa S." 
-                class="w-14 h-14 rounded-full object-cover border-2 border-red-600 shadow-glow-red" 
+                loading="lazy"
+                class="w-13 h-13 rounded-full object-cover border-2 border-brand" 
               />
               <div>
                 <div class="font-bold text-white text-base">Deepa Sundaram</div>
-                <div class="text-xs text-brand font-semibold">6-Month Member &bull; Cardio & Strength</div>
+                <div class="text-xs text-zinc-400 font-medium">6-Month Member &bull; Cardio & Strength</div>
               </div>
             </div>
           </div>
 
           <!-- Testimonial Slide 3 -->
-          <div class="testimonial-slide hidden flex-col justify-between transition-opacity duration-500 relative z-10">
+          <div class="testimonial-slide hidden flex-col justify-between transition-opacity duration-500">
             <div>
-              <div class="flex items-center gap-1.5 text-amber-400 text-lg mb-6">
+              <div class="flex items-center gap-1 text-amber-400 text-base mb-6">
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
               </div>
-              <blockquote class="font-heading text-xl sm:text-2xl lg:text-3xl font-semibold text-zinc-100 leading-snug">
+              <blockquote class="font-heading text-lg sm:text-2xl font-medium text-zinc-100 leading-snug">
                 "Stop wishing, start doing — that slogan is painted right on the wall and it pushes you every day. The dumbbell collection and power racks are top-notch. If you want results without burning a hole in your pocket, join Temple Fit."
               </blockquote>
             </div>
@@ -1270,33 +1631,34 @@
               <img 
                 src="https://images.unsplash.com/photo-1628157582853-a796fa650a6a?q=80&w=200&auto=format&fit=crop" 
                 alt="Member Vijay K." 
-                class="w-14 h-14 rounded-full object-cover border-2 border-red-600 shadow-glow-red" 
+                loading="lazy"
+                class="w-13 h-13 rounded-full object-cover border-2 border-brand" 
               />
               <div>
                 <div class="font-bold text-white text-base">Vijay Kumar</div>
-                <div class="text-xs text-brand font-semibold">Annual Member &bull; Muscle Building</div>
+                <div class="text-xs text-zinc-400 font-medium">Annual Member &bull; Muscle Building</div>
               </div>
             </div>
           </div>
 
         </div>
 
-        <!-- Carousel Navigation Controls -->
-        <div class="flex items-center justify-between mt-8 px-4">
+        <!-- Carousel Controls -->
+        <div class="flex items-center justify-between mt-6 px-2">
           <!-- Slide Indicator Dots -->
           <div class="flex items-center gap-2">
-            <button class="carousel-dot w-8 h-2.5 rounded-full bg-brand shadow-glow-red transition-all" data-index="0" aria-label="Go to slide 1"></button>
-            <button class="carousel-dot w-2.5 h-2.5 rounded-full bg-zinc-700 transition-all hover:bg-zinc-500" data-index="1" aria-label="Go to slide 2"></button>
-            <button class="carousel-dot w-2.5 h-2.5 rounded-full bg-zinc-700 transition-all hover:bg-zinc-500" data-index="2" aria-label="Go to slide 3"></button>
+            <button class="carousel-dot w-8 h-2 rounded-full bg-red-500 transition-all" data-index="0" aria-label="Go to slide 1"></button>
+            <button class="carousel-dot w-2.5 h-2 rounded-full bg-zinc-700 transition-all hover:bg-zinc-500" data-index="1" aria-label="Go to slide 2"></button>
+            <button class="carousel-dot w-2.5 h-2 rounded-full bg-zinc-700 transition-all hover:bg-zinc-500" data-index="2" aria-label="Go to slide 3"></button>
           </div>
 
-          <!-- Prev / Next Arrow Buttons: 3D Beveled -->
+          <!-- Prev / Next Arrow Buttons -->
           <div class="flex items-center gap-3">
-            <button id="carousel-prev" type="button" class="btn-3d-dark w-12 h-12 rounded-full flex items-center justify-center text-white" aria-label="Previous testimonial">
-              <i class="fa-solid fa-chevron-left text-sm"></i>
+            <button id="carousel-prev" type="button" class="btn-secondary w-10 h-10 rounded-full flex items-center justify-center text-white" aria-label="Previous review">
+              <i class="fa-solid fa-chevron-left text-xs"></i>
             </button>
-            <button id="carousel-next" type="button" class="btn-3d-dark w-12 h-12 rounded-full flex items-center justify-center text-white" aria-label="Next testimonial">
-              <i class="fa-solid fa-chevron-right text-sm"></i>
+            <button id="carousel-next" type="button" class="btn-secondary w-10 h-10 rounded-full flex items-center justify-center text-white" aria-label="Next review">
+              <i class="fa-solid fa-chevron-right text-xs"></i>
             </button>
           </div>
         </div>
@@ -1308,22 +1670,22 @@
 
 
   <!-- ========================================================================= -->
-  <!-- 9. FAQ ACCORDION SECTION                                                  -->
+  <!-- 10. FAQ ACCORDION SECTION                                                 -->
   <!-- ========================================================================= -->
-  <section id="faq" class="py-24 bg-dark-900 relative bg-carbon-pattern border-t border-b border-red-950/40">
+  <section id="faq" class="py-24 bg-obsidian-950 relative">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <!-- Section Header -->
       <div class="text-center mb-14 reveal">
         <div class="inline-flex items-center gap-2 text-brand font-bold text-xs uppercase tracking-widest mb-2">
-          <span class="w-8 h-[3px] bg-brand inline-block rounded-full shadow-glow-red"></span>
-          Got Questions?
-          <span class="w-8 h-[3px] bg-brand inline-block rounded-full shadow-glow-red"></span>
+          <span class="w-6 h-[2px] bg-brand inline-block rounded-full"></span>
+          Common Questions
+          <span class="w-6 h-[2px] bg-brand inline-block rounded-full"></span>
         </div>
-        <h2 class="font-heading text-4xl sm:text-5xl font-black uppercase tracking-tight text-white">
-          Frequently Asked Questions
+        <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold uppercase tracking-tight text-white">
+          FREQUENTLY ASKED QUESTIONS
         </h2>
-        <p class="mt-4 text-zinc-400 text-base">
+        <p class="mt-4 text-zinc-400 text-sm sm:text-base">
           Everything you need to know about joining Temple Fit Gym, fee plans, and facilities.
         </p>
       </div>
@@ -1332,13 +1694,13 @@
       <div class="space-y-4 reveal">
         
         <!-- Accordion Item 1 -->
-        <div class="faq-item bg-dark-950 border border-zinc-800 rounded-2xl overflow-hidden transition-all duration-200 hover:border-red-600/50 shadow-md">
-          <button type="button" class="faq-toggle w-full px-6 py-5 text-left flex items-center justify-between gap-4 font-heading text-lg font-bold uppercase text-white hover:text-brand transition-colors">
+        <div class="faq-item gym-card rounded-2xl overflow-hidden transition-all duration-200">
+          <button type="button" class="faq-toggle w-full px-6 py-5 text-left flex items-center justify-between gap-4 font-heading text-base sm:text-lg font-bold uppercase text-white hover:text-brand transition-colors" aria-expanded="false">
             <span>What are the exact fees for joining Temple Fit Gym?</span>
             <i class="fa-solid fa-chevron-down faq-icon text-brand transition-transform duration-300"></i>
           </button>
-          <div class="faq-content hidden px-6 pb-5 text-zinc-400 text-sm leading-relaxed border-t border-zinc-800/60 pt-4">
-            Our fees structure matches the official poster exactly:
+          <div class="faq-content hidden px-6 pb-5 text-zinc-400 text-xs sm:text-sm leading-relaxed border-t border-white/5 pt-4">
+            Our fees structure is completely transparent:
             <ul class="list-disc list-inside mt-2 space-y-1.5 text-zinc-300">
               <li><strong class="text-white">First Month Fees With Membership:</strong> Rs. 2,000/-</li>
               <li><strong class="text-white">Monthly Renewal Fees:</strong> Rs. 1,500/-</li>
@@ -1350,35 +1712,35 @@
         </div>
 
         <!-- Accordion Item 2 -->
-        <div class="faq-item bg-dark-950 border border-zinc-800 rounded-2xl overflow-hidden transition-all duration-200 hover:border-red-600/50 shadow-md">
-          <button type="button" class="faq-toggle w-full px-6 py-5 text-left flex items-center justify-between gap-4 font-heading text-lg font-bold uppercase text-white hover:text-brand transition-colors">
+        <div class="faq-item gym-card rounded-2xl overflow-hidden transition-all duration-200">
+          <button type="button" class="faq-toggle w-full px-6 py-5 text-left flex items-center justify-between gap-4 font-heading text-base sm:text-lg font-bold uppercase text-white hover:text-brand transition-colors" aria-expanded="false">
             <span>Is Temple Fit Gym a Unisex gym with Air Conditioning (A/C)?</span>
             <i class="fa-solid fa-chevron-down faq-icon text-brand transition-transform duration-300"></i>
           </button>
-          <div class="faq-content hidden px-6 pb-5 text-zinc-400 text-sm leading-relaxed border-t border-zinc-800/60 pt-4">
+          <div class="faq-content hidden px-6 pb-5 text-zinc-400 text-xs sm:text-sm leading-relaxed border-t border-white/5 pt-4">
             Yes! Temple Fit Gym is a 100% full A/C Unisex fitness center. We warmly welcome both men and women, providing a clean, respectful, air-conditioned environment with dedicated trainers.
           </div>
         </div>
 
         <!-- Accordion Item 3 -->
-        <div class="faq-item bg-dark-950 border border-zinc-800 rounded-2xl overflow-hidden transition-all duration-200 hover:border-red-600/50 shadow-md">
-          <button type="button" class="faq-toggle w-full px-6 py-5 text-left flex items-center justify-between gap-4 font-heading text-lg font-bold uppercase text-white hover:text-brand transition-colors">
+        <div class="faq-item gym-card rounded-2xl overflow-hidden transition-all duration-200">
+          <button type="button" class="faq-toggle w-full px-6 py-5 text-left flex items-center justify-between gap-4 font-heading text-base sm:text-lg font-bold uppercase text-white hover:text-brand transition-colors" aria-expanded="false">
             <span>Are both Cardio and Strength training included in the fees?</span>
             <i class="fa-solid fa-chevron-down faq-icon text-brand transition-transform duration-300"></i>
           </button>
-          <div class="faq-content hidden px-6 pb-5 text-zinc-400 text-sm leading-relaxed border-t border-zinc-800/60 pt-4">
-            Yes! All our fee packages include unrestricted access to both the Cardio zone (treadmills, spin bikes, cross trainers) and the heavy Strength floor (free weights, squat racks, multi-stations, dumbbells).
+          <div class="faq-content hidden px-6 pb-5 text-zinc-400 text-xs sm:text-sm leading-relaxed border-t border-white/5 pt-4">
+            Yes! All our fee packages include unrestricted access to both the Cardio zone (motorized treadmills, spin bikes, cross trainers) and the heavy Strength floor (free weights, squat racks, multi-stations, dumbbells).
           </div>
         </div>
 
         <!-- Accordion Item 4 -->
-        <div class="faq-item bg-dark-950 border border-zinc-800 rounded-2xl overflow-hidden transition-all duration-200 hover:border-red-600/50 shadow-md">
-          <button type="button" class="faq-toggle w-full px-6 py-5 text-left flex items-center justify-between gap-4 font-heading text-lg font-bold uppercase text-white hover:text-brand transition-colors">
+        <div class="faq-item gym-card rounded-2xl overflow-hidden transition-all duration-200">
+          <button type="button" class="faq-toggle w-full px-6 py-5 text-left flex items-center justify-between gap-4 font-heading text-base sm:text-lg font-bold uppercase text-white hover:text-brand transition-colors" aria-expanded="false">
             <span>How can I contact Gopal Periyasamy directly for gym admission?</span>
             <i class="fa-solid fa-chevron-down faq-icon text-brand transition-transform duration-300"></i>
           </button>
-          <div class="faq-content hidden px-6 pb-5 text-zinc-400 text-sm leading-relaxed border-t border-zinc-800/60 pt-4">
-            You can directly call or WhatsApp <strong class="text-white">9884557280</strong>. You can also walk into the gym during operating hours for an in-person facility tour and instant spot admission.
+          <div class="faq-content hidden px-6 pb-5 text-zinc-400 text-xs sm:text-sm leading-relaxed border-t border-white/5 pt-4">
+            You can directly call or WhatsApp <strong class="text-white">9884557280</strong>. You can also visit our gym during opening hours for a facility tour and spot admission.
           </div>
         </div>
 
@@ -1389,37 +1751,37 @@
 
 
   <!-- ========================================================================= -->
-  <!-- 10. CONTACT SECTION                                                       -->
+  <!-- 11. CONTACT SECTION (Conversion-Focused with Inline Validation)           -->
   <!-- ========================================================================= -->
-  <section id="contact" class="py-24 bg-dark-950 relative">
+  <section id="contact" class="py-24 bg-obsidian-900 border-t border-white/5 relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <!-- Section Header -->
       <div class="text-center max-w-3xl mx-auto mb-16 reveal">
         <div class="inline-flex items-center gap-2 text-brand font-bold text-xs uppercase tracking-widest mb-2">
-          <span class="w-8 h-[3px] bg-brand inline-block rounded-full shadow-glow-red"></span>
-          Get In Touch
-          <span class="w-8 h-[3px] bg-brand inline-block rounded-full shadow-glow-red"></span>
+          <span class="w-6 h-[2px] bg-brand inline-block rounded-full"></span>
+          Start Your Transformation
+          <span class="w-6 h-[2px] bg-brand inline-block rounded-full"></span>
         </div>
-        <h2 class="font-heading text-4xl sm:text-5xl font-black uppercase tracking-tight text-white">
-          Contact Temple Fit Gym
+        <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold uppercase tracking-tight text-white">
+          GET STARTED TODAY
         </h2>
-        <p class="mt-4 text-zinc-400 text-base">
-          Visit our facility, message us on WhatsApp, or call directly to get started today!
+        <p class="mt-4 text-zinc-400 text-sm sm:text-base">
+          Have questions about membership, training, or want to schedule a visit? Talk to us today.
         </p>
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
         
         <!-- Left Column: Contact Cards & Direct Action Buttons -->
-        <div class="lg:col-span-6 space-y-8 reveal">
+        <div class="lg:col-span-6 space-y-6 reveal">
           
-          <!-- Contact Cards Grid: 3D Depth -->
+          <!-- Contact Cards Grid -->
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             
             <!-- Direct Phone -->
-            <div class="p-5 rounded-2xl bg-dark-900 border border-zinc-800 shadow-md">
-              <div class="w-11 h-11 rounded-xl bg-red-950/80 border border-red-600/40 flex items-center justify-center text-brand mb-3 text-lg">
+            <div class="p-5 rounded-2xl bg-obsidian-950 border border-white/5 shadow-md">
+              <div class="w-10 h-10 rounded-xl bg-brand/10 border border-brand/25 flex items-center justify-center text-brand mb-3">
                 <i class="fa-solid fa-phone"></i>
               </div>
               <h4 class="font-bold text-white text-sm uppercase font-heading">Direct Contact</h4>
@@ -1430,33 +1792,33 @@
             </div>
 
             <!-- Proprietor Details -->
-            <div class="p-5 rounded-2xl bg-dark-900 border border-zinc-800 shadow-md">
-              <div class="w-11 h-11 rounded-xl bg-red-950/80 border border-red-600/40 flex items-center justify-center text-brand mb-3 text-lg">
+            <div class="p-5 rounded-2xl bg-obsidian-950 border border-white/5 shadow-md">
+              <div class="w-10 h-10 rounded-xl bg-brand/10 border border-brand/25 flex items-center justify-center text-brand mb-3">
                 <i class="fa-solid fa-user-tie"></i>
               </div>
               <h4 class="font-bold text-white text-sm uppercase font-heading">Proprietor</h4>
               <p class="text-zinc-100 text-base font-extrabold mt-1">
                 Gopal Periyasamy
               </p>
-              <span class="text-[11px] text-brand font-bold">Temple Fit Gym (TFG)</span>
+              <span class="text-[11px] text-brand font-semibold">Temple Fit Gym (TFG)</span>
             </div>
 
             <!-- Operating Hours -->
-            <div class="p-5 rounded-2xl bg-dark-900 border border-zinc-800 shadow-md">
-              <div class="w-11 h-11 rounded-xl bg-red-950/80 border border-red-600/40 flex items-center justify-center text-brand mb-3 text-lg">
+            <div class="p-5 rounded-2xl bg-obsidian-950 border border-white/5 shadow-md">
+              <div class="w-10 h-10 rounded-xl bg-brand/10 border border-brand/25 flex items-center justify-center text-brand mb-3">
                 <i class="fa-regular fa-clock"></i>
               </div>
               <h4 class="font-bold text-white text-sm uppercase font-heading">Opening Hours</h4>
               <p class="text-zinc-400 text-xs mt-1 leading-relaxed">
                 Mon - Sat: 5:30 AM – 10:00 PM<br />
                 Sun: 6:00 AM – 1:00 PM<br />
-                <span class="text-brand font-bold">100% A/C Unisex Center</span>
+                <span class="text-brand font-semibold">100% A/C Unisex Center</span>
               </p>
             </div>
 
-            <!-- Location & Type -->
-            <div class="p-5 rounded-2xl bg-dark-900 border border-zinc-800 shadow-md">
-              <div class="w-11 h-11 rounded-xl bg-red-950/80 border border-red-600/40 flex items-center justify-center text-brand mb-3 text-lg">
+            <!-- Facility -->
+            <div class="p-5 rounded-2xl bg-obsidian-950 border border-white/5 shadow-md">
+              <div class="w-10 h-10 rounded-xl bg-brand/10 border border-brand/25 flex items-center justify-center text-brand mb-3">
                 <i class="fa-solid fa-location-dot"></i>
               </div>
               <h4 class="font-bold text-white text-sm uppercase font-heading">Gym Facility</h4>
@@ -1468,61 +1830,56 @@
 
           </div>
 
-          <!-- Three 3D Direct Action Buttons: Get Directions, Call Now, WhatsApp -->
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
+          <!-- Three Direct Action Buttons: Get Directions, Call Now, WhatsApp -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
             
-            <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="btn-3d-dark px-4 py-3.5 rounded-xl text-zinc-200 text-center text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2">
+            <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="btn-secondary py-3 text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-2">
               <i class="fa-solid fa-diamond-turn-right text-brand"></i>
               <span>Directions</span>
             </a>
 
-            <a href="tel:9884557280" class="btn-3d-dark px-4 py-3.5 rounded-xl text-zinc-200 text-center text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2">
+            <a href="tel:9884557280" class="btn-secondary py-3 text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-2">
               <i class="fa-solid fa-phone text-brand"></i>
               <span>Call Now</span>
             </a>
 
-            <a href="https://wa.me/919884557280" target="_blank" rel="noopener noreferrer" class="btn-3d-dark px-4 py-3.5 rounded-xl text-emerald-400 text-center text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2">
+            <a href="https://wa.me/919884557280" target="_blank" rel="noopener noreferrer" class="btn-secondary py-3 text-xs font-semibold uppercase tracking-wider text-emerald-400 flex items-center justify-center gap-2">
               <i class="fa-brands fa-whatsapp text-emerald-400 text-sm"></i>
               <span>WhatsApp</span>
             </a>
 
           </div>
 
-          <!-- Google Maps Embed Mockup Card with Red Neon Flare -->
-          <div class="rounded-3xl overflow-hidden border border-zinc-800 bg-dark-900 relative h-64 shadow-xl group">
-            <div class="w-full h-full bg-zinc-950 flex flex-col items-center justify-center text-center p-6 relative">
-              <div class="absolute inset-0 opacity-20 bg-[radial-gradient(#ef4444_1.5px,transparent_1.5px)] [background-size:20px_20px]"></div>
-              <div class="relative z-10">
-                <div class="w-13 h-13 p-3.5 rounded-2xl bg-gradient-to-br from-red-600 to-red-900 text-white flex items-center justify-center mx-auto text-2xl shadow-glow-red animate-bounce">
-                  <i class="fa-solid fa-location-dot"></i>
-                </div>
-                <h4 class="font-heading text-xl font-black uppercase text-white mt-3">Temple Fit Gym (TFG)</h4>
-                <p class="text-zinc-400 text-xs mt-1">A/C Unisex Cardio & Strength Center</p>
-                <p class="text-brand text-xs font-bold mt-0.5">Prop: Gopal Periyasamy &bull; Contact: 9884557280</p>
-                <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="mt-4 inline-block px-5 py-2 rounded-xl bg-zinc-850 border border-zinc-700 text-zinc-200 text-xs font-bold hover:bg-brand hover:text-white transition-colors">
-                  Open in Google Maps &nearr;
-                </a>
+          <!-- Location Map Preview Card -->
+          <div class="rounded-2xl overflow-hidden border border-white/10 bg-obsidian-950 relative h-60 shadow-xl group">
+            <div class="w-full h-full flex flex-col items-center justify-center text-center p-6 relative">
+              <div class="w-12 h-12 rounded-2xl bg-brand text-white flex items-center justify-center mx-auto text-xl shadow-lg">
+                <i class="fa-solid fa-location-dot"></i>
               </div>
+              <h4 class="font-heading text-lg font-bold uppercase text-white mt-3">Temple Fit Gym (TFG)</h4>
+              <p class="text-zinc-400 text-xs mt-1">A/C Unisex Cardio & Strength Center</p>
+              <p class="text-brand text-xs font-semibold mt-0.5">Prop: Gopal Periyasamy &bull; Contact: 9884557280</p>
+              <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="mt-4 inline-block px-4 py-1.5 rounded-lg bg-zinc-800 text-zinc-300 text-xs font-medium hover:bg-brand hover:text-white transition-colors">
+                Open in Google Maps &nearr;
+              </a>
             </div>
           </div>
 
         </div>
 
-        <!-- Right Column: 3D Contact Form with Client-Side Validation -->
+        <!-- Right Column: Clean Enquiry Form with Inline Validation -->
         <div class="lg:col-span-6 reveal">
-          <div class="bg-dark-900 rounded-3xl p-8 sm:p-10 border border-red-950/80 shadow-[0_20px_50px_rgba(0,0,0,0.8)] relative">
-            <div class="absolute top-0 right-0 w-32 h-32 bg-red-600/10 rounded-full filter blur-2xl pointer-events-none"></div>
-            
-            <h3 class="font-heading text-2xl sm:text-3xl font-black uppercase text-white">Join Temple Fit Gym</h3>
-            <p class="text-zinc-400 text-xs sm:text-sm mt-2">
-              Send an inquiry or request an admission callback from Coach Gopal.
+          <div class="gym-card p-8 sm:p-10 border border-white/10 shadow-2xl relative">
+            <h3 class="font-heading text-2xl font-bold uppercase text-white">Send An Admission Enquiry</h3>
+            <p class="text-zinc-400 text-xs sm:text-sm mt-1.5">
+              Fill out your details below and Coach Gopal will reach back with full admission guidance.
             </p>
 
-            <form id="contact-form" class="mt-8 space-y-5" novalidate>
+            <form id="contact-form" class="mt-7 space-y-4" novalidate>
               
               <!-- Full Name Field -->
               <div>
-                <label for="contact-name" class="block text-xs font-bold uppercase tracking-wider text-zinc-300 mb-1.5">
+                <label for="contact-name" class="block text-xs font-semibold uppercase tracking-wider text-zinc-300 mb-1">
                   Full Name <span class="text-brand">*</span>
                 </label>
                 <input 
@@ -1530,14 +1887,14 @@
                   id="contact-name" 
                   name="name" 
                   placeholder="e.g. Anand Kumar" 
-                  class="w-full px-4 py-3.5 rounded-xl bg-dark-950 border border-zinc-700 text-white placeholder-zinc-500 text-sm focus:outline-none focus:border-brand focus:ring-1 focus:ring-brand transition-all" 
+                  class="w-full px-4 py-3 rounded-xl bg-obsidian-950 border border-zinc-700 text-white placeholder-zinc-500 text-sm focus:outline-none focus:border-brand focus:ring-1 focus:ring-brand transition-all" 
                 />
                 <span id="name-error" class="text-red-500 text-xs mt-1 hidden">Please enter your full name.</span>
               </div>
 
               <!-- Email Field -->
               <div>
-                <label for="contact-email" class="block text-xs font-bold uppercase tracking-wider text-zinc-300 mb-1.5">
+                <label for="contact-email" class="block text-xs font-semibold uppercase tracking-wider text-zinc-300 mb-1">
                   Email Address <span class="text-brand">*</span>
                 </label>
                 <input 
@@ -1545,14 +1902,14 @@
                   id="contact-email" 
                   name="email" 
                   placeholder="e.g. anand@example.com" 
-                  class="w-full px-4 py-3.5 rounded-xl bg-dark-950 border border-zinc-700 text-white placeholder-zinc-500 text-sm focus:outline-none focus:border-brand focus:ring-1 focus:ring-brand transition-all" 
+                  class="w-full px-4 py-3 rounded-xl bg-obsidian-950 border border-zinc-700 text-white placeholder-zinc-500 text-sm focus:outline-none focus:border-brand focus:ring-1 focus:ring-brand transition-all" 
                 />
                 <span id="email-error" class="text-red-500 text-xs mt-1 hidden">Please enter a valid email address.</span>
               </div>
 
               <!-- Phone Number Field -->
               <div>
-                <label for="contact-phone" class="block text-xs font-bold uppercase tracking-wider text-zinc-300 mb-1.5">
+                <label for="contact-phone" class="block text-xs font-semibold uppercase tracking-wider text-zinc-300 mb-1">
                   Mobile Phone Number <span class="text-brand">*</span>
                 </label>
                 <input 
@@ -1560,47 +1917,47 @@
                   id="contact-phone" 
                   name="phone" 
                   placeholder="e.g. 9884557280" 
-                  class="w-full px-4 py-3.5 rounded-xl bg-dark-950 border border-zinc-700 text-white placeholder-zinc-500 text-sm focus:outline-none focus:border-brand focus:ring-1 focus:ring-brand transition-all" 
+                  class="w-full px-4 py-3 rounded-xl bg-obsidian-950 border border-zinc-700 text-white placeholder-zinc-500 text-sm focus:outline-none focus:border-brand focus:ring-1 focus:ring-brand transition-all" 
                 />
               </div>
 
               <!-- Interested Program / Plan Select -->
               <div>
-                <label for="contact-interest" class="block text-xs font-bold uppercase tracking-wider text-zinc-300 mb-1.5">
+                <label for="contact-interest" class="block text-xs font-semibold uppercase tracking-wider text-zinc-300 mb-1">
                   Select Fees Package
                 </label>
                 <select 
                   id="contact-interest" 
                   name="interest" 
-                  class="w-full px-4 py-3.5 rounded-xl bg-dark-950 border border-zinc-700 text-white text-sm focus:outline-none focus:border-brand focus:ring-1 focus:ring-brand transition-all">
+                  class="w-full px-4 py-3 rounded-xl bg-obsidian-950 border border-zinc-700 text-white text-sm focus:outline-none focus:border-brand focus:ring-1 focus:ring-brand transition-all">
                   <option value="1 Year Annual Plan">1 Year Package — Rs. 8,499/- (Best Value)</option>
                   <option value="6 Months Plan">6 Months Package — Rs. 6,499/-</option>
                   <option value="3 Months Plan">3 Months Package — Rs. 3,999/-</option>
                   <option value="Monthly Plan">Monthly Plan — Rs. 1,500/- (1st Mo Rs. 2,000/-)</option>
-                  <option value="General Inquiry">General Gym Tour / Inquiries</option>
+                  <option value="General Inquiry">General Gym Tour / Inquiry</option>
                 </select>
               </div>
 
               <!-- Message Field -->
               <div>
-                <label for="contact-message" class="block text-xs font-bold uppercase tracking-wider text-zinc-300 mb-1.5">
-                  Your Fitness Goal or Note <span class="text-brand">*</span>
+                <label for="contact-message" class="block text-xs font-semibold uppercase tracking-wider text-zinc-300 mb-1">
+                  Your Goals / Message <span class="text-brand">*</span>
                 </label>
                 <textarea 
                   id="contact-message" 
                   name="message" 
-                  rows="4" 
-                  placeholder="I would like to start cardio + strength training..." 
-                  class="w-full px-4 py-3.5 rounded-xl bg-dark-950 border border-zinc-700 text-white placeholder-zinc-500 text-sm focus:outline-none focus:border-brand focus:ring-1 focus:ring-brand transition-all resize-none"></textarea>
-                <span id="message-error" class="text-red-500 text-xs mt-1 hidden">Please provide a brief message (minimum 10 characters).</span>
+                  rows="3" 
+                  placeholder="I would like to start cardio and strength training..." 
+                  class="w-full px-4 py-3 rounded-xl bg-obsidian-950 border border-zinc-700 text-white placeholder-zinc-500 text-sm focus:outline-none focus:border-brand focus:ring-1 focus:ring-brand transition-all resize-none"></textarea>
+                <span id="message-error" class="text-red-500 text-xs mt-1 hidden">Please provide a brief message (minimum 6 characters).</span>
               </div>
 
-              <!-- 3D Submit Button -->
+              <!-- Submit Button -->
               <button 
                 type="submit" 
                 id="contact-submit-btn" 
-                class="btn-3d-red w-full py-4 rounded-xl font-black text-sm uppercase tracking-wider flex items-center justify-center gap-2">
-                <span>Send Admission Request</span>
+                class="btn-primary w-full py-4 text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2">
+                <span>Send Admission Enquiry</span>
                 <i class="fa-regular fa-paper-plane text-xs"></i>
               </button>
 
@@ -1616,16 +1973,16 @@
 
 
   <!-- ========================================================================= -->
-  <!-- 11. FOOTER                                                                -->
+  <!-- 12. FOOTER (Clean Commercial Fitness Layout)                              -->
   <!-- ========================================================================= -->
-  <footer class="bg-dark-950 border-t border-red-950/60 pt-16 pb-12 text-zinc-400 text-sm">
+  <footer class="bg-obsidian-950 border-t border-white/5 pt-16 pb-12 text-zinc-400 text-sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-zinc-800/80">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-white/5">
         
         <!-- Col 1 & 2: Brand Info -->
         <div class="lg:col-span-2 space-y-4">
           <a href="#home" class="flex items-center gap-3.5 group">
-            <img src="assets/logo.svg" alt="Temple Fit Gym 3D Logo" class="h-11 w-auto max-w-[200px] object-contain" />
+            <img src="assets/logo.svg" alt="Temple Fit Gym Logo" class="h-10 w-auto max-w-[200px] object-contain" />
           </a>
           
           <p class="text-zinc-400 text-xs leading-relaxed max-w-sm">
@@ -1637,17 +1994,17 @@
           </div>
           
           <!-- Social Icons -->
-          <div class="flex items-center gap-3 pt-2">
-            <a href="https://wa.me/919884557280" target="_blank" rel="noopener noreferrer" class="btn-3d-dark w-10 h-10 rounded-xl text-zinc-300 hover:text-white flex items-center justify-center" aria-label="WhatsApp">
+          <div class="flex items-center gap-2.5 pt-2">
+            <a href="https://wa.me/919884557280" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg bg-zinc-900 hover:bg-brand text-zinc-300 hover:text-white flex items-center justify-center transition-all" aria-label="WhatsApp">
               <i class="fa-brands fa-whatsapp text-sm text-emerald-400"></i>
             </a>
-            <a href="tel:9884557280" class="btn-3d-dark w-10 h-10 rounded-xl text-zinc-300 hover:text-white flex items-center justify-center" aria-label="Call">
+            <a href="tel:9884557280" class="w-9 h-9 rounded-lg bg-zinc-900 hover:bg-brand text-zinc-300 hover:text-white flex items-center justify-center transition-all" aria-label="Call">
               <i class="fa-solid fa-phone text-sm text-brand"></i>
             </a>
-            <a href="#" class="btn-3d-dark w-10 h-10 rounded-xl text-zinc-300 hover:text-white flex items-center justify-center" aria-label="Instagram">
+            <a href="#" class="w-9 h-9 rounded-lg bg-zinc-900 hover:bg-brand text-zinc-300 hover:text-white flex items-center justify-center transition-all" aria-label="Instagram">
               <i class="fa-brands fa-instagram text-sm"></i>
             </a>
-            <a href="#" class="btn-3d-dark w-10 h-10 rounded-xl text-zinc-300 hover:text-white flex items-center justify-center" aria-label="Facebook">
+            <a href="#" class="w-9 h-9 rounded-lg bg-zinc-900 hover:bg-brand text-zinc-300 hover:text-white flex items-center justify-center transition-all" aria-label="Facebook">
               <i class="fa-brands fa-facebook-f text-sm"></i>
             </a>
           </div>
@@ -1655,35 +2012,37 @@
 
         <!-- Col 3: Quick Links -->
         <div class="space-y-3">
-          <h4 class="font-heading text-base font-bold uppercase text-white tracking-wider">Quick Links</h4>
+          <h4 class="font-heading text-sm font-bold uppercase text-white tracking-wider">Quick Links</h4>
           <ul class="space-y-2 text-xs">
             <li><a href="#home" class="hover:text-brand transition-colors">Home</a></li>
             <li><a href="#about" class="hover:text-brand transition-colors">About Us</a></li>
-            <li><a href="#services" class="hover:text-brand transition-colors">Cardio & Strength</a></li>
+            <li><a href="#services" class="hover:text-brand transition-colors">Services</a></li>
+            <li><a href="#bmi" class="hover:text-brand transition-colors">Quick BMI Check</a></li>
             <li><a href="#pricing" class="hover:text-brand transition-colors">Fees Structure</a></li>
-            <li><a href="#trainers" class="hover:text-brand transition-colors">Coaching Team</a></li>
+            <li><a href="#trainers" class="hover:text-brand transition-colors">Coaches</a></li>
+            <li><a href="#gallery" class="hover:text-brand transition-colors">Gallery</a></li>
           </ul>
         </div>
 
         <!-- Col 4: Fees Packages -->
         <div class="space-y-3">
-          <h4 class="font-heading text-base font-bold uppercase text-white tracking-wider">Fees Packages</h4>
+          <h4 class="font-heading text-sm font-bold uppercase text-white tracking-wider">Fees Packages</h4>
           <ul class="space-y-2 text-xs">
             <li><a href="#pricing" class="hover:text-brand transition-colors">Monthly (Rs. 1500/-)</a></li>
             <li><a href="#pricing" class="hover:text-brand transition-colors">3 Months (Rs. 3999/-)</a></li>
             <li><a href="#pricing" class="hover:text-brand transition-colors">6 Months (Rs. 6499/-)</a></li>
             <li><a href="#pricing" class="hover:text-brand transition-colors">1 Year (Rs. 8499/-)</a></li>
-            <li><a href="#faq" class="hover:text-brand transition-colors">Frequently Asked Questions</a></li>
+            <li><a href="#faq" class="hover:text-brand transition-colors">FAQs</a></li>
           </ul>
         </div>
 
         <!-- Col 5: Hours Summary -->
         <div class="space-y-3">
-          <h4 class="font-heading text-base font-bold uppercase text-white tracking-wider">Hours & Contact</h4>
+          <h4 class="font-heading text-sm font-bold uppercase text-white tracking-wider">Hours & Contact</h4>
           <ul class="space-y-2 text-xs text-zinc-400">
             <li><span class="text-white font-medium">Mon - Sat:</span> 5:30 AM - 10:00 PM</li>
             <li><span class="text-white font-medium">Sunday:</span> 6:00 AM - 1:00 PM</li>
-            <li><span class="text-brand font-bold">Contact: 9884557280</span></li>
+            <li><span class="text-brand font-semibold">Contact: 9884557280</span></li>
             <li><span class="text-zinc-300">Prop: Gopal Periyasamy</span></li>
           </ul>
         </div>
@@ -1691,7 +2050,7 @@
       </div>
 
       <!-- Copyright Row -->
-      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-400 gap-4">
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500 gap-4">
         <p>&copy; 2026 Temple Fit Gym. All rights reserved. Prop: Gopal Periyasamy.</p>
         <div class="flex items-center gap-6">
           <a href="#" class="hover:text-zinc-300 transition-colors">Privacy Policy</a>
@@ -1705,49 +2064,64 @@
 
 
   <!-- ========================================================================= -->
-  <!-- MODAL 1: GALLERY LIGHTBOX MODAL (3D Pop Animation)                       -->
+  <!-- FLOATING WHATSAPP BUTTON (Fixed Bottom-Right)                             -->
+  <!-- ========================================================================= -->
+  <a 
+    href="https://wa.me/919884557280" 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    class="whatsapp-float group" 
+    aria-label="Chat with Temple Fit Gym on WhatsApp">
+    <div class="whatsapp-pulse-ring"></div>
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="whatsapp-tooltip">Chat with us on WhatsApp</span>
+  </a>
+
+
+  <!-- ========================================================================= -->
+  <!-- MODAL 1: GALLERY LIGHTBOX MODAL                                           -->
   <!-- ========================================================================= -->
   <div id="lightbox-modal" class="fixed inset-0 z-50 hidden bg-black/95 backdrop-blur-md flex items-center justify-center p-4 transition-opacity duration-300" role="dialog" aria-modal="true" aria-label="Image Lightbox">
-    <button id="lightbox-close" type="button" class="btn-3d-dark absolute top-6 right-6 z-10 w-12 h-12 rounded-full text-white flex items-center justify-center" aria-label="Close Lightbox">
-      <i class="fa-solid fa-xmark text-xl"></i>
+    <button id="lightbox-close" type="button" class="btn-secondary absolute top-6 right-6 z-10 w-11 h-11 rounded-full text-white flex items-center justify-center" aria-label="Close Lightbox">
+      <i class="fa-solid fa-xmark text-lg"></i>
     </button>
-    <button id="lightbox-prev" type="button" class="btn-3d-dark absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full text-white flex items-center justify-center" aria-label="Previous image">
-      <i class="fa-solid fa-chevron-left text-lg"></i>
+    <button id="lightbox-prev" type="button" class="btn-secondary absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 z-10 w-11 h-11 rounded-full text-white flex items-center justify-center" aria-label="Previous image">
+      <i class="fa-solid fa-chevron-left text-base"></i>
     </button>
-    <button id="lightbox-next" type="button" class="btn-3d-dark absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full text-white flex items-center justify-center" aria-label="Next image">
-      <i class="fa-solid fa-chevron-right text-lg"></i>
+    <button id="lightbox-next" type="button" class="btn-secondary absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 z-10 w-11 h-11 rounded-full text-white flex items-center justify-center" aria-label="Next image">
+      <i class="fa-solid fa-chevron-right text-base"></i>
     </button>
-    <div class="max-w-5xl max-h-[85vh] flex flex-col items-center justify-center animate-modal-pop">
-      <img id="lightbox-img" src="" alt="Lightbox Zoomed View" class="max-w-full max-h-[75vh] object-contain rounded-2xl shadow-[0_25px_60px_rgba(0,0,0,0.9)] border-2 border-red-600/40" />
+    <div class="max-w-5xl max-h-[85vh] flex flex-col items-center justify-center animate-scale-up">
+      <img id="lightbox-img" src="" alt="Lightbox Zoomed View" class="max-w-full max-h-[75vh] object-contain rounded-2xl shadow-2xl border border-white/10" />
       <div id="lightbox-caption" class="mt-4 text-center">
-        <h4 id="lightbox-title" class="font-heading text-xl font-bold uppercase text-white"></h4>
-        <p id="lightbox-category" class="text-xs text-brand uppercase tracking-wider mt-1 font-bold"></p>
+        <h4 id="lightbox-title" class="font-heading text-lg font-bold uppercase text-white"></h4>
+        <p id="lightbox-category" class="text-xs text-brand uppercase tracking-wider mt-0.5 font-bold"></p>
       </div>
     </div>
   </div>
 
 
   <!-- ========================================================================= -->
-  <!-- MODAL 2: TRAINER PROFILE POPUP MODAL (3D Pop Animation)                   -->
+  <!-- MODAL 2: TRAINER PROFILE POPUP MODAL                                      -->
   <!-- ========================================================================= -->
   <div id="trainer-modal" class="fixed inset-0 z-50 hidden bg-black/85 backdrop-blur-md flex items-center justify-center p-4 transition-opacity duration-300" role="dialog" aria-modal="true" aria-label="Trainer Profile">
     <div id="trainer-modal-backdrop" class="absolute inset-0"></div>
-    <div class="relative z-10 w-full max-w-2xl bg-dark-900 border-2 border-red-600/40 rounded-3xl overflow-hidden shadow-[0_25px_60px_rgba(239,68,68,0.2)] animate-modal-pop">
-      <button id="trainer-modal-close" type="button" class="btn-3d-dark absolute top-4 right-4 z-20 w-10 h-10 rounded-full text-white flex items-center justify-center" aria-label="Close trainer modal">
-        <i class="fa-solid fa-xmark text-lg"></i>
+    <div class="relative z-10 w-full max-w-2xl bg-obsidian-900 border border-white/10 rounded-3xl overflow-hidden shadow-2xl animate-scale-up">
+      <button id="trainer-modal-close" type="button" class="btn-secondary absolute top-4 right-4 z-20 w-9 h-9 rounded-full text-white flex items-center justify-center" aria-label="Close trainer modal">
+        <i class="fa-solid fa-xmark text-sm"></i>
       </button>
 
       <div class="grid grid-cols-1 sm:grid-cols-12">
-        <div class="sm:col-span-5 relative h-64 sm:h-full">
-          <img id="modal-trainer-img" src="" alt="Trainer Profile" class="w-full h-full object-cover object-top filter contrast-110" />
-          <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent to-transparent sm:hidden"></div>
+        <div class="sm:col-span-5 relative h-60 sm:h-full">
+          <img id="modal-trainer-img" src="" alt="Trainer Profile" class="w-full h-full object-cover object-top" />
+          <div class="absolute inset-0 bg-gradient-to-t from-obsidian-900 via-transparent to-transparent sm:hidden"></div>
         </div>
 
         <div class="sm:col-span-7 p-6 sm:p-8 space-y-4">
           <div>
-            <span id="modal-trainer-exp" class="text-[10px] font-black uppercase tracking-wider bg-red-600 text-white px-3 py-1 rounded-full shadow-glow-red"></span>
-            <h3 id="modal-trainer-name" class="font-heading text-3xl font-black uppercase text-white mt-2"></h3>
-            <p id="modal-trainer-title" class="text-brand text-xs font-bold uppercase tracking-wider"></p>
+            <span id="modal-trainer-exp" class="text-[10px] font-bold uppercase tracking-wider bg-brand/20 text-brand border border-brand/30 px-3 py-0.5 rounded-full"></span>
+            <h3 id="modal-trainer-name" class="font-heading text-2xl font-bold uppercase text-white mt-2"></h3>
+            <p id="modal-trainer-title" class="text-zinc-400 text-xs font-semibold uppercase tracking-wider"></p>
           </div>
 
           <div class="border-t border-zinc-800 pt-3">
@@ -1757,7 +2131,7 @@
 
           <div class="border-t border-zinc-800 pt-3">
             <h4 class="text-xs font-bold uppercase text-zinc-300 tracking-wider">Specialties</h4>
-            <p id="modal-trainer-specialties" class="text-zinc-300 text-xs font-semibold mt-1"></p>
+            <p id="modal-trainer-specialties" class="text-zinc-300 text-xs font-medium mt-1"></p>
           </div>
 
           <div class="border-t border-zinc-800 pt-3">
@@ -1766,7 +2140,7 @@
           </div>
 
           <div class="pt-2">
-            <a href="#contact" id="modal-book-trainer-btn" class="btn-3d-red block text-center w-full py-3.5 rounded-xl font-black text-xs uppercase tracking-wider">
+            <a href="#contact" id="modal-book-trainer-btn" class="btn-primary block text-center w-full py-3 text-xs font-bold uppercase tracking-wider">
               Book A Session / Admission
             </a>
           </div>
@@ -1777,20 +2151,20 @@
 
 
   <!-- ========================================================================= -->
-  <!-- TOAST NOTIFICATION: Form Submission Success (3D Bevel)                    -->
+  <!-- TOAST NOTIFICATION: Form Submission Success                               -->
   <!-- ========================================================================= -->
-  <div id="toast-success" class="fixed bottom-6 right-6 z-50 hidden max-w-md bg-dark-900 border-2 border-red-600 rounded-2xl p-4 shadow-glow-red transition-all duration-300 animate-modal-pop">
+  <div id="toast-success" class="fixed bottom-6 right-6 sm:right-24 z-50 hidden max-w-md bg-obsidian-900 border border-brand rounded-2xl p-4 shadow-2xl transition-all duration-300 animate-scale-up">
     <div class="flex items-start gap-3">
-      <div class="w-9 h-9 rounded-xl bg-red-600 text-white flex items-center justify-center flex-shrink-0 mt-0.5 shadow-glow-red">
-        <i class="fa-solid fa-check font-black"></i>
+      <div class="w-8 h-8 rounded-lg bg-brand text-white flex items-center justify-center flex-shrink-0 mt-0.5">
+        <i class="fa-solid fa-check text-sm"></i>
       </div>
       <div>
-        <h5 class="text-white font-black text-sm uppercase font-heading">Admission Request Received!</h5>
+        <h5 class="text-white font-bold text-sm uppercase font-heading">Admission Enquiry Received!</h5>
         <p class="text-zinc-300 text-xs mt-0.5">
           Thank you! Coach Gopal or the Temple Fit team will contact you shortly on 9884557280.
         </p>
       </div>
-      <button id="toast-close-btn" type="button" class="text-zinc-400 hover:text-white text-sm ml-auto p-1">
+      <button id="toast-close-btn" type="button" class="text-zinc-400 hover:text-white text-sm ml-auto p-1" aria-label="Close notification">
         <i class="fa-solid fa-xmark"></i>
       </button>
     </div>
