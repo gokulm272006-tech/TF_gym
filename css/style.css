@@ -188,34 +188,47 @@
 
 .bmi-scale-bar {
   display: flex;
-  height: 10px;
+  height: 12px;
   border-radius: 9999px;
   overflow: hidden;
   background: #18181b;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 .bmi-scale-under {
   background: #38bdf8; /* Underweight: Blue */
-  flex: 18.5;
+  flex: 1;
+  border-right: 2px solid #09090b;
 }
 
 .bmi-scale-normal {
   background: #10b981; /* Normal: Emerald Green */
-  flex: 6.4;
+  flex: 1;
+  border-right: 2px solid #09090b;
 }
 
 .bmi-scale-over {
   background: #f59e0b; /* Overweight: Amber */
-  flex: 5.0;
+  flex: 1;
+  border-right: 2px solid #09090b;
 }
 
 .bmi-scale-obese {
   background: #ef4444; /* Obese: Red */
-  flex: 10.1;
+  flex: 1;
 }
 
 .bmi-scale-pin {
-  transition: left 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  position: absolute;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 9999px;
+  border: 3px solid #ffffff;
+  transform: translateX(-50%);
+  transition: left 0.6s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s ease, box-shadow 0.4s ease;
+  z-index: 10;
+  pointer-events: none;
 }
 
 /* --------------------------------------------------------------------------
@@ -339,3 +352,36 @@
     display: none !important;
   }
 }
+
+/* --------------------------------------------------------------------------
+   12. RESPONSIVE GOOGLE MAP CONTAINER
+   -------------------------------------------------------------------------- */
+.map-container {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 1.25rem;
+  background: #09090b;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  position: relative;
+}
+
+.map-container iframe {
+  width: 100% !important;
+  height: 450px;
+  border: 0;
+  display: block;
+}
+
+@media (max-width: 1024px) {
+  .map-container iframe {
+    height: 400px;
+  }
+}
+
+@media (max-width: 640px) {
+  .map-container iframe {
+    height: 320px;
+  }
+}
+

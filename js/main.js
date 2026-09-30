@@ -153,6 +153,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const bmiWhatsappCta = document.getElementById('bmi-whatsapp-cta');
   const bmiLiveRegion = document.getElementById('bmi-live-region');
 
+  // Scale category label elements
+  const bmiLblUnder = document.getElementById('bmi-lbl-under');
+  const bmiLblNormal = document.getElementById('bmi-lbl-normal');
+  const bmiLblOver = document.getElementById('bmi-lbl-over');
+  const bmiLblObese = document.getElementById('bmi-lbl-obese');
+
   // Gauge circumference: 2 * PI * r (r=45 => 282.74)
   const GAUGE_CIRCUMFERENCE = 282.74;
 
@@ -193,51 +199,80 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    // Height in meters
+    // Height in meters & mathematical BMI formula
     const heightInMeters = heightVal / 100;
     const rawBmi = weightVal / (heightInMeters * heightInMeters);
     const bmi = parseFloat(rawBmi.toFixed(1));
 
-    // Category determination
+    // Category determination & visual indicators
     let category = '';
     let categoryClass = '';
     let gaugeColor = '';
     let desc = '';
     let pinPercentage = 0;
 
+    // Reset label highlight styles
+    const defaultLabelClass = 'text-zinc-500 font-bold transition-colors duration-300';
+    if (bmiLblUnder) bmiLblUnder.className = defaultLabelClass;
+    if (bmiLblNormal) bmiLblNormal.className = defaultLabelClass;
+    if (bmiLblOver) bmiLblOver.className = defaultLabelClass;
+    if (bmiLblObese) bmiLblObese.className = defaultLabelClass;
+
     if (bmi < 18.5) {
       category = 'Underweight';
       categoryClass = 'bg-sky-500/20 text-sky-400 border-sky-500/40';
       gaugeColor = '#38bdf8';
       desc = 'Your BMI is below the standard healthy range. Coach Gopal can customize a high-protein nutrition and progressive strength routine to safely build lean muscle mass.';
-      // Pin scale 0 to 18.5 mapped to 0% to 25%
-      pinPercentage = Math.max(5, (bmi / 18.5) * 25);
+      // Underweight segment [0%, 25%]: map BMI 10.0 to 18.5 safely inside [4%, 21%]
+      const ratio = Math.max(0, Math.min(1, (bmi - 10) / (18.5 - 10)));
+      pinPercentage = 4 + (ratio * 17);
+      if (bmiLblUnder) {
+        bmiLblUnder.className = 'text-sky-400 font-bold drop-shadow-[0_0_8px_rgba(56,189,248,0.5)] transition-colors duration-300';
+      }
     } else if (bmi >= 18.5 && bmi <= 24.9) {
       category = 'Normal Weight';
       categoryClass = 'bg-emerald-500/20 text-emerald-400 border-emerald-500/40';
       gaugeColor = '#10b981';
       desc = 'Great news! Your BMI is within the healthy range (18.5 – 24.9). Maintain your conditioning with our cardio zone and sculpted hypertrophy routines.';
-      // Pin scale 18.5 to 24.9 mapped to 25% to 50%
-      pinPercentage = 25 + ((bmi - 18.5) / 6.4) * 25;
+      // Normal Weight segment [25%, 50%]: map BMI 18.5 to 24.9 safely inside [28%, 47%]
+      const ratio = Math.max(0, Math.min(1, (bmi - 18.5) / (24.9 - 18.5)));
+      pinPercentage = 28 + (ratio * 19);
+      if (bmiLblNormal) {
+        bmiLblNormal.className = 'text-emerald-400 font-bold drop-shadow-[0_0_8px_rgba(16,185,129,0.5)] transition-colors duration-300';
+      }
     } else if (bmi >= 25.0 && bmi <= 29.9) {
       category = 'Overweight';
       categoryClass = 'bg-amber-500/20 text-amber-400 border-amber-500/40';
       gaugeColor = '#f59e0b';
       desc = 'Your BMI is slightly above the standard range. Our air-conditioned cardio training and metabolic fat-burn circuits will help you shed weight while retaining strength.';
-      // Pin scale 25.0 to 29.9 mapped to 50% to 75%
-      pinPercentage = 50 + ((bmi - 25.0) / 4.9) * 25;
+      // Overweight segment [50%, 75%]: map BMI 25.0 to 29.9 safely inside [53%, 72%]
+      const ratio = Math.max(0, Math.min(1, (bmi - 25.0) / (29.9 - 25.0)));
+      pinPercentage = 53 + (ratio * 19);
+      if (bmiLblOver) {
+        bmiLblOver.className = 'text-amber-400 font-bold drop-shadow-[0_0_8px_rgba(245,158,11,0.5)] transition-colors duration-300';
+      }
     } else {
       category = 'Obesity';
       categoryClass = 'bg-red-500/20 text-red-400 border-red-500/40';
       gaugeColor = '#ef4444';
       desc = 'Your BMI indicates obesity. Step into Temple Fit Gym for a dedicated, respectful coaching plan combining steady-state cardio, core conditioning, and sustainable diet discipline.';
-      // Pin scale 30.0 to 45.0 mapped to 75% to 98%
-      pinPercentage = Math.min(96, 75 + ((bmi - 30.0) / 15.0) * 25);
+      // Obesity segment [75%, 100%]: map BMI 30.0 to 40.0+ safely inside [78%, 96%]
+      const ratio = Math.max(0, Math.min(1, (bmi - 30.0) / (40.0 - 30.0)));
+      pinPercentage = 78 + (ratio * 18);
+      if (bmiLblObese) {
+        bmiLblObese.className = 'text-red-400 font-bold drop-shadow-[0_0_8px_rgba(239,68,68,0.5)] transition-colors duration-300';
+      }
     }
 
     // Populate Results UI
-    if (bmiValueDisplay) bmiValueDisplay.textContent = bmi;
-    if (bmiCategoryTitle) bmiCategoryTitle.textContent = category;
+    if (bmiValueDisplay) {
+      bmiValueDisplay.textContent = bmi;
+      bmiValueDisplay.style.color = gaugeColor;
+    }
+    if (bmiCategoryTitle) {
+      bmiCategoryTitle.textContent = category;
+      bmiCategoryTitle.style.color = gaugeColor;
+    }
 
     if (bmiCategoryBadge) {
       bmiCategoryBadge.className = `px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider border ${categoryClass}`;
@@ -256,9 +291,11 @@ document.addEventListener('DOMContentLoaded', () => {
       bmiGaugeProgress.style.strokeDashoffset = offset;
     }
 
-    // Animate Linear Pin
+    // Animate Linear Pin with Active Color and Subtle Glow
     if (bmiScalePin) {
-      bmiScalePin.style.left = `${pinPercentage}%`;
+      bmiScalePin.style.left = `${pinPercentage.toFixed(1)}%`;
+      bmiScalePin.style.backgroundColor = gaugeColor;
+      bmiScalePin.style.boxShadow = `0 0 14px ${gaugeColor}, 0 2px 6px rgba(0,0,0,0.6)`;
     }
 
     // Update WhatsApp CTA prefilled text with the user's BMI
@@ -293,6 +330,16 @@ document.addEventListener('DOMContentLoaded', () => {
     if (bmiWeightError) bmiWeightError.classList.add('hidden');
     if (bmiResultContainer) bmiResultContainer.classList.add('hidden');
     if (bmiGaugeProgress) bmiGaugeProgress.style.strokeDashoffset = GAUGE_CIRCUMFERENCE;
+    if (bmiScalePin) {
+      bmiScalePin.style.left = '33.1%';
+      bmiScalePin.style.backgroundColor = '#10b981';
+      bmiScalePin.style.boxShadow = '0 0 14px #10b981, 0 2px 6px rgba(0,0,0,0.6)';
+    }
+    const defaultLabelClass = 'text-zinc-500 font-bold transition-colors duration-300';
+    if (bmiLblUnder) bmiLblUnder.className = defaultLabelClass;
+    if (bmiLblNormal) bmiLblNormal.className = defaultLabelClass;
+    if (bmiLblOver) bmiLblOver.className = defaultLabelClass;
+    if (bmiLblObese) bmiLblObese.className = defaultLabelClass;
   };
 
   if (btnCalcBmi) {
